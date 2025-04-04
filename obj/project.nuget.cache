@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "sVGTgFMMaKo=",
+  "success": true,
+  "projectFilePath": "D:\\C#\\FoxVill\\FoxVill.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AdminX\\.nuget\\packages\\materialdesigncolors\\5.2.2-ci942\\materialdesigncolors.5.2.2-ci942.nupkg.sha512",
+    "C:\\Users\\AdminX\\.nuget\\packages\\materialdesignthemes\\5.2.2-ci942\\materialdesignthemes.5.2.2-ci942.nupkg.sha512",
+    "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}
