@@ -28,4 +28,31 @@ public partial class AuthorizationWindow : Window
             this.DragMove();
         }
     }
+
+    private void CloseButton_Click(object sender, RoutedEventArgs e)
+    {
+        this.Close();
+    }
+
+    private void MinimizedButton_Click(object sender, RoutedEventArgs e)
+    {
+        this.WindowState = WindowState.Minimized;
+    }
+
+    private void ToggleButton_Click(object sender, RoutedEventArgs e)
+    {
+        int minWidth = 1150;
+        int minHeight = 900;
+
+        if (this.WindowState == WindowState.Maximized)
+        {
+            this.WindowState = WindowState.Normal;
+            this.Width = minWidth;
+            this.Height = minHeight;
+        }
+        else
+        {
+            this.WindowState = WindowState.Maximized;
+        }
+    }
 }

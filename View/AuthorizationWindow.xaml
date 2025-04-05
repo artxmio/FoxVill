@@ -14,7 +14,7 @@
         AllowsTransparency="True"
         WindowStyle="None"
         MouseLeftButtonDown="DragModeWindow"
-        
+        MouseDoubleClick="ToggleButton_Click"
         MinHeight="800"
         MinWidth="1150">
 
@@ -22,7 +22,135 @@
         <ImageBrush ImageSource="/Resources/Images/Png/auth_back.png" Stretch="Fill" />
     </Window.Background>
 
-    <Frame x:Name="MainFrame" 
-           NavigationUIVisibility="Hidden"/>
+    <Window.Resources>
+        <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="BaseTextBoxStyle" TargetType="TextBox">
+            <Style.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="15" />
+                </Style>
+            </Style.Resources>
+            <Setter Property="Margin" Value="10 0 10 0"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="FontSize" Value="37"/>
+            <Setter Property="SelectionBrush" Value="White" />
+            <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderBrush" Value="Black" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="BaseButtonStyle" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatDarkButton}">
+            <Setter Property="Width" Value="255" />
+            <Setter Property="Height" Value="62" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="materialDesign:ButtonAssist.CornerRadius" Value="15" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="35" />
+            <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="10">
+
+            <Button x:Name="MinimizedButton"
+                Background="Transparent" 
+                Width="50"
+                Height="50"
+                Padding="0"
+                BorderThickness="0"
+                Click="MinimizedButton_Click">
+
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Image Width="30"
+                       Source="/Resources/Images/Png/minus.png"/>
+            </Button>
+
+            <Button x:Name="ToggleButton"
+                    Background="Transparent" 
+                    Width="50"
+                    Height="50"
+                    Padding="0"
+                    BorderThickness="0"
+                    Click="ToggleButton_Click">
+
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Image Width="27"
+               Source="/Resources/Images/Png/dwindow.png"/>
+            </Button>
+
+            <Button Background="Transparent" 
+                Width="50"
+                Height="50"
+                Padding="0"
+                BorderThickness="0"
+                Click="CloseButton_Click">
+
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Image Width="35"
+               Source="/Resources/Images/Png/x.png"/>
+            </Button>
+        </StackPanel>
+
+        <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+           Text="FoxVill"
+           FontSize="120"
+           HorizontalAlignment="Center"
+           Grid.Column="0"
+           Grid.Row="0"/>
+
+        <Frame x:Name="MainFrame" 
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+    
 
 </Window>

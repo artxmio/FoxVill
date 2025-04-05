@@ -7,11 +7,8 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:vm="clr-namespace:FoxVill.ViewModel"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="AuthPage"
-      d:Background="AliceBlue"
 
-      
       d:DataContext="{d:DesignInstance vm:AuthorizationWindowViewModel}">
 
     <Page.Resources>
@@ -39,6 +36,7 @@
                     <Setter Property="BorderBrush" Value="Black" />
                 </Trigger>
             </Style.Triggers>
+
         </Style>
 
         <Style x:Key="BaseButtonStyle" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatDarkButton}">
@@ -53,30 +51,39 @@
             <Setter Property="FontSize" Value="35" />
             <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat" />
         </Style>
-        
+
     </Page.Resources>
-    
-    <Grid VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <Border VerticalAlignment="Top" 
+            HorizontalAlignment="Center"
+            CornerRadius="15"
+            Background="#f6f6f6">
 
-        <StackPanel Orientation="Horizontal"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top">
+        <Border.Effect>
+            <DropShadowEffect Color="Black"
+                          BlurRadius="15"
+                          ShadowDepth="1"
+                          Opacity="0.4"/>
+        </Border.Effect>
+
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
             <Button x:Name="MinimizedButton"
                 Background="Transparent" 
-                Width="50"
-                Height="50"
+                Width="30"
+                Height="30"
                 Padding="0"
+                Margin="10"
                 BorderThickness="0"
-                Click="MinimizedButton_Click">
+                HorizontalAlignment="Right">
 
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
@@ -89,125 +96,103 @@
                 </Button.Style>
 
                 <Image Width="30"
-                Source="/Resources/Images/Png/minus.png"/>
+                       Source="/Resources/Images/Png/info.png"/>
             </Button>
 
-            <Button x:Name="ToggleButton"
-                Background="Transparent" 
-                Width="50"
-                Height="50"
-                Padding="0"
-                BorderThickness="0"
-                Click="ToggleButton_Click">
-                
-                <Button.Style>
-                    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="Red"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-                
-                <Image Width="27"
-                       Source="/Resources/Images/Png/dwindow.png"/>
-            </Button>
-
-            <Button Background="Transparent" 
-                Width="50"
-                Height="50"
-                Padding="0"
-                BorderThickness="0"
-                Click="CloseButton_Click">
-
-                <Button.Style>
-                    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="Red"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-                
-                <Image Width="35"
-                       Source="/Resources/Images/Png/x.png"/>
-            </Button>
-        </StackPanel>
-
-        <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-               Text="FoxVill"
-               FontSize="120"
-               HorizontalAlignment="Center"
-               Grid.Column="0"
-               Grid.Row="0"/>
-
-        <StackPanel Grid.Row="1"
+            <StackPanel Grid.Row="1"
                 Width="650"
-                Height="650">
+                Height="600">
 
-            <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
                Text="Авторизация"
                HorizontalAlignment="Center"
                FontSize="90"/>
 
-            <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
                Text="Электронная почта:"
                Margin="66 0 0 0"
                FontSize="35"/>
 
-            <TextBox Style="{StaticResource BaseTextBoxStyle}"
-                 Margin="66 0 66 33"/>
+                <TextBox Style="{StaticResource BaseTextBoxStyle}"
+                 Margin="66 0 66 33">
+                    <TextBox.Effect>
+                        <DropShadowEffect Color="Black"
+                          BlurRadius="15"
+                            ShadowDepth="1"
+                            Opacity="0.4" />
+                    </TextBox.Effect>
+                </TextBox>
 
-            <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-               Text="Пароль:"
-               Margin="66 0 0 0"
-               FontSize="35"/>
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                   Text="Пароль:"
+                   Margin="66 0 0 0"
+                   FontSize="35"/>
 
-            <TextBox Style="{StaticResource BaseTextBoxStyle}"
-                 Margin="66 0 66 33"/>
+                <TextBox Style="{StaticResource BaseTextBoxStyle}"
+                 Margin="66 0 66 33">
+                    <TextBox.Effect>
+                        <DropShadowEffect Color="Black"
+                              BlurRadius="15"
+                                ShadowDepth="1"
+                                Opacity="0.4"/>     
+                    </TextBox.Effect>
+                </TextBox>
 
-            <StackPanel Orientation="Horizontal"
+                <StackPanel Orientation="Horizontal"
                     Margin="66 0 0 30">
-                <CheckBox/>
-                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                    <CheckBox/>
+                    <TextBlock Style="{StaticResource BaseTextBlockStyle}"
                        Text="Запомнить меня?"/>
-            </StackPanel>
+                </StackPanel>
 
-            <StackPanel Orientation="Horizontal"
+                <StackPanel Orientation="Horizontal"
                     Margin="66 0 0 33">
-                <Button Style="{StaticResource BaseButtonStyle}"
+                    <Button Style="{StaticResource BaseButtonStyle}"
                     Content="Продолжить"
-                    Margin="0 0 10 0"/>
-                <Button Style="{StaticResource BaseButtonStyle}"
-                    Content="Отмена"/>
-            </StackPanel>
+                    Margin="0 0 10 0">
+                        <Button.Effect>
+                            <DropShadowEffect Color="Black"
+                                  BlurRadius="15"
+                                ShadowDepth="1"
+                                Opacity="0.4" />
+                        </Button.Effect>
+                    </Button>
+                    <Button Style="{StaticResource BaseButtonStyle}"
+                    Content="Отмена">
+                        <Button.Effect>
+                            <DropShadowEffect Color="Black"
+                                  BlurRadius="15"
+                                  ShadowDepth="1"
+                                  Opacity="0.4" />
+                        </Button.Effect>
+                    </Button>
+                </StackPanel>
 
-            <StackPanel Orientation="Horizontal"
+                <StackPanel Orientation="Horizontal"
                     Margin="66 0 0 0">
-                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                    <TextBlock Style="{StaticResource BaseTextBlockStyle}"
                        Text="Нет аккаунта?"
                        Margin="0 0 10 0"/>
 
-                <TextBlock Foreground="Blue" Text="Создайте новый">
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
-                            <Setter Property="TextDecorations" Value="None" />
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="TextDecorations" Value="Underline" />
-                                    <Setter Property="Cursor" Value="Hand" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
+                    <TextBlock Foreground="Blue" Text="Создайте новый">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+                                <Setter Property="TextDecorations" Value="None" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="TextDecorations" Value="Underline" />
+                                        <Setter Property="Cursor" Value="Hand" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
 
-                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                    <TextBlock Style="{StaticResource BaseTextBlockStyle}"
                        Text=":)"/>
-            </StackPanel>
+                </StackPanel>
 
-        </StackPanel>
-    </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
 </Page>
