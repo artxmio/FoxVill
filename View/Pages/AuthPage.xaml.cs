@@ -14,5 +14,10 @@ public partial class AuthPage : Page
         _window = window;
     }
 
-    
+    private void MinimizedButton_Click(object sender, RoutedEventArgs e)
+    {
+        var window = new AboutWindow();
+
+        window.ShowDialog();
+    }
 }

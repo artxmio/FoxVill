@@ -83,8 +83,9 @@
                 Padding="0"
                 Margin="10"
                 BorderThickness="0"
-                HorizontalAlignment="Right">
-
+                HorizontalAlignment="Right"
+                    Click="MinimizedButton_Click">
+                
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
                         <Style.Triggers>
@@ -134,7 +135,7 @@
                         <DropShadowEffect Color="Black"
                               BlurRadius="15"
                                 ShadowDepth="1"
-                                Opacity="0.4"/>     
+                                Opacity="0.4"/>
                     </TextBox.Effect>
                 </TextBox>
 

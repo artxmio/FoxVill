@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoxVill")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f542b1d5bd380762a1b42244934f4affd8ec6c0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04b8fd877cea5c4464947e9ee65a10ade548afd0")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoxVill")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoxVill")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

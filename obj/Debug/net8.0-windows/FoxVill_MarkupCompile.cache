@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\C#\FoxVill\App.xaml
-2-1189106719
+3-221828120
 121490555852
-61335988020
+71539375513
 201-1048574823
-View\AuthorizationWindow.xaml;View\Pages\AuthPage.xaml;
+View\AboutWindow.xaml;View\AuthorizationWindow.xaml;View\Pages\AuthPage.xaml;
 
 False
 
