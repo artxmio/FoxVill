@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\C#\FoxVill\App.xaml
-1-236591066
+2-1189106719
 121490555852
-4-13615411
+61335988020
 201-1048574823
-View\AuthorizationWindow.xaml;
+View\AuthorizationWindow.xaml;View\Pages\AuthPage.xaml;
 
 False
 

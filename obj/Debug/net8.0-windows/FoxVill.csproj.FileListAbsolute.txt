@@ -37,3 +37,6 @@ D:\C#\FoxVill\bin\Debug\net8.0-windows\Resources\Images\Png\minus.png
 D:\C#\FoxVill\bin\Debug\net8.0-windows\Resources\Images\Png\user.png
 D:\C#\FoxVill\bin\Debug\net8.0-windows\Resources\Images\Png\x.png
 D:\C#\FoxVill\bin\Debug\net8.0-windows\Resources\Images\Png\dwindow.png
+D:\C#\FoxVill\obj\Debug\net8.0-windows\View\Pages\AuthPage.g.cs
+D:\C#\FoxVill\obj\Debug\net8.0-windows\View\Pages\AuthPage.baml
+D:\C#\FoxVill\obj\Debug\net8.0-windows\FoxVill.sourcelink.json
