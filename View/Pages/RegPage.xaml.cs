@@ -4,13 +4,14 @@ using System.Windows.Controls;
 
 namespace FoxVill.View.Pages;
 
-public partial class AuthPage : Page
+public partial class RegPage : Page
 {
     private readonly AuthorizationWindow _window;
 
-    public AuthPage(AuthorizationWindow window)
+    public RegPage(AuthorizationWindow window)
     {
         InitializeComponent();
+
         _window = window;
     }
 
@@ -23,6 +24,6 @@ public partial class AuthPage : Page
 
     private void TextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        AnimationManager.NavigateWithAnimation(_window.MainFrame, new RegPage(_window));
+        AnimationManager.NavigateWithAnimation(_window.MainFrame, new AuthPage(_window));
     }
 }

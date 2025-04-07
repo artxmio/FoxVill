@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FoxVill.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="AboutWindow" Height="685" Width="700"
+        Title="AboutWindow" Height="725" Width="725"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         WindowStyle="None"
@@ -32,39 +32,77 @@
             <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat" />
         </Style>
     </Window.Resources>
+    
     <Border Background="#f6f6f6"
             CornerRadius="15"
             BorderThickness="2"
             BorderBrush="Black">
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="10">
-            <TextBlock Text="Добро пожаловать в мир увлекательных приключений и хитрых развлечений —"
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Background="Transparent" 
+                Width="40"
+                Height="40"
+                Padding="0"
+                BorderThickness="0"
+                HorizontalAlignment="Right"
+                Margin="0 10 10 0"
+                Click="CloseButtonClick">      
+
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Image Width="35"
+                       Source="/Resources/Images/Png/x.png"/>
+            </Button>
+
+            <StackPanel Orientation="Vertical" 
+                        Grid.Row="1"
+                        HorizontalAlignment="Center" 
+                        Margin="10">
+                <TextBlock Text="Добро пожаловать в мир увлекательных приключений и хитрых развлечений —"
                    FontWeight="Bold"
                    FontSize="24"
                    TextAlignment="Center"
                        Style="{StaticResource BaseTextBlockStyle}"/>
-            <TextBlock Text="FoxVill, где лисы правят балом! 🦊✨"
+                <TextBlock Text="FoxVill, где лисы правят балом! 🦊✨"
                    Style="{StaticResource BaseTextBlockStyle}"
                    FontWeight="Bold"
                    FontSize="28"
                    TextAlignment="Center"
                    Margin="0,10,0,20" />
-            <TextBlock TextWrapping="Wrap" TextAlignment="Center" Style="{StaticResource BaseTextBlockStyle}">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Style="{StaticResource BaseTextBlockStyle}">
             <Run Text="FoxVill — это парк, в котором каждая деталь пропитана изяществом и ловкостью этих загадочных созданий. Представьте себе густые леса, сверкающие тропинки и сказочные уголки, где каждая лисья лапка оставила свой след! Здесь вы найдете аттракционы, будто созданные для настоящих охотников за впечатлениями — от головокружительных каруселей до захватывающих катаний на “Лисьем следе”." />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BaseTextBlockStyle}" TextWrapping="Wrap" TextAlignment="Center" Margin="0,10,0,10">
+                </TextBlock>
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}" TextWrapping="Wrap" TextAlignment="Center" Margin="0,10,0,10">
             <Run Text="А как насчёт “Танца хитрой лисы” — аттракциона, где вас закружат, словно в вихре лесных тайн? Или зоны отдыха “Лисья нора”, где можно уютно расположиться в деревянных домиках, словно в настоящем лисьем убежище?" />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BaseTextBlockStyle}" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold"  Margin="0,20,0,10">
+                </TextBlock>
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold"  Margin="0,20,0,10">
             <Run Text="Каждая тропинка парка словно шепчет: “Приключения ждут!” FoxVill — это не просто место, это целая лисья история, в которую можно окунуться всей душой." />
-            </TextBlock>
-            <TextBlock Style="{StaticResource BaseTextBlockStyle}" FontSize="20" FontWeight="Bold" TextAlignment="Center">
+                </TextBlock>
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}" FontSize="20" FontWeight="Bold" TextAlignment="Center">
             <Run Text="Готовы испытать хитрость и грацию настоящей лисы? Добро пожаловать в FoxVill! 🦊🎢✨" />
-            </TextBlock>
+                </TextBlock>
 
-            <Button Content="Поехали!" 
+                <Button Content="Поехали!" 
                     Style="{StaticResource BaseButtonStyle}"
-                    Margin="0 10 0 0"
-                    Click="Button_Click"/>
-        </StackPanel>
+                    Margin="0 30 0 0"
+                    Click="CloseButtonClick"/>
+            </StackPanel>
+        </Grid>
+
+
     </Border>
 </Window>

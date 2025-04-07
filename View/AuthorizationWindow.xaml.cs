@@ -1,4 +1,5 @@
-﻿using FoxVill.View.Pages;
+﻿using FoxVill.View.Animation;
+using FoxVill.View.Pages;
 using FoxVill.ViewModel;
 using System.Windows;
 using System.Windows.Input;
@@ -31,7 +32,7 @@ public partial class AuthorizationWindow : Window
 
     private void CloseButton_Click(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        AnimationManager.CloseMainWindow(this);
     }
 
     private void MinimizedButton_Click(object sender, RoutedEventArgs e)

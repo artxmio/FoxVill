@@ -42,3 +42,5 @@ D:\C#\FoxVill\obj\Debug\net8.0-windows\View\Pages\AuthPage.baml
 D:\C#\FoxVill\obj\Debug\net8.0-windows\FoxVill.sourcelink.json
 D:\C#\FoxVill\obj\Debug\net8.0-windows\View\AboutWindow.g.cs
 D:\C#\FoxVill\obj\Debug\net8.0-windows\View\AboutWindow.baml
+D:\C#\FoxVill\obj\Debug\net8.0-windows\View\Pages\RegPage.g.cs
+D:\C#\FoxVill\obj\Debug\net8.0-windows\View\Pages\RegPage.baml

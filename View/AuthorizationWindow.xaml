@@ -150,7 +150,7 @@
         <Frame x:Name="MainFrame" 
                Grid.Row="1"
                NavigationUIVisibility="Hidden"/>
+
     </Grid>
     
-
 </Window>

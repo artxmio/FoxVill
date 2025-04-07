@@ -1,4 +1,4 @@
-﻿<Page x:Class="FoxVill.View.Pages.AuthPage"
+﻿<Page x:Class="FoxVill.View.Pages.RegPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,8 +7,8 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:vm="clr-namespace:FoxVill.ViewModel"
       mc:Ignorable="d" 
-      Title="AuthPage"
-
+      Title="RegPage"
+      
       d:DataContext="{d:DesignInstance vm:AuthorizationWindowViewModel}">
 
     <Page.Resources>
@@ -52,70 +52,21 @@
             <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat" />
         </Style>
 
-        <Style x:Key="BaseCheckBoxStyle" TargetType="CheckBox">
-            <Setter Property="FontFamily" Value="Segoe UI" />
-            <Setter Property="FontSize" Value="20" />
-            <!-- Размер текста -->
-            <Setter Property="MinWidth" Value="20" />
-            <!-- Минимальная ширина -->
-            <Setter Property="MinHeight" Value="20" />
-            <!-- Минимальная высота -->
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="CheckBox">
-                        <StackPanel Orientation="Horizontal">
-                            <!-- Настройка поля флажка -->
-                            <Border x:Name="CheckMarkBorder"
-                            Width="20" Height="20"
-                                Background="White"
-                            BorderBrush="Black"
-                            BorderThickness="2"
-                            CornerRadius="5"
-                            Margin="5,0,5,0">
-                                <Grid>
-                                    <!-- Галочка -->
-                                    <Path x:Name="CheckMark"
-                                  Data="M 2,8 L 6,12 L 12,2"
-                                  Stroke="Black" 
-                                  StrokeThickness="2"
-                                  Visibility="Collapsed"/>
-                                </Grid>
-                            </Border>
-                            <!-- Текст рядом с CheckBox -->
-                            <ContentPresenter VerticalAlignment="Center" />
-                        </StackPanel>
-                        <ControlTemplate.Triggers>
-                            <!-- Состояние "IsChecked" -->
-                            <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="CheckMark" Property="Visibility" Value="Visible" />
-                                <Setter TargetName="CheckMarkBorder" Property="Background" Value="LightGreen" />
-                            </Trigger>
-                            <!-- Наведение мышью -->
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="CheckMarkBorder" Property="BorderBrush" Value="Blue" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-
     </Page.Resources>
 
     <Border VerticalAlignment="Top" 
-            HorizontalAlignment="Center"
-            CornerRadius="15"
-            Background="#f6f6f6">
+        HorizontalAlignment="Center"
+        CornerRadius="15"
+        Background="#f6f6f6">
 
         <Border.Effect>
             <DropShadowEffect Color="Black"
-                          BlurRadius="15"
-                          ShadowDepth="1"
-                          Opacity="0.4"/>
+                      BlurRadius="15"
+                      ShadowDepth="1"
+                      Opacity="0.4"/>
         </Border.Effect>
 
-        <Grid >
+        <Grid Height="700" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -134,7 +85,7 @@
                 BorderThickness="0"
                 HorizontalAlignment="Right"
                 Click="AboutClick">
-                
+
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
                         <Style.Triggers>
@@ -146,85 +97,93 @@
                 </Button.Style>
 
                 <Image Width="30"
-                       Source="/Resources/Images/Png/info.png"/>
+                   Source="/Resources/Images/Png/info.png"/>
             </Button>
 
             <StackPanel Grid.Row="1"
-                Width="650"
-                Height="600">
+            Width="650"
+            Height="650">
 
                 <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-               Text="Авторизация"
-               HorizontalAlignment="Center"
-               FontSize="90"/>
+           Text="Регистрация"
+           HorizontalAlignment="Center"
+           FontSize="90"/>
 
                 <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-               Text="Электронная почта:"
+           Text="Электронная почта:"
+           Margin="66 0 0 0"
+           FontSize="35"/>
+
+                <TextBox Style="{StaticResource BaseTextBoxStyle}"
+             Margin="66 0 66 33">
+                    <TextBox.Effect>
+                        <DropShadowEffect Color="Black"
+                      BlurRadius="15"
+                        ShadowDepth="1"
+                        Opacity="0.4" />
+                    </TextBox.Effect>
+                </TextBox>
+
+                <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+               Text="Пароль:"
                Margin="66 0 0 0"
                FontSize="35"/>
 
                 <TextBox Style="{StaticResource BaseTextBoxStyle}"
-                 Margin="66 0 66 33">
+             Margin="66 0 66 33">
                     <TextBox.Effect>
                         <DropShadowEffect Color="Black"
                           BlurRadius="15"
                             ShadowDepth="1"
-                            Opacity="0.4" />
+                            Opacity="0.4"/>
                     </TextBox.Effect>
                 </TextBox>
 
                 <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-                   Text="Пароль:"
-                   Margin="66 0 0 0"
-                   FontSize="35"/>
+                      Text="Повторите пароль:"
+                      Margin="66 0 0 0"
+                      FontSize="35"/>
 
                 <TextBox Style="{StaticResource BaseTextBoxStyle}"
-                 Margin="66 0 66 33">
+                         Margin="66 0 66 33">
                     <TextBox.Effect>
                         <DropShadowEffect Color="Black"
-                              BlurRadius="15"
-                                ShadowDepth="1"
-                                Opacity="0.4"/>
+                         BlurRadius="15"
+                           ShadowDepth="1"
+                           Opacity="0.4"/>
                     </TextBox.Effect>
                 </TextBox>
 
                 <StackPanel Orientation="Horizontal"
-                    Margin="66 0 0 30">
-                    <CheckBox Style="{StaticResource BaseCheckBoxStyle}"/>
-                    <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-                       Text="Запомнить меня?"/>
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal"
-                    Margin="66 0 0 33">
+                Margin="66 0 0 33">
                     <Button Style="{StaticResource BaseButtonStyle}"
-                    Content="Продолжить"
-                    Margin="0 0 10 0">
+                Content="Продолжить"
+                Margin="0 0 10 0">
                         <Button.Effect>
                             <DropShadowEffect Color="Black"
-                                  BlurRadius="15"
-                                ShadowDepth="1"
-                                Opacity="0.4" />
+                              BlurRadius="15"
+                            ShadowDepth="1"
+                            Opacity="0.4" />
                         </Button.Effect>
                     </Button>
                     <Button Style="{StaticResource BaseButtonStyle}"
-                    Content="Отмена">
+                Content="Отмена">
                         <Button.Effect>
                             <DropShadowEffect Color="Black"
-                                  BlurRadius="15"
-                                  ShadowDepth="1"
-                                  Opacity="0.4" />
+                              BlurRadius="15"
+                              ShadowDepth="1"
+                              Opacity="0.4" />
                         </Button.Effect>
                     </Button>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal"
-                    Margin="66 0 0 0">
+                Margin="66 0 0 0">
                     <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-                       Text="Нет аккаунта?"
-                       Margin="0 0 10 0"/>
+                   Text="Уже есть аккаунт?"
+                   Margin="0 0 10 0"/>
 
-                    <TextBlock Foreground="Blue" Text="Создайте новый" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown">
+                    <TextBlock Foreground="Blue" Text="Быстрее заходи" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
                                 <Setter Property="TextDecorations" Value="None" />
@@ -239,7 +198,7 @@
                     </TextBlock>
 
                     <TextBlock Style="{StaticResource BaseTextBlockStyle}"
-                       Text=":)"/>
+                   Text=":)"/>
                 </StackPanel>
 
             </StackPanel>

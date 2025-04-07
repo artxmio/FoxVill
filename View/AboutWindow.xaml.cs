@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using FoxVill.View.Animation;
+using System.Windows;
 
 namespace FoxVill.View;
 
@@ -9,8 +10,8 @@ public partial class AboutWindow : Window
         InitializeComponent();
     }
 
-    private void Button_Click(object sender, RoutedEventArgs e)
+    private void CloseButtonClick(object sender, RoutedEventArgs e)
     {
-        this.Close();
+        AnimationManager.CloseWithFade(this);
     }
 }
