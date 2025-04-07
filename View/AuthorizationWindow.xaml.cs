@@ -2,6 +2,7 @@
 using FoxVill.View.Pages;
 using FoxVill.ViewModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace FoxVill.View;
@@ -42,8 +43,16 @@ public partial class AuthorizationWindow : Window
 
     private void ToggleButton_Click(object sender, RoutedEventArgs e)
     {
-        int minWidth = 1150;
-        int minHeight = 900;
+        if (Mouse.DirectlyOver is TextBox||
+            Mouse.DirectlyOver is TextBlock ||
+             Mouse.DirectlyOver is CheckBox
+            || Mouse.DirectlyOver is Button)
+        {
+            return;
+        }
+
+        const int minWidth = 1150;
+        const int minHeight = 900;
 
         if (this.WindowState == WindowState.Maximized)
         {

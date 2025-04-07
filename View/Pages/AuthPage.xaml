@@ -6,6 +6,8 @@
       xmlns:local="clr-namespace:FoxVill.View.Pages"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:vm="clr-namespace:FoxVill.ViewModel"
+      xmlns:validations="clr-namespace:FoxVill.Validation"
+      xmlns:controls="clr-namespace:FoxVill.View.Controls"
       mc:Ignorable="d" 
       Title="AuthPage"
 
@@ -30,8 +32,27 @@
             <Setter Property="SelectionBrush" Value="White" />
             <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
             <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Validation.ErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <Border BorderBrush="Red" BorderThickness="1" CornerRadius="15">
+                                <AdornedElementPlaceholder />
+                            </Border>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
 
             <Style.Triggers>
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderBrush" Value="Black" />
+                </Trigger>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+                    <Setter Property="BorderBrush" Value="Red" />
+                    <Setter Property="Foreground" Value="Red" />
+                </Trigger>
                 <Trigger Property="IsKeyboardFocusWithin" Value="True">
                     <Setter Property="BorderBrush" Value="Black" />
                 </Trigger>
@@ -55,16 +76,12 @@
         <Style x:Key="BaseCheckBoxStyle" TargetType="CheckBox">
             <Setter Property="FontFamily" Value="Segoe UI" />
             <Setter Property="FontSize" Value="20" />
-            <!-- Размер текста -->
             <Setter Property="MinWidth" Value="20" />
-            <!-- Минимальная ширина -->
             <Setter Property="MinHeight" Value="20" />
-            <!-- Минимальная высота -->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="CheckBox">
                         <StackPanel Orientation="Horizontal">
-                            <!-- Настройка поля флажка -->
                             <Border x:Name="CheckMarkBorder"
                             Width="20" Height="20"
                                 Background="White"
@@ -73,7 +90,6 @@
                             CornerRadius="5"
                             Margin="5,0,5,0">
                                 <Grid>
-                                    <!-- Галочка -->
                                     <Path x:Name="CheckMark"
                                   Data="M 2,8 L 6,12 L 12,2"
                                   Stroke="Black" 
@@ -81,16 +97,13 @@
                                   Visibility="Collapsed"/>
                                 </Grid>
                             </Border>
-                            <!-- Текст рядом с CheckBox -->
                             <ContentPresenter VerticalAlignment="Center" />
                         </StackPanel>
                         <ControlTemplate.Triggers>
-                            <!-- Состояние "IsChecked" -->
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter TargetName="CheckMark" Property="Visibility" Value="Visible" />
                                 <Setter TargetName="CheckMarkBorder" Property="Background" Value="LightGreen" />
                             </Trigger>
-                            <!-- Наведение мышью -->
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="CheckMarkBorder" Property="BorderBrush" Value="Blue" />
                             </Trigger>
@@ -171,6 +184,13 @@
                             ShadowDepth="1"
                             Opacity="0.4" />
                     </TextBox.Effect>
+                    <TextBox.Text>
+                        <Binding Path="AuthUser.Email" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
+                            <Binding.ValidationRules>
+                                <validations:EmailValidationRule/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
                 </TextBox>
 
                 <TextBlock Style="{StaticResource BaseTextBlockStyle}"
@@ -178,15 +198,65 @@
                    Margin="66 0 0 0"
                    FontSize="35"/>
 
-                <TextBox Style="{StaticResource BaseTextBoxStyle}"
-                 Margin="66 0 66 33">
-                    <TextBox.Effect>
-                        <DropShadowEffect Color="Black"
-                              BlurRadius="15"
-                                ShadowDepth="1"
-                                Opacity="0.4"/>
-                    </TextBox.Effect>
-                </TextBox>
+                <StackPanel Orientation="Horizontal" 
+            Margin="56 0 56 23">
+                    <controls:TextPasswordBox x:Name="mainRegistrationBox"
+              Style="{StaticResource BaseTextBoxStyle}"
+              Width="470"
+              Margin="10 10 10 10"
+              Text="{Binding RegUser.Password, Mode=OneWay}">
+                        <controls:TextPasswordBox.Effect>
+                            <DropShadowEffect Color="Black"
+               BlurRadius="15"
+               ShadowDepth="1"
+               Opacity="0.4"/>
+                        </controls:TextPasswordBox.Effect>
+
+                        <controls:TextPasswordBox.Password>
+                            <Binding Path="RegUser.Password" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
+                                <Binding.ValidationRules>
+                                    <validations:PasswordValidationRule />
+                                </Binding.ValidationRules>
+                            </Binding>
+                        </controls:TextPasswordBox.Password>
+                    </controls:TextPasswordBox>
+
+                    <Button 
+                            Width="40"
+                            Height="40"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Cursor="Hand"
+                            Tag="0"
+                            Click="ChangeMainPasswordVisible">
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            </ControlTemplate>
+                        </Button.Template>
+
+                        <Button.Content>
+                            <Image Width="35" Height="35">
+                                <Image.Style>
+                                    <Style TargetType="Image">
+                                        <Setter Property="Source" Value="/Resources/Images/Png/open_eye.png"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource AncestorType=Button}}" Value="1">
+                                                <Setter Property="Source" Value="/Resources/Images/Png/close_eye.png" />
+                                            </DataTrigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Opacity" Value="0.7"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
 
                 <StackPanel Orientation="Horizontal"
                     Margin="66 0 0 30">

@@ -44,3 +44,6 @@ D:\C#\FoxVill\obj\Debug\net8.0-windows\View\AboutWindow.g.cs
 D:\C#\FoxVill\obj\Debug\net8.0-windows\View\AboutWindow.baml
 D:\C#\FoxVill\obj\Debug\net8.0-windows\View\Pages\RegPage.g.cs
 D:\C#\FoxVill\obj\Debug\net8.0-windows\View\Pages\RegPage.baml
+D:\C#\FoxVill\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\C#\FoxVill\bin\Debug\net8.0-windows\Resources\Images\Png\close_eye.png
+D:\C#\FoxVill\bin\Debug\net8.0-windows\Resources\Images\Png\open_eye.png

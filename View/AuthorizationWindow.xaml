@@ -149,7 +149,9 @@
 
         <Frame x:Name="MainFrame" 
                Grid.Row="1"
-               NavigationUIVisibility="Hidden"/>
+               NavigationUIVisibility="Hidden"
+               Width="Auto"
+               Height="Auto"/>
 
     </Grid>
     

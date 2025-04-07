@@ -13,6 +13,8 @@ public partial class RegPage : Page
         InitializeComponent();
 
         _window = window;
+
+        DataContext = _window.DataContext;
     }
 
     private void AboutClick(object sender, RoutedEventArgs e)
@@ -25,5 +27,25 @@ public partial class RegPage : Page
     private void TextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         AnimationManager.NavigateWithAnimation(_window.MainFrame, new AuthPage(_window));
+    }
+
+    private void ChangeRepeatPasswordVisible(object sender, RoutedEventArgs e)
+    {
+        repeatRegistrationBox.IsPasswordVisible = !repeatRegistrationBox.IsPasswordVisible;
+
+        if (sender is Button button)
+        {
+            button.Tag = button.Tag?.ToString() == "0" ? "1" : "0";
+        }
+    }   
+    
+    private void ChangeMainPasswordVisible(object sender, RoutedEventArgs e)
+    {
+        mainRegistrationBox.IsPasswordVisible = !mainRegistrationBox.IsPasswordVisible;
+
+        if (sender is Button button)
+        {
+            button.Tag = button.Tag?.ToString() == "0" ? "1" : "0";
+        }
     }
 }

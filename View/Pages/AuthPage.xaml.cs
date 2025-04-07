@@ -12,6 +12,8 @@ public partial class AuthPage : Page
     {
         InitializeComponent();
         _window = window;
+
+        DataContext = _window.DataContext;
     }
 
     private void AboutClick(object sender, RoutedEventArgs e)
@@ -24,5 +26,15 @@ public partial class AuthPage : Page
     private void TextBlock_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
         AnimationManager.NavigateWithAnimation(_window.MainFrame, new RegPage(_window));
+    }
+
+    private void ChangeMainPasswordVisible(object sender, RoutedEventArgs e)
+    {
+        mainRegistrationBox.IsPasswordVisible = !mainRegistrationBox.IsPasswordVisible;
+
+        if (sender is Button button)
+        {
+            button.Tag = button.Tag?.ToString() == "0" ? "1" : "0";
+        }
     }
 }

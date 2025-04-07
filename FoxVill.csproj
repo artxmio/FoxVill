@@ -15,11 +15,13 @@
     <None Remove="Resources\Images\Png\bag.png" />
     <None Remove="Resources\Images\Png\bank.png" />
     <None Remove="Resources\Images\Png\cart.png" />
+    <None Remove="Resources\Images\Png\close_eye.png" />
     <None Remove="Resources\Images\Png\data.png" />
     <None Remove="Resources\Images\Png\dwindow.png" />
     <None Remove="Resources\Images\Png\heart.png" />
     <None Remove="Resources\Images\Png\info.png" />
     <None Remove="Resources\Images\Png\minus.png" />
+    <None Remove="Resources\Images\Png\open_eye.png" />
     <None Remove="Resources\Images\Png\user.png" />
     <None Remove="Resources\Images\Png\x.png" />
   </ItemGroup>
@@ -40,6 +42,9 @@
     <Content Include="Resources\Images\Png\cart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Png\close_eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Png\data.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -55,6 +60,9 @@
     <Content Include="Resources\Images\Png\minus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Png\open_eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Png\user.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -64,7 +72,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
   <ItemGroup>
