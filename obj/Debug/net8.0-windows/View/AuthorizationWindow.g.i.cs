@@ -80,7 +80,7 @@ namespace FoxVill.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FoxVill;component/view/authorizationwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FoxVill;V1.0.0.0;component/view/authorizationwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\AuthorizationWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
