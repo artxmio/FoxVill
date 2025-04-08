@@ -90,7 +90,7 @@
                             Opacity="0.4" />
                     </TextBox.Effect>
                     <TextBox.Text>
-                        <Binding Path="AuthUser.Email" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
+                        <Binding Path="AuthorizationEmail" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
                             <Binding.ValidationRules>
                                 <validations:EmailValidationRule/>
                             </Binding.ValidationRules>
@@ -104,21 +104,21 @@
                    FontSize="35"/>
 
                 <StackPanel Orientation="Horizontal" 
-            Margin="56 0 56 23">
+                            Margin="56 0 56 23">
                     <controls:TextPasswordBox x:Name="mainRegistrationBox"
-              Style="{StaticResource BaseTextBoxStyle}"
-              Width="470"
-              Margin="10 10 10 10"
-              Text="{Binding RegUser.Password, Mode=OneWay}">
+                          Style="{StaticResource BaseTextBoxStyle}"
+                          Width="470"
+                          Margin="10 10 10 10"
+                          Text="{Binding AuthorizationPassword, Mode=OneWay}">
                         <controls:TextPasswordBox.Effect>
                             <DropShadowEffect Color="Black"
-               BlurRadius="15"
-               ShadowDepth="1"
-               Opacity="0.4"/>
+                               BlurRadius="15"
+                               ShadowDepth="1"
+                               Opacity="0.4"/>
                         </controls:TextPasswordBox.Effect>
 
                         <controls:TextPasswordBox.Password>
-                            <Binding Path="RegUser.Password" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
+                            <Binding Path="AuthorizationPassword" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
                                 <Binding.ValidationRules>
                                     <validations:PasswordValidationRule />
                                 </Binding.ValidationRules>
@@ -165,16 +165,17 @@
 
                 <StackPanel Orientation="Horizontal"
                     Margin="66 0 0 30">
-                    <CheckBox Style="{StaticResource BaseCheckBoxStyle}"/>
+                    <CheckBox Style="{StaticResource BaseCheckBoxStyle}" IsChecked="{Binding AuthorizationIsRememberMe}"/>
                     <TextBlock Style="{StaticResource BaseTextBlockStyle}"
                        Text="Запомнить меня?"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal"
-                    Margin="66 0 0 33">
+                    Margin="66 0 0 3">
                     <Button Style="{StaticResource BaseButtonStyle}"
-                    Content="Продолжить"
-                    Margin="0 0 10 0">
+                            Content="Продолжить"
+                            Margin="0 0 10 0"
+                            Command="{Binding AuthorizationCommand}">
                         <Button.Effect>
                             <DropShadowEffect Color="Black"
                                   BlurRadius="15"
@@ -193,6 +194,13 @@
                     </Button>
                 </StackPanel>
 
+                <TextBlock Text="{Binding ErrorAuthorizationMessage}" 
+                           Style="{StaticResource BaseTextBlockStyle}"
+                           FontSize="16"
+                           Foreground="Red"
+                           Height="20" 
+                           Width="500"/>
+                
                 <StackPanel Orientation="Horizontal"
                     Margin="66 0 0 0">
                     <TextBlock Style="{StaticResource BaseTextBlockStyle}"

@@ -91,7 +91,7 @@
                     </TextBox.Effect>
 
                     <TextBox.Text>
-                        <Binding Path="RegUser.Email" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
+                        <Binding Path="RegistrationEmail" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
                             <Binding.ValidationRules>
                                 <validations:EmailValidationRule/>
                             </Binding.ValidationRules>
@@ -111,7 +111,7 @@
                               Style="{StaticResource BaseTextBoxStyle}"
                               Width="470"
                               Margin="10 10 10 10"
-                              Text="{Binding RegUser.Password, Mode=OneWay}">
+                              Text="{Binding RegistrationPassword, Mode=OneWay}">
                         <controls:TextPasswordBox.Effect>
                             <DropShadowEffect Color="Black"
                                BlurRadius="15"
@@ -120,7 +120,7 @@
                         </controls:TextPasswordBox.Effect>
 
                         <controls:TextPasswordBox.Password>
-                            <Binding Path="RegUser.Password" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
+                            <Binding Path="RegistrationPassword" UpdateSourceTrigger="PropertyChanged" NotifyOnTargetUpdated="True">
                                 <Binding.ValidationRules>
                                     <validations:PasswordValidationRule />
                                 </Binding.ValidationRules>

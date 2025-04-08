@@ -1,9 +1,11 @@
 ﻿using FoxVill.AutorizaitionServices;
 using FoxVill.Command;
-using FoxVill.DataBase;
 using FoxVill.Model;
+using Newtonsoft.Json;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;
@@ -14,8 +16,19 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
     private User _regUser = new();
 
     private string _errorRegistrionMessage = string.Empty;
+    private string _errorAuthorizationMessage = string.Empty;
     private string _repeatedPassword = string.Empty;
+    private bool _authorizationIsRememberMe;
 
+    public string ErrorAuthorizationMessage
+    {
+        get => _errorAuthorizationMessage;
+        set
+        {
+            _errorAuthorizationMessage = value;
+            OnPropertyChanged();
+        }
+    }
     public string ErrorRegistrionMessage
     {
         get => _errorRegistrionMessage;
@@ -26,22 +39,32 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
         }
     }
 
-    public User AuthUser
+    public string AuthorizationEmail
     {
-        get => _authUser;
-
+        get=> _authUser.Email;
         set
         {
-            _authUser = value;
+            _authUser.Email = value;
             OnPropertyChanged();
+            OnPropertyChanged(nameof(ErrorAuthorizationMessage));
         }
     }
-    public User RegUser
+    public string AuthorizationPassword
     {
-        get => _regUser;
+        get => _authUser.Password;
         set
         {
-            _regUser = value;
+            _authUser.Password = value;
+            OnPropertyChanged();
+            OnPropertyChanged(nameof(ErrorAuthorizationMessage));
+        }
+    }
+    public bool AuthorizationIsRememberMe
+    {
+        get => _authorizationIsRememberMe;
+        set
+        {
+            _authorizationIsRememberMe = value;
             OnPropertyChanged();
         }
     }
@@ -77,16 +100,18 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
         }
     }
 
+    public ICommand AuthorizationCommand { get; }
     public ICommand RegistrationCommand { get; }
 
     public AuthorizationWindowViewModel()
     {
         RegistrationCommand = new RelayCommand(async p => await RegistrateNewUser());
+        AuthorizationCommand = new RelayCommand(async p => await AuthorizateUser());
     }
 
     private async Task RegistrateNewUser()
     {
-        if (string.IsNullOrEmpty(RegUser.Email) && string.IsNullOrEmpty(RegUser.Password))
+        if (string.IsNullOrEmpty(_regUser.Email) && string.IsNullOrEmpty(_regUser.Password) && string.IsNullOrEmpty(RepeatedPassword))
         {
             ErrorRegistrionMessage = "Заполните все поля!";
             return;
@@ -98,7 +123,58 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
             return;
         }
 
-        await RegistrationService.AddUserToDatabase(RegUser);
+        var isSucces = await RegistrationService.AddUserToDatabase(_regUser);
+
+        if (isSucces)
+        {
+            MessageBox.Show("Регистрация прошла успешна!", "Внимание!");
+        }
+        else
+        {
+            MessageBox.Show("Такой пользователь уже существует,\nлибо произошла какая-то ошибка!", "Внимание!");
+        }
+    }
+
+    private async Task AuthorizateUser()
+    {
+        if (string.IsNullOrEmpty(_authUser.Email) && string.IsNullOrEmpty(_authUser.Password))
+        {
+            ErrorAuthorizationMessage = "Заполните все поля!";
+            return;
+        }
+
+        var isSuccess = await AuthorizationService.AutorizateUser(_authUser);
+
+        if (isSuccess)
+        {
+            if (AuthorizationIsRememberMe)
+            {
+                SaveUserData(_authUser);
+            }
+
+            /// Переход к основному окну
+            MessageBox.Show("Успех");
+        }
+        else
+        {
+            MessageBox.Show("Неуспех");
+        }
+    }
+
+    private static void SaveUserData(User user)
+    {
+        try
+        {
+            var applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
+
+            var json = JsonConvert.SerializeObject(user);
+
+            File.WriteAllText(applicationFolder + @"\data.json", json);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Произошла неожиданная ошибка: " + ex.Message, "Внимание");
+        }
     }
 
     public event PropertyChangedEventHandler? PropertyChanged;
