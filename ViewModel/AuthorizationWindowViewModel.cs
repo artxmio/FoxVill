@@ -1,6 +1,7 @@
 ﻿using FoxVill.AutorizaitionServices;
 using FoxVill.Command;
 using FoxVill.Model;
+using FoxVill.View;
 using Newtonsoft.Json;
 using System.ComponentModel;
 using System.IO;
@@ -127,11 +128,11 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
 
         if (isSucces)
         {
-            MessageBox.Show("Регистрация прошла успешна!", "Внимание!");
+            new MessageWindow("Регистрация прошла успешна!").ShowDialog();
         }
         else
         {
-            MessageBox.Show("Такой пользователь уже существует,\nлибо произошла какая-то ошибка!", "Внимание!");
+            new MessageWindow("Такой пользователь уже существует,\nлибо произошла какая-то ошибка!").ShowDialog();
         }
     }
 
@@ -157,7 +158,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
         }
         else
         {
-            MessageBox.Show("Неуспех");
+            ErrorAuthorizationMessage = "Такого пользователя не существует.";
         }
     }
 

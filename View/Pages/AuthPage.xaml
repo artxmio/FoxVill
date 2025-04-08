@@ -197,6 +197,7 @@
                 <TextBlock Text="{Binding ErrorAuthorizationMessage}" 
                            Style="{StaticResource BaseTextBlockStyle}"
                            FontSize="16"
+                           TextWrapping="Wrap"
                            Foreground="Red"
                            Height="20" 
                            Width="500"/>
