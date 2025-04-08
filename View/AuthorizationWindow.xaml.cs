@@ -19,7 +19,7 @@ public partial class AuthorizationWindow : Window
 
         this.DataContext = _viewModel;
 
-        var authPage = new AuthPage(this);
+        var authPage = new DefaultPage(this);
         MainFrame.Navigate(authPage);
     }
 

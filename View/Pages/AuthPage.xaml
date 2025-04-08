@@ -147,7 +147,7 @@
                 BorderThickness="0"
                 HorizontalAlignment="Right"
                 Click="AboutClick">
-                
+
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
                         <Style.Triggers>
@@ -278,7 +278,7 @@
                         </Button.Effect>
                     </Button>
                     <Button Style="{StaticResource BaseButtonStyle}"
-                    Content="Отмена">
+                    Content="Отмена" Click="ClosePage">
                         <Button.Effect>
                             <DropShadowEffect Color="Black"
                                   BlurRadius="15"

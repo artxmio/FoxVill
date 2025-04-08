@@ -48,4 +48,11 @@ public partial class RegPage : Page
             button.Tag = button.Tag?.ToString() == "0" ? "1" : "0";
         }
     }
+
+    private void ClosePage(object sender, RoutedEventArgs e)
+    {
+        var defaultPage = new DefaultPage(_window);
+
+        AnimationManager.NavigateWithAnimation(_window.MainFrame, defaultPage);
+    }
 }
