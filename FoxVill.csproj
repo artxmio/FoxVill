@@ -28,6 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Resources\Styles\BaseStyles.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="database.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -99,6 +103,7 @@
     <Resource Include="Resources\Fonts\Caveat.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Styles\BaseStyles.xaml" />
   </ItemGroup>
 
 </Project>

@@ -13,26 +13,13 @@
         Background="Transparent">
 
     <Window.Resources>
-        <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
-            <Setter Property="FontSize" Value="25"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-        </Style>
-
-        <Style x:Key="BaseButtonStyle" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatDarkButton}">
-            <Setter Property="Width" Value="255" />
-            <Setter Property="Height" Value="62" />
-            <Setter Property="Background" Value="White" />
-            <Setter Property="Foreground" Value="Black" />
-            <Setter Property="BorderBrush" Value="Black" />
-            <Setter Property="BorderThickness" Value="2" />
-            <Setter Property="materialDesign:ButtonAssist.CornerRadius" Value="15" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="FontSize" Value="35" />
-            <Setter Property="FontFamily" Value="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat" />
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles/BaseStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
-    
+
     <Border Background="#f6f6f6"
             CornerRadius="15"
             BorderThickness="2"

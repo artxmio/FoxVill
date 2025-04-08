@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\C#\\FoxVill\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\regpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\regpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\aboutwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\aboutwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\regpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\regpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\authorizationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\authorizationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\defaultpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\defaultpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\authpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\authpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\authorizationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\authorizationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\authpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\authpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,46 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 316,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DefaultPage.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\DefaultPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pages\\DefaultPage.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\DefaultPage.xaml.cs",
-              "RelativeToolTip": "View\\Pages\\DefaultPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:38:00.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegPage.xaml",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\RegPage.xaml",
-              "RelativeDocumentMoniker": "View\\Pages\\RegPage.xaml",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\RegPage.xaml",
-              "RelativeToolTip": "View\\Pages\\RegPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-08T08:37:27.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegPage.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\RegPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pages\\RegPage.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\RegPage.xaml.cs",
-              "RelativeToolTip": "View\\Pages\\RegPage.xaml.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:37:22.464Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
@@ -88,40 +38,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthPage.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\AuthPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pages\\AuthPage.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\AuthPage.xaml.cs",
-              "RelativeToolTip": "View\\Pages\\AuthPage.xaml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:33:44.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthorizationWindow.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\AuthorizationWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\AuthorizationWindow.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\AuthorizationWindow.xaml.cs",
-              "RelativeToolTip": "View\\AuthorizationWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAhwBUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T08:21:25.799Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthPage.xaml",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\AuthPage.xaml",
-              "RelativeDocumentMoniker": "View\\Pages\\AuthPage.xaml",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\AuthPage.xaml",
-              "RelativeToolTip": "View\\Pages\\AuthPage.xaml",
+              "DocumentIndex": 0,
+              "Title": "AboutWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\AboutWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AboutWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\AboutWindow.xaml",
+              "RelativeToolTip": "View\\AboutWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-08T08:10:04.738Z",
+              "WhenOpened": "2025-04-08T09:06:57.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthorizationWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\AuthorizationWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AuthorizationWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\AuthorizationWindow.xaml*",
+              "RelativeToolTip": "View\\AuthorizationWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-08T09:06:41.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-08T08:54:58.187Z",
               "EditorCaption": ""
             }
           ]
