@@ -285,10 +285,11 @@
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal"
-                            Margin="66 0 0 23">
+                            Margin="66 0 0 3">
                     <Button Style="{StaticResource BaseButtonStyle}"
                             Content="Продолжить"
-                            Margin="0 0 10 0">      
+                            Margin="0 0 10 0"
+                            Command="{Binding RegistrationCommand}">      
                         <Button.Effect>
                             <DropShadowEffect Color="Black"
                                               BlurRadius="15"
@@ -297,7 +298,7 @@
                         </Button.Effect>
                     </Button>
                     <Button Style="{StaticResource BaseButtonStyle}"
-                Content="Отмена">
+                            Content="Отмена">
                         <Button.Effect>
                             <DropShadowEffect Color="Black"
                               BlurRadius="15"
@@ -306,6 +307,13 @@
                         </Button.Effect>
                     </Button>
                 </StackPanel>
+
+                <TextBlock Text="{Binding ErrorRegistrionMessage}" 
+                           Style="{StaticResource BaseTextBlockStyle}"
+                           FontSize="16"
+                           Foreground="Red"
+                           Height="20" 
+                           Width="500"/>
 
                 <StackPanel Orientation="Horizontal"
                     Margin="66 0 0 0">
