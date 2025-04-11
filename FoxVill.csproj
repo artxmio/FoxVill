@@ -19,12 +19,18 @@
     <None Remove="Resources\Images\Png\close_eye.png" />
     <None Remove="Resources\Images\Png\data.png" />
     <None Remove="Resources\Images\Png\dwindow.png" />
+    <None Remove="Resources\Images\Png\empty_heart.png" />
+    <None Remove="Resources\Images\Png\full_heart.png" />
     <None Remove="Resources\Images\Png\heart.png" />
     <None Remove="Resources\Images\Png\info.png" />
+    <None Remove="Resources\Images\Png\main_back.png" />
     <None Remove="Resources\Images\Png\minus.png" />
+    <None Remove="Resources\Images\Png\more.png" />
     <None Remove="Resources\Images\Png\open_eye.png" />
+    <None Remove="Resources\Images\Png\sort.png" />
     <None Remove="Resources\Images\Png\user.png" />
     <None Remove="Resources\Images\Png\x.png" />
+    <None Remove="Resources\Images\Products\example2.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -59,22 +65,43 @@
     <Content Include="Resources\Images\Png\dwindow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Png\empty_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\full_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Png\heart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\info.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Png\main_back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Png\minus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Png\more.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Png\open_eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\sort.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\user.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\x.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Products\example1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Products\example2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

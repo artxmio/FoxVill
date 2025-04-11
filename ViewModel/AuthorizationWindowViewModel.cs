@@ -13,8 +13,8 @@ namespace FoxVill.ViewModel;
 
 public class AuthorizationWindowViewModel : INotifyPropertyChanged
 {
-    private User _authUser = new();
-    private User _regUser = new();
+    private readonly User _authUser = new();
+    private readonly User _regUser = new();
 
     private string _errorRegistrionMessage = string.Empty;
     private string _errorAuthorizationMessage = string.Empty;
