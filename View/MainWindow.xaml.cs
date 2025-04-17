@@ -1,5 +1,6 @@
 ﻿using FoxVill.View.Animation;
 using FoxVill.View.Pages;
+using FoxVill.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -8,9 +9,11 @@ namespace FoxVill.View;
 
 public partial class MainWindow : Window
 {
-    public MainWindow()
+    public MainWindow(MainWindowViewModel viewModel)
     {
         InitializeComponent();
+
+        this.DataContext = viewModel;
 
         this.MainFrame.Navigate(new MainPage());
     }

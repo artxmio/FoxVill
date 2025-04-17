@@ -39,7 +39,7 @@
 
   <ItemGroup>
     <Content Include="database.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

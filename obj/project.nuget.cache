@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6wnwnhfc/FE=",
+  "dgSpecHash": "l3wAau/yrvU=",
   "success": true,
   "projectFilePath": "D:\\C#\\FoxVill\\FoxVill.csproj",
   "expectedPackageFiles": [
@@ -58,7 +58,11 @@
     "C:\\Users\\AdminX\\.nuget\\packages\\system.text.encodings.web\\9.0.2\\system.text.encodings.web.9.0.2.nupkg.sha512",
     "C:\\Users\\AdminX\\.nuget\\packages\\system.text.json\\9.0.2\\system.text.json.9.0.2.nupkg.sha512",
     "C:\\Users\\AdminX\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.26100.34\\microsoft.windows.sdk.net.ref.10.0.26100.34.nupkg.sha512"
+    "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.26100.57\\microsoft.windows.sdk.net.ref.10.0.26100.57.nupkg.sha512",
+    "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\8.0.15\\microsoft.netcore.app.host.win-x86.8.0.15.nupkg.sha512"
   ],
   "logs": []
 }

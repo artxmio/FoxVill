@@ -1,5 +1,6 @@
 ﻿using FoxVill.AutorizaitionServices;
 using FoxVill.Command;
+using FoxVill.DataBase;
 using FoxVill.Model;
 using FoxVill.View;
 using Newtonsoft.Json;
@@ -13,7 +14,7 @@ namespace FoxVill.ViewModel;
 
 public class AuthorizationWindowViewModel : INotifyPropertyChanged
 {
-    private readonly User _authUser = new();
+    private User _authUser = new();
     private readonly User _regUser = new();
 
     private string _errorRegistrionMessage = string.Empty;
@@ -42,7 +43,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
 
     public string AuthorizationEmail
     {
-        get=> _authUser.Email;
+        get => _authUser.Email;
         set
         {
             _authUser.Email = value;
@@ -106,6 +107,8 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
 
     public AuthorizationWindowViewModel()
     {
+        CheckSavedUserData();
+
         RegistrationCommand = new RelayCommand(async p => await RegistrateNewUser());
         AuthorizationCommand = new RelayCommand(async p => await AuthorizateUser());
     }
@@ -153,8 +156,11 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
                 SaveUserData(_authUser);
             }
 
-            /// Переход к основному окну
-            MessageBox.Show("Успех");
+            var dataBaseContext = new DatabaseContext();
+
+            var viewModel = new MainWindowViewModel(dataBaseContext);
+            var window = new MainWindow(viewModel);
+            window.Show();
         }
         else
         {
@@ -171,6 +177,32 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
             var json = JsonConvert.SerializeObject(user);
 
             File.WriteAllText(applicationFolder + @"\data.json", json);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Произошла неожиданная ошибка: " + ex.Message, "Внимание");
+        }
+    }
+
+    private void CheckSavedUserData()
+    {
+        try
+        {
+            var applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
+
+            var jsonString = File.ReadAllText(applicationFolder + @"\data.json");
+
+            if (jsonString is not null)
+            {
+                User savedUser = JsonConvert.DeserializeObject<User>(jsonString) 
+                    ?? throw new NullReferenceException(); 
+
+                _authUser = savedUser;
+
+                
+                AuthorizateUser();
+                Application.Current.MainWindow.Close();
+            }
         }
         catch (Exception ex)
         {

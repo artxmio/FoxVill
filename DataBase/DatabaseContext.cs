@@ -6,6 +6,7 @@ namespace FoxVill.DataBase;
 public class DatabaseContext : DbContext
 {
     public DbSet<User> Users { get; set; } = null!;
+    public DbSet<Product> Products { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
