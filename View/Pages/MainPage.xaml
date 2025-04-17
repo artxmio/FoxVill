@@ -157,7 +157,8 @@
                 Padding="0"
                 BorderThickness="2"
                 HorizontalAlignment="Right"
-                materialDesign:ButtonAssist.CornerRadius="15">
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Click="Button_Click">
 
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">

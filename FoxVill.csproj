@@ -12,6 +12,7 @@
     <None Remove="database.db" />
     <None Remove="Resources\Fonts\Caveat.ttf" />
     <None Remove="Resources\Images\Png\arrow.png" />
+    <None Remove="Resources\Images\Png\arrow_to_left.png" />
     <None Remove="Resources\Images\Png\auth_back.png" />
     <None Remove="Resources\Images\Png\bag.png" />
     <None Remove="Resources\Images\Png\bank.png" />
@@ -29,6 +30,7 @@
     <None Remove="Resources\Images\Png\open_eye.png" />
     <None Remove="Resources\Images\Png\sort.png" />
     <None Remove="Resources\Images\Png\user.png" />
+    <None Remove="Resources\Images\Png\user_profile.png" />
     <None Remove="Resources\Images\Png\x.png" />
     <None Remove="Resources\Images\Products\example2.jpg" />
   </ItemGroup>
@@ -42,6 +44,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\arrow_to_left.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\auth_back.png">
@@ -93,6 +98,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\user_profile.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\x.png">

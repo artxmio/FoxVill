@@ -19,7 +19,7 @@ public partial class MainWindow : Window
 
         this.DataContext = _viewModel;
 
-        this.MainFrame.Navigate(new MainPage(_viewModel));
+        this.MainFrame.Navigate(new MainPage(_viewModel, this));
     }
 
     private void DragModeWindow(object sender, System.Windows.Input.MouseButtonEventArgs e)
