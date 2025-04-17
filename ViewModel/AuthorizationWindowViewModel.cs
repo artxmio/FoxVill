@@ -14,6 +14,8 @@ namespace FoxVill.ViewModel;
 
 public class AuthorizationWindowViewModel : INotifyPropertyChanged
 {
+    private readonly DatabaseContext _databaseContext;
+
     private User _authUser = new();
     private readonly User _regUser = new();
 
@@ -107,6 +109,8 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
 
     public AuthorizationWindowViewModel()
     {
+        _databaseContext = new DatabaseContext();
+
         CheckSavedUserData();
 
         RegistrationCommand = new RelayCommand(async p => await RegistrateNewUser());
@@ -127,7 +131,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
             return;
         }
 
-        var isSucces = await RegistrationService.AddUserToDatabase(_regUser);
+        var isSucces = await RegistrationService.AddUserToDatabase(_regUser, _databaseContext);
 
         if (isSucces)
         {
@@ -147,7 +151,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
             return;
         }
 
-        var isSuccess = await AuthorizationService.AutorizateUser(_authUser);
+        var isSuccess = await AuthorizationService.AutorizateUser(_authUser, _databaseContext);
 
         if (isSuccess)
         {
@@ -156,9 +160,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
                 SaveUserData(_authUser);
             }
 
-            var dataBaseContext = new DatabaseContext();
-
-            var viewModel = new MainWindowViewModel(dataBaseContext);
+            var viewModel = new MainWindowViewModel(_databaseContext);
             var window = new MainWindow(viewModel);
             window.Show();
         }

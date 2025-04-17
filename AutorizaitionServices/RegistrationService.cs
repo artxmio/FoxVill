@@ -12,11 +12,9 @@ public static class RegistrationService
     /// </summary>
     /// <param name="newUser"></param>
     /// <returns></returns>
-    public static async Task<bool> AddUserToDatabase(User newUser)
+    public static async Task<bool> AddUserToDatabase(User newUser, DatabaseContext context)
     {
         ArgumentNullException.ThrowIfNull(newUser);
-
-        using DatabaseContext context = new();
 
         await context.Users.LoadAsync();
 

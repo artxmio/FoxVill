@@ -11,11 +11,9 @@ public static class AuthorizationService
     /// </summary>
     /// <param name="user"></param>
     /// <returns></returns>
-    public static async Task<bool> AutorizateUser(User user)
+    public static async Task<bool> AutorizateUser(User user, DatabaseContext context)
     {
         ArgumentNullException.ThrowIfNull(user);
-
-        using DatabaseContext context = new();
 
         await context.Users.LoadAsync();
 

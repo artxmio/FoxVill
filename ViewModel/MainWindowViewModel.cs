@@ -4,7 +4,6 @@ using FoxVill.Model;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Windows.Controls;
 
 namespace FoxVill.ViewModel;
 
@@ -13,7 +12,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
     private readonly DatabaseContext _dbContext;
     private readonly ProductService _productService;
 
-    private ObservableCollection<Product> _products;
+    private ObservableCollection<Product> _products = new();
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -23,7 +22,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
         set
         {
             _products = value;
-            OnPropertyChange(nameof(Products));
+            OnPropertyChange();
         }
     }
 
@@ -33,7 +32,6 @@ public class MainWindowViewModel : INotifyPropertyChanged
         _productService = new ProductService(_dbContext);
 
         _products = _productService.GetProducts();
-        OnPropertyChange(nameof(Products));
     }
 
     protected void OnPropertyChange([CallerMemberName] string propName = "")
