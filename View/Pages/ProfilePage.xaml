@@ -314,7 +314,7 @@
             HorizontalAlignment="Center"
             Grid.Row="3"
             Grid.Column="1"
-            Grid.ColumnSpan="2">
+            Grid.ColumnSpan="2" Click="Button_Click_1">
 
             <Button.Effect>
                 <DropShadowEffect Color="Black"

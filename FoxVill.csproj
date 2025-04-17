@@ -28,6 +28,7 @@
     <None Remove="Resources\Images\Png\minus.png" />
     <None Remove="Resources\Images\Png\more.png" />
     <None Remove="Resources\Images\Png\open_eye.png" />
+    <None Remove="Resources\Images\Png\plus.png" />
     <None Remove="Resources\Images\Png\sort.png" />
     <None Remove="Resources\Images\Png\user.png" />
     <None Remove="Resources\Images\Png\user_profile.png" />
@@ -92,6 +93,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\open_eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\plus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\sort.png">

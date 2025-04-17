@@ -34,4 +34,11 @@ public partial class MainPage : Page
 
         AnimationManager.NavigateWithAnimation(_window.MainFrame, profilePage);
     }
+
+    private void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+        var cartPage = new CartPage(_viewModel, _window);
+
+        AnimationManager.NavigateWithAnimation(_window.MainFrame, cartPage);
+    }
 }

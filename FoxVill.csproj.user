@@ -17,6 +17,9 @@
     <Compile Update="View\Pages\AuthPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Pages\CartPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Pages\DefaultPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
