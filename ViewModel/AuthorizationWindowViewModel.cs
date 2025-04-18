@@ -142,7 +142,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
             new MessageWindow("Такой пользователь уже существует,\nлибо произошла какая-то ошибка!").ShowDialog();
         }
     }
-
+    
     private async Task AuthorizateUser()
     {
         if (string.IsNullOrEmpty(_authUser.Email) && string.IsNullOrEmpty(_authUser.Password))
@@ -160,9 +160,11 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
                 SaveUserData(_authUser);
             }
 
+            
             var viewModel = new MainWindowViewModel(_databaseContext);
-            var window = new MainWindow(viewModel);
-            window.Show();
+            var mainWindow = new MainWindow(viewModel);
+            mainWindow.Show();
+            Application.Current.MainWindow.Close();
         }
         else
         {
@@ -188,21 +190,29 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
 
     private void CheckSavedUserData()
     {
+        var applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
+        var filePath = applicationFolder + @"\data.json";
+
+        if (!File.Exists(filePath))
+        {
+            return;
+        }
+
         try
         {
-            var applicationFolder = AppDomain.CurrentDomain.BaseDirectory;
-
-            var jsonString = File.ReadAllText(applicationFolder + @"\data.json");
+            var jsonString = File.ReadAllText(filePath);
 
             if (jsonString is not null)
             {
-                User savedUser = JsonConvert.DeserializeObject<User>(jsonString) 
-                    ?? throw new NullReferenceException(); 
+                User savedUser = JsonConvert.DeserializeObject<User>(jsonString)
+                    ?? throw new NullReferenceException();
 
                 _authUser = savedUser;
 
-                
-                AuthorizateUser();
+                var viewModel = new MainWindowViewModel(_databaseContext);
+                var mainWindow = new MainWindow(viewModel);
+                mainWindow.Show();
+
                 Application.Current.MainWindow.Close();
             }
         }
