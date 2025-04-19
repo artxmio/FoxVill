@@ -18,6 +18,8 @@ public partial class CartPage : Page
         _window = window;
 
         this.DataContext = _viewModel;
+
+        listView.ItemsSource = new List<object>() { new() };
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)

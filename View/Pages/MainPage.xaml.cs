@@ -41,4 +41,12 @@ public partial class MainPage : Page
 
         AnimationManager.NavigateWithAnimation(_window.MainFrame, cartPage);
     }
+
+    private void Button_Click_2(object sender, RoutedEventArgs e)
+    {
+        if (sender is Button button && button.ContextMenu != null)
+        {
+            button.ContextMenu.IsOpen = true;
+        }
+    }
 }

@@ -57,23 +57,105 @@
                 BorderBrush="Black"
                 BorderThickness="2"
                 CornerRadius="15"
-                Margin="10 0">
-            <StackPanel>
+                Margin="10 0"
+                MinWidth="700">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
                 <TextBlock Text="Корзина" 
                            FontSize="70" 
                            FontWeight="Bold" 
                            Margin="40 10 0 10" 
+                           Grid.Row="0"
                            Style="{StaticResource BaseTextBlockStyle}"/>
 
-                <ListView ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ListView ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          ScrollViewer.IsDeferredScrollingEnabled="True"
+                          Grid.Row="1"
+                          x:Name="listView">
+
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel ScrollUnit="Pixel" />
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="Margin" Value="25 5 15 0" />
+                            <Setter Property="BorderThickness" Value="1" />
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="BorderBrush" Value="Transparent"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="RenderTransformOrigin" Value="0.7,0.7" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListViewItem">
+                                        <Border Background="Transparent">
+                                            <ContentPresenter/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ContextMenu">
+                                <Setter.Value>
+                                    <ContextMenu>
+                                        <MenuItem>
+                                            <MenuItem.Header>
+                                                <TextBlock Text="Убрать из корзины"
+                                                           FontSize="20"
+                                                           Style="{StaticResource BaseTextBlockStyle}"/>
+                                            </MenuItem.Header>
+                                        </MenuItem>
+                                    </ContextMenu>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.05" Duration="0:0:0.1" />
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.05" Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1" Duration="0:0:0.1" />
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1" Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </ListView.ItemContainerStyle>
+
                     <ListView.ItemTemplate>
                         <DataTemplate>
+
                             <Border BorderBrush="Black"
                                         BorderThickness="2"
-                                        CornerRadius="15"
-                                        Margin="30 0 0 0"
-                    
-                                        HorizontalAlignment="Center">
+                                        CornerRadius="15">
+
                                 <Grid Margin="5">
 
                                     <Grid.ColumnDefinitions>
@@ -83,23 +165,24 @@
                                     </Grid.ColumnDefinitions>
 
                                     <TextBlock Text="Колесо обозрения"
-                               FontSize="50" 
-                               Margin="10"
-                               Style="{StaticResource BaseTextBlockStyle}"
-                               Grid.Column="0"/>
+                                               FontSize="50" 
+                                               Margin="10"
+                                               Style="{StaticResource BaseTextBlockStyle}"
+                                               Grid.Column="0"/>
 
                                     <StackPanel Orientation="Horizontal"
-                                Margin="0 0 0 0"
-                                Grid.Column="1">
+                                                Margin="0 0 0 0"
+                                                Grid.Column="1">
+
                                         <Button
-                            Background="Transparent" 
-                            Width="40"
-                            Height="40"
-                            Margin="0"
-                            Padding="0"
-                            BorderThickness="2"
-                            HorizontalAlignment="Right"
-                            materialDesign:ButtonAssist.CornerRadius="15">
+                                                Background="Transparent" 
+                                                Width="40"
+                                                Height="40"
+                                                Margin="0"
+                                                Padding="0"
+                                                BorderThickness="2"
+                                                HorizontalAlignment="Right"
+                                                materialDesign:ButtonAssist.CornerRadius="15">
 
                                             <Button.Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
@@ -182,17 +265,15 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
 
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
-                    <ListItem/>
+                    
                 </ListView>
+                <!--<Label Content="Корзина пока что пуста..." 
+                       HorizontalAlignment="Center"
+                       FontSize="50"
+                       FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"
+                       Grid.Row="1" VerticalAlignment="Center"/>-->
 
-            </StackPanel>
+            </Grid>
         </Border>
 
         <Border Grid.Column="2"
@@ -268,7 +349,10 @@
                            FontSize="45"/>
                 </StackPanel>
 
-
+                <Button Style="{StaticResource BaseButtonStyle}"
+                        Content="Оплатить"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"/>
             </Grid>
         </Border>
     </Grid>

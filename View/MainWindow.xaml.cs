@@ -44,8 +44,9 @@ public partial class MainWindow : Window
     {
         if (Mouse.DirectlyOver is TextBox ||
             Mouse.DirectlyOver is TextBlock ||
-             Mouse.DirectlyOver is CheckBox
-            || Mouse.DirectlyOver is Button)
+            Mouse.DirectlyOver is CheckBox ||
+            Mouse.DirectlyOver is Button ||
+            Mouse.DirectlyOver is ListViewItem)
         {
             return;
         }

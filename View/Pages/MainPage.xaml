@@ -44,7 +44,9 @@
                 materialDesign:ButtonAssist.CornerRadius="15">
 
                 <Button.ToolTip>
-                    Категории товаров
+                    <TextBlock Text="Категории товаров"
+                               FontSize="20"
+                               Style="{StaticResource BaseTextBlockStyle}"/>
                 </Button.ToolTip>
                 
                 <Button.Style>
@@ -96,7 +98,28 @@
                         Margin="10 5"
                         BorderThickness="0"
                         HorizontalAlignment="Right"
-                        materialDesign:ButtonAssist.CornerRadius="15">
+                        materialDesign:ButtonAssist.CornerRadius="15" 
+                        Click="Button_Click_2">
+
+                        <Button.ContextMenu>
+                            <ContextMenu x:Name="SortContextMenu"
+                                         FontSize="20">
+                                <MenuItem Header="По цене"
+                                          FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat">
+                                    <MenuItem Header="По возрастанию"
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                    <MenuItem Header="По убыванию"
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                </MenuItem>
+                                <MenuItem Header="По названию"
+                                          FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat">
+                                    <MenuItem Header="В алфавитном порядке"
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                    <MenuItem Header="В алфавитном порядке (обр.)"
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                </MenuItem>
+                            </ContextMenu>
+                        </Button.ContextMenu>
 
                         <Button.Style>
                             <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
@@ -142,7 +165,9 @@
                 </Button.Style>
 
                 <Button.ToolTip>
-                    Избранное
+                    <TextBlock Text="Избранное"
+                               FontSize="20"
+                               Style="{StaticResource BaseTextBlockStyle}"/>
                 </Button.ToolTip>
 
                 <Image Width="60"
@@ -171,7 +196,9 @@
                 </Button.Style>
 
                 <Button.ToolTip>
-                    Профиль
+                    <TextBlock Text="Профиль"
+                               FontSize="20"
+                               Style="{StaticResource BaseTextBlockStyle}"/>
                 </Button.ToolTip>
 
                 <Image Width="55"
@@ -200,7 +227,9 @@
                 </Button.Style>
 
                 <Button.ToolTip>
-                    Корзина
+                    <TextBlock Text="Корзина"
+                               FontSize="20"
+                               Style="{StaticResource BaseTextBlockStyle}"/>
                 </Button.ToolTip>
 
                 <Image Width="55"
@@ -230,9 +259,19 @@
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
                     <Setter Property="Padding" Value="0" />
-                    <Setter Property="Margin" Value="10 10 0 0" />
+                    <Setter Property="Margin" Value="10 15 0 0" />
                     <Setter Property="BorderThickness" Value="1" />
                     <Setter Property="RenderTransformOrigin" Value="0.7,0.7" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Border Background="Transparent">
+                                    <ContentPresenter/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
                     <Setter Property="RenderTransform">
                         <Setter.Value>
                             <ScaleTransform ScaleX="1" ScaleY="1" />
@@ -241,8 +280,21 @@
                     <Setter Property="ContextMenu">
                         <Setter.Value>
                             <ContextMenu>
-                                <MenuItem Header="Добавить в корзину"/>
-                                <MenuItem Header="Добавить в избранное"/>
+                                <MenuItem>
+                                    <MenuItem.Header>
+                                        <TextBlock Text="Добавить в корзину"
+                                                   FontSize="20"
+                                                   Style="{StaticResource BaseTextBlockStyle}"/>
+                                    </MenuItem.Header>
+                                </MenuItem>
+
+                                <MenuItem>
+                                    <MenuItem.Header>
+                                        <TextBlock Text="Добавить в измбранное"
+                                                   FontSize="20"
+                                                   Style="{StaticResource BaseTextBlockStyle}"/>
+                                    </MenuItem.Header>
+                                </MenuItem>
                             </ContextMenu>
                         </Setter.Value>
                     </Setter>
@@ -268,7 +320,6 @@
                             </Trigger.ExitActions>
                         </Trigger>
                     </Style.Triggers>
-
                     
                 </Style>
             </ListView.ItemContainerStyle>
@@ -283,9 +334,11 @@
                             CornerRadius="15"
                             BorderBrush="Black"
                             Background="Transparent"
-                            ClipToBounds="True">
+                            ClipToBounds="True"
+                            Margin="13 0 0 0">
 
                         <StackPanel Orientation="Vertical">
+                            
                             <Border BorderBrush="Black"
                                     BorderThickness="2"
                                     Margin="18 18 18 0"
@@ -301,9 +354,9 @@
                                        Style="{StaticResource BaseTextBlockStyle}"
                                        Margin="18 0 18 0"
                                        FontSize="25"
-                                       TextAlignment="Left"
                                        Height="65"
-                                       TextWrapping="Wrap"/>
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Center"/>
 
                             <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
