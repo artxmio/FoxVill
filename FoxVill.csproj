@@ -23,6 +23,7 @@
     <None Remove="Resources\Images\Png\empty_heart.png" />
     <None Remove="Resources\Images\Png\full_heart.png" />
     <None Remove="Resources\Images\Png\heart.png" />
+    <None Remove="Resources\Images\Png\house.png" />
     <None Remove="Resources\Images\Png\info.png" />
     <None Remove="Resources\Images\Png\main_back.png" />
     <None Remove="Resources\Images\Png\minus.png" />
@@ -78,6 +79,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\house.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\info.png">

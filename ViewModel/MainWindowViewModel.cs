@@ -42,6 +42,8 @@ public class MainWindowViewModel : INotifyPropertyChanged
     }
 
     public ICommand ChangeProductFavoriteStateCommand {  get; set; }
+    public ICommand ShowFavoritesCommand {  get; set; }
+    public ICommand ShowAllProductsCommand {  get; set; }
 
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
@@ -53,6 +55,8 @@ public class MainWindowViewModel : INotifyPropertyChanged
         _products = _productService.GetProducts(currentUserID: _currentUser.Id);
 
         ChangeProductFavoriteStateCommand = new RelayCommand(p => ChangeFavoriteState(p));
+        ShowFavoritesCommand = new RelayCommand(p => ShowFavorites());
+        ShowAllProductsCommand = new RelayCommand(p => ShowProducts());
     }
 
     private void ChangeFavoriteState(object parametr)
@@ -65,6 +69,8 @@ public class MainWindowViewModel : INotifyPropertyChanged
         product.IsFavorite = !product.IsFavorite;
         OnPropertyChange(nameof(product.IsFavorite));
     }
+    private void ShowFavorites() => Products = [.. _dbContext.Favorites.Where(f => f.UserId == _currentUser.Id).Select(f => f.Product)];
+    private void ShowProducts() => Products = [.. _dbContext.Products];
 
     protected void OnPropertyChange([CallerMemberName] string propName = "")
     {

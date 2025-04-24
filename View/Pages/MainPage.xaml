@@ -41,7 +41,8 @@
                 Padding="0"
                 BorderThickness="2"
                 HorizontalAlignment="Right"
-                materialDesign:ButtonAssist.CornerRadius="15">
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Command="{Binding ShowAllProductsCommand}">
 
                 <Button.ToolTip>
                     <TextBlock Text="Категории товаров"
@@ -67,7 +68,7 @@
                 </Button.Effect>
 
                 <Image Width="40"
-                       Source="/Resources/Images/Png/more.png"/>
+                       Source="/Resources/Images/Png/house.png"/>
             </Button>
 
             <Border BorderBrush="Black"
@@ -152,7 +153,8 @@
                 Padding="0"
                 BorderThickness="2"
                 HorizontalAlignment="Right"
-                materialDesign:ButtonAssist.CornerRadius="15">
+                materialDesign:ButtonAssist.CornerRadius="15"
+                Command="{Binding ShowFavoritesCommand}">
 
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
