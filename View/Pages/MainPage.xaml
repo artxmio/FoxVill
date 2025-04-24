@@ -245,7 +245,7 @@
                   Margin="0 5 0 0"
                   SelectionMode="Single"
                   ItemsSource="{Binding Products, Mode=OneWay}"
-                  >
+                  SelectedItem="{Binding SelectedProduct}">
 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -340,6 +340,7 @@
                         <StackPanel Orientation="Vertical">
                             
                             <Border BorderBrush="Black"
+                                    Background="White"
                                     BorderThickness="2"
                                     Margin="18 18 18 0"
                                     Width="230"
@@ -406,17 +407,18 @@
                                 </Button>
                                 <Button 
                                     x:Name="AddItemToLiked"
-                                    Width="40"
-                                    Height="40"
+                                    Width="35"
+                                    Height="35"
                                     Margin="15 0 0 0"
-                                    Padding="0"
+                                    Padding="3"
                                     Background="Transparent"
                                     BorderBrush="Transparent"
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center"
                                     Cursor="Hand"
                                     Tag="0"
-                                    Click="AddItemToLiked_Click">
+                                    Command="{Binding DataContext.ChangeProductFavoriteStateCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                    CommandParameter="{Binding}">
 
                                     <Button.Template>
                                         <ControlTemplate TargetType="Button">
@@ -425,17 +427,14 @@
                                     </Button.Template>
 
                                     <Button.Content>
-                                        <Image Width="37" Height="37" Margin="0" >
+                                        <Image Stretch="UniformToFill">
                                             <Image.Style>
                                                 <Style TargetType="Image">
                                                     <Setter Property="Source" Value="/Resources/Images/Png/empty_heart.png"/>
                                                     <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding Tag, RelativeSource={RelativeSource AncestorType=Button}}" Value="1">
-                                                            <Setter Property="Source" Value="/Resources/Images/Png/full_heart.png" />
+                                                        <DataTrigger Binding="{Binding IsFavorite}" Value="True">
+                                                            <Setter Property="Source" Value="/Resources/Images/Png/full_heart.png"/>
                                                         </DataTrigger>
-                                                        <Trigger Property="IsMouseOver" Value="True">
-                                                            <Setter Property="Opacity" Value="0.7"/>
-                                                        </Trigger>
                                                     </Style.Triggers>
                                                 </Style>
                                             </Image.Style>

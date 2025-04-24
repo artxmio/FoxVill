@@ -160,8 +160,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
                 SaveUserData(_authUser);
             }
 
-            
-            var viewModel = new MainWindowViewModel(_databaseContext);
+            var viewModel = new MainWindowViewModel(_databaseContext, _authUser);
             var mainWindow = new MainWindow(viewModel);
             mainWindow.Show();
             Application.Current.MainWindow.Close();
@@ -209,7 +208,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
 
                 _authUser = savedUser;
 
-                var viewModel = new MainWindowViewModel(_databaseContext);
+                var viewModel = new MainWindowViewModel(_databaseContext, _authUser);
                 var mainWindow = new MainWindow(viewModel);
                 mainWindow.Show();
 
