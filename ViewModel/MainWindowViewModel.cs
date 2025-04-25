@@ -2,12 +2,14 @@
 using FoxVill.DataBase;
 using FoxVill.MainServices.FavoritesService;
 using FoxVill.MainServices.ProductService;
+using FoxVill.MainServices.SortManager;
 using FoxVill.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using static MaterialDesignThemes.Wpf.Theme.ToolBar;
 
 namespace FoxVill.ViewModel;
 
@@ -45,6 +47,10 @@ public class MainWindowViewModel : INotifyPropertyChanged
     public ICommand ShowFavoritesCommand { get; set; }
     public ICommand ShowAllProductsCommand { get; set; }
     public ICommand ShowMoreProductsCommand { get; set; }
+    public ICommand SortByDescendingCommand { get; }
+    public ICommand SortByAscendingCommand { get; }
+    public ICommand SortByTitleCommand { get; }
+    public ICommand SortByTitleRevertCommand { get; }
 
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
@@ -59,6 +65,30 @@ public class MainWindowViewModel : INotifyPropertyChanged
         ShowFavoritesCommand = new RelayCommand(p => ShowFavorites());
         ShowAllProductsCommand = new RelayCommand(p => ShowProducts());
         ShowMoreProductsCommand = new RelayCommand(p => ShowMoreProducts());
+
+        SortByDescendingCommand = new RelayCommand(_ =>
+        {
+            Products = SortManager.SortByPrice(Products, false);
+            OnPropertyChange(nameof(Products));
+        });
+
+        SortByAscendingCommand = new RelayCommand(_ =>
+        {
+            Products = SortManager.SortByPrice(Products, true);
+            OnPropertyChange(nameof(Products));
+        });
+
+        SortByTitleCommand = new RelayCommand(_ =>
+        {
+            Products = SortManager.SortByTitle(Products, true);
+            OnPropertyChange(nameof(Products));
+        });
+
+        SortByTitleRevertCommand = new RelayCommand(_ =>
+        {
+            Products = SortManager.SortByTitle(Products, false);
+            OnPropertyChange(nameof(Products));
+        });
     }
 
     private void ChangeFavoriteState(object parametr)

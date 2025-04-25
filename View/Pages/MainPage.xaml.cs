@@ -49,4 +49,21 @@ public partial class MainPage : Page
             button.ContextMenu.IsOpen = true;
         }
     }
+
+    private void SortByDescendingClick(object sender, System.Windows.RoutedEventArgs e)
+    {
+        _viewModel.SortByDescendingCommand.Execute(null);
+    }
+    private void SortByAscendingClick(object sender, System.Windows.RoutedEventArgs e)
+    {
+        _viewModel.SortByAscendingCommand.Execute(null);
+    }
+    private void SortByTitleClick(object sender, System.Windows.RoutedEventArgs e)
+    {
+        _viewModel.SortByTitleCommand.Execute(null);
+    }
+    private void SortByTitleRevertClick(object sender, System.Windows.RoutedEventArgs e)
+    {
+        _viewModel.SortByTitleRevertCommand.Execute(null);
+    }
 }

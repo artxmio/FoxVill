@@ -108,16 +108,20 @@
                                 <MenuItem Header="По цене"
                                           FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat">
                                     <MenuItem Header="По возрастанию"
-                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"
+                                              Click="SortByAscendingClick"/>
                                     <MenuItem Header="По убыванию"
-                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"
+                                              Click="SortByDescendingClick"/>
                                 </MenuItem>
                                 <MenuItem Header="По названию"
                                           FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat">
                                     <MenuItem Header="В алфавитном порядке"
-                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"
+                                              Click="SortByTitleClick"/>
                                     <MenuItem Header="В алфавитном порядке (обр.)"
-                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"/>
+                                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"
+                                              Click="SortByTitleRevertClick"/>
                                 </MenuItem>
                             </ContextMenu>
                         </Button.ContextMenu>
