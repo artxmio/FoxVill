@@ -55,6 +55,11 @@ public class MainWindowViewModel : INotifyPropertyChanged
         }
     }
 
+    public User CurrentUser
+    {
+        get => _currentUser;
+    }
+
     public ICommand ChangeProductFavoriteStateCommand { get; set; }
     public ICommand ShowFavoritesCommand { get; set; }
     public ICommand ShowAllProductsCommand { get; set; }

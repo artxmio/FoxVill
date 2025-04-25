@@ -22,6 +22,13 @@
         <ImageBrush ImageSource="/Resources/Images/Png/main_back.png" Stretch="Fill" />
     </Window.Background>
 
+    <Window.Effect>
+        <DropShadowEffect Color="Black"
+          BlurRadius="15"
+        ShadowDepth="1"
+        Opacity="0.4" />
+    </Window.Effect>
+    
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

@@ -10,7 +10,7 @@
       Title="ProfilePage"
       Margin="330 120 0 0"
       d:Background="White"
-      d:DataContext="{d:DesignInstance vm:MainWindowViewModel}">
+      d:DataContext="{d:DesignInstance vm:ProfileViewModel}">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -126,7 +126,8 @@
                     BorderThickness="2"
                     Margin="10"
                     materialDesign:ButtonAssist.CornerRadius="10"
-                    HorizontalAlignment="Center">
+                    HorizontalAlignment="Center"
+                    Click="Button_Click_3">
 
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
@@ -168,7 +169,7 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Center"
             Grid.Row="1"
-            Grid.Column="1">
+            Grid.Column="1" Click="Button_Click_2">
             <Button.Effect>
                 <DropShadowEffect Color="Black"
                                   BlurRadius="15"

@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "D:\\C#\\FoxVill\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\animation\\animationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\animation\\animationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\userdatawindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\userdatawindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\userdatawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\userdatawindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\sortmanager\\sortmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\sortmanager\\sortmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\favoritesservice\\favoriteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\favoritesservice\\favoriteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\productservice\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\productservice\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 316,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,91 +54,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pages\\MainPage.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml.cs",
-              "RelativeToolTip": "View\\Pages\\MainPage.xaml.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAEkAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AnimationManager.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Animation\\AnimationManager.cs",
+              "RelativeDocumentMoniker": "View\\Animation\\AnimationManager.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Animation\\AnimationManager.cs*",
+              "RelativeToolTip": "View\\Animation\\AnimationManager.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAC0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T09:01:09.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SortManager.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\SortManager\\SortManager.cs",
-              "RelativeDocumentMoniker": "MainServices\\SortManager\\SortManager.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\MainServices\\SortManager\\SortManager.cs",
-              "RelativeToolTip": "MainServices\\SortManager\\SortManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T08:46:17.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FavoriteService.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\FavoritesService\\FavoriteService.cs",
-              "RelativeDocumentMoniker": "MainServices\\FavoritesService\\FavoriteService.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\MainServices\\FavoritesService\\FavoriteService.cs",
-              "RelativeToolTip": "MainServices\\FavoritesService\\FavoriteService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAADwvyEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T08:19:53.554Z",
+              "WhenOpened": "2025-04-25T12:19:22.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\ProductService\\ProductService.cs",
-              "RelativeDocumentMoniker": "MainServices\\ProductService\\ProductService.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\MainServices\\ProductService\\ProductService.cs",
-              "RelativeToolTip": "MainServices\\ProductService\\ProductService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Pages\\ProfilePage.xaml.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "View\\Pages\\ProfilePage.xaml.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAC8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T07:54:08.158Z",
+              "WhenOpened": "2025-04-25T12:07:21.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\MainWindow.xaml",
-              "RelativeToolTip": "View\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-24T10:06:21.219Z",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Pages\\MainPage.xaml.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml.cs",
+              "RelativeToolTip": "View\\Pages\\MainPage.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACAAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T12:03:09.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDataWindow.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\UserDataWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\UserDataWindow.xaml.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\UserDataWindow.xaml.cs",
+              "RelativeToolTip": "View\\UserDataWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAhwBUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T11:42:23.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml",
-              "RelativeDocumentMoniker": "View\\Pages\\MainPage.xaml",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml",
-              "RelativeToolTip": "View\\Pages\\MainPage.xaml",
+              "Title": "UserDataWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\UserDataWindow.xaml",
+              "RelativeDocumentMoniker": "View\\UserDataWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\UserDataWindow.xaml",
+              "RelativeToolTip": "View\\UserDataWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-24T10:06:34.954Z",
+              "WhenOpened": "2025-04-25T11:04:34.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs*",
-              "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs*",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAhwIgAAABWAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "View\\Pages\\ProfilePage.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml",
+              "RelativeToolTip": "View\\Pages\\ProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-25T10:53:39.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ProfileViewModel.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\ProfileViewModel.cs",
+              "RelativeToolTip": "ViewModel\\ProfileViewModel.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAADYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T10:01:31.374Z",
+              "WhenOpened": "2025-04-25T10:51:39.893Z",
               "EditorCaption": ""
             }
           ]

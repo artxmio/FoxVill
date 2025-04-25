@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\Images\Ico\fox.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,6 +46,7 @@
     <Content Include="database.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Ico\fox.ico" />
     <Content Include="Resources\Images\Png\arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

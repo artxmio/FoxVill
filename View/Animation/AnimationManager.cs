@@ -43,7 +43,7 @@ public static class AnimationManager
         {
             From = 1.0, 
             To = 0.0,   
-            Duration = TimeSpan.FromSeconds(0.5)
+            Duration = TimeSpan.FromSeconds(0.3)
         };
 
         fadeOut.Completed += (s, e) =>

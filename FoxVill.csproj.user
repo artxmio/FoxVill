@@ -32,5 +32,8 @@
     <Compile Update="View\Pages\RegPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UserDataWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

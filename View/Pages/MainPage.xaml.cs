@@ -30,7 +30,8 @@ public partial class MainPage : Page
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
-        var profilePage = new ProfilePage(_viewModel, _window);
+        var profileViewModel = new ProfileViewModel(new DataBase.DatabaseContext(), _viewModel.CurrentUser);
+        var profilePage = new ProfilePage(profileViewModel, _window);
 
         AnimationManager.NavigateWithAnimation(_window.MainFrame, profilePage);
     }

@@ -1,5 +1,6 @@
 ﻿using FoxVill.View.Animation;
 using FoxVill.ViewModel;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace FoxVill.View.Pages;
@@ -7,9 +8,9 @@ namespace FoxVill.View.Pages;
 public partial class ProfilePage : Page
 {
     private readonly MainWindow _window;
-    private readonly MainWindowViewModel _viewModel;
+    private readonly ProfileViewModel _viewModel;
 
-    public ProfilePage(MainWindowViewModel viewModel, MainWindow window)
+    public ProfilePage(ProfileViewModel viewModel, MainWindow window)
     {
         InitializeComponent();
 
@@ -21,15 +22,31 @@ public partial class ProfilePage : Page
 
     private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
     {
-        var mainPage = new MainPage(_viewModel, _window);
+        var mainPage = new MainPage((MainWindowViewModel)_window.DataContext, _window);
 
         AnimationManager.NavigateWithAnimation(_window.MainFrame, mainPage);
     }
 
     private void Button_Click_1(object sender, System.Windows.RoutedEventArgs e)
     {
-        var cartPage = new CartPage(_viewModel, _window);
+        var cartPage = new CartPage((MainWindowViewModel)_window.DataContext, _window);
 
         AnimationManager.NavigateWithAnimation(_window.MainFrame, cartPage);
+    }
+
+    private void Button_Click_2(object sender, System.Windows.RoutedEventArgs e)
+    {
+        var mainPage = new MainPage((MainWindowViewModel)_window.DataContext, _window);
+
+        AnimationManager.NavigateWithAnimation(_window.MainFrame, mainPage);
+
+        ((MainWindowViewModel)_window.DataContext).ShowFavoritesCommand.Execute(_window.MainFrame);
+    }
+
+    private void Button_Click_3(object sender, System.Windows.RoutedEventArgs e)
+    {
+        var dataWindow = new UserDataWindow(_viewModel);
+
+        AnimationManager.ShowModalWindow(_window, dataWindow);
     }
 }
