@@ -66,4 +66,12 @@ public partial class MainPage : Page
     {
         _viewModel.SortByTitleRevertCommand.Execute(null);
     }
+
+    private void SearchBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+    {
+        if (e.Key == System.Windows.Input.Key.Enter)
+        {
+            _viewModel.SearchString = searchbox.Text;
+        }
+    }
 }

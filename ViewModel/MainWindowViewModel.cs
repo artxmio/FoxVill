@@ -2,14 +2,13 @@
 using FoxVill.DataBase;
 using FoxVill.MainServices.FavoritesService;
 using FoxVill.MainServices.ProductService;
+using FoxVill.MainServices.SearchService;
 using FoxVill.MainServices.SortManager;
 using FoxVill.Model;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using static MaterialDesignThemes.Wpf.Theme.ToolBar;
 
 namespace FoxVill.ViewModel;
 
@@ -18,11 +17,13 @@ public class MainWindowViewModel : INotifyPropertyChanged
     private readonly DatabaseContext _dbContext;
     private readonly ProductService _productService;
     private readonly FavoriteService _favoriteService;
+    private readonly SearchService _searchService;
     private readonly User _currentUser;
 
     private ObservableCollection<Product> _products = new();
 
     public event PropertyChangedEventHandler? PropertyChanged;
+    public event PropertyChangingEventHandler? SearchStringChanged;
 
     public ObservableCollection<Product> Products
     {
@@ -43,6 +44,17 @@ public class MainWindowViewModel : INotifyPropertyChanged
         }
     }
 
+    public string SearchString
+    {
+        get => _searchService.SearchString;
+        set
+        {
+            _searchService.SearchString = value;
+            OnPropertyChange();
+            SearchStringChanged?.Invoke(this, new PropertyChangingEventArgs(nameof(SearchString)));
+        }
+    }
+
     public ICommand ChangeProductFavoriteStateCommand { get; set; }
     public ICommand ShowFavoritesCommand { get; set; }
     public ICommand ShowAllProductsCommand { get; set; }
@@ -58,6 +70,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
         _currentUser = _dbContext.Users.First(u => u.Email == currentUser.Email);
         _favoriteService = new FavoriteService(_dbContext, _currentUser);
         _productService = new ProductService(_dbContext);
+        _searchService = new SearchService();
 
         _products = _productService.GetProducts(currentUserID: _currentUser.Id);
 
@@ -71,24 +84,23 @@ public class MainWindowViewModel : INotifyPropertyChanged
             Products = SortManager.SortByPrice(Products, false);
             OnPropertyChange(nameof(Products));
         });
-
         SortByAscendingCommand = new RelayCommand(_ =>
         {
             Products = SortManager.SortByPrice(Products, true);
             OnPropertyChange(nameof(Products));
         });
-
         SortByTitleCommand = new RelayCommand(_ =>
         {
             Products = SortManager.SortByTitle(Products, true);
             OnPropertyChange(nameof(Products));
         });
-
         SortByTitleRevertCommand = new RelayCommand(_ =>
         {
             Products = SortManager.SortByTitle(Products, false);
             OnPropertyChange(nameof(Products));
         });
+
+        SearchStringChanged += OnSearchStringChanged;
     }
 
     private void ChangeFavoriteState(object parametr)
@@ -118,6 +130,14 @@ public class MainWindowViewModel : INotifyPropertyChanged
         Products = _productService.GetProducts(_currentUser.Id);
     }
 
+    protected void OnSearchStringChanged(object sender, PropertyChangingEventArgs e)
+    {
+        if (SearchString.Length >= 3)
+        {
+            Products = _searchService.Find(_productService.GetProducts(_currentUser.Id));
+            OnPropertyChange(nameof(Products));
+        }
+    }
     protected void OnPropertyChange([CallerMemberName] string propName = "")
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));

@@ -79,6 +79,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox Width="1000" 
+                             x:Name="searchbox"
                              BorderBrush="Transparent"
                              Margin="10 15 0 10"
                              materialDesign:HintAssist.Hint="Поиск"
@@ -89,7 +90,8 @@
                              FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"
                              materialDesign:TextFieldAssist.UnderlineBrush="Transparent"
                              Foreground="Black"
-                             CaretBrush="Black"/>
+                             CaretBrush="Black"
+                             KeyDown="SearchBox_KeyDown"/>
 
                     <Button
                         Background="Transparent" 
