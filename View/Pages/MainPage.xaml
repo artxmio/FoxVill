@@ -49,7 +49,7 @@
                                FontSize="20"
                                Style="{StaticResource BaseTextBlockStyle}"/>
                 </Button.ToolTip>
-                
+
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
                         <Style.Triggers>
@@ -241,95 +241,101 @@
             </Button>
         </StackPanel>
 
-        <ListView Grid.Row="1"
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                
+                <ListView Grid.Row="0"
                   HorizontalAlignment="Center"
                   Padding="0"
                   Margin="0 5 0 0"
                   SelectionMode="Single"
-                  ItemsSource="{Binding Products, Mode=OneWay}"
-                  SelectedItem="{Binding SelectedProduct}">
+                  ItemsSource="{Binding Products, Mode=OneWay}">
 
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel Orientation="Horizontal"
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"
                                Margin="20 0 0 0"
                                Width="1500"
                                />
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
 
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
-                    <Setter Property="Padding" Value="0" />
-                    <Setter Property="Margin" Value="10 15 0 0" />
-                    <Setter Property="BorderThickness" Value="1" />
-                    <Setter Property="RenderTransformOrigin" Value="0.7,0.7" />
-                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListViewItem">
-                                <Border Background="Transparent">
-                                    <ContentPresenter/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Setter Property="RenderTransform">
-                        <Setter.Value>
-                            <ScaleTransform ScaleX="1" ScaleY="1" />
-                        </Setter.Value>
-                    </Setter>
-                    <Setter Property="ContextMenu">
-                        <Setter.Value>
-                            <ContextMenu>
-                                <MenuItem>
-                                    <MenuItem.Header>
-                                        <TextBlock Text="Добавить в корзину"
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="Margin" Value="10 15 0 0" />
+                            <Setter Property="BorderThickness" Value="1" />
+                            <Setter Property="RenderTransformOrigin" Value="0.7,0.7" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListViewItem">
+                                        <Border Background="Transparent">
+                                            <ContentPresenter/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1" ScaleY="1" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="ContextMenu">
+                                <Setter.Value>
+                                    <ContextMenu>
+                                        <MenuItem>
+                                            <MenuItem.Header>
+                                                <TextBlock Text="Добавить в корзину"
                                                    FontSize="20"
                                                    Style="{StaticResource BaseTextBlockStyle}"/>
-                                    </MenuItem.Header>
-                                </MenuItem>
+                                            </MenuItem.Header>
+                                        </MenuItem>
 
-                                <MenuItem>
-                                    <MenuItem.Header>
-                                        <TextBlock Text="Добавить в измбранное"
+                                        <MenuItem>
+                                            <MenuItem.Header>
+                                                <TextBlock Text="Добавить в измбранное"
                                                    FontSize="20"
                                                    Style="{StaticResource BaseTextBlockStyle}"/>
-                                    </MenuItem.Header>
-                                </MenuItem>
-                            </ContextMenu>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            
-                            <Trigger.EnterActions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.05" Duration="0:0:0.1" />
-                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.05" Duration="0:0:0.1" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                            
-                            <Trigger.ExitActions>
-                                <BeginStoryboard>
-                                    <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1" Duration="0:0:0.1" />
-                                        <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1" Duration="0:0:0.1" />
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.ExitActions>
-                        </Trigger>
-                    </Style.Triggers>
-                    
-                </Style>
-            </ListView.ItemContainerStyle>
+                                            </MenuItem.Header>
+                                        </MenuItem>
+                                    </ContextMenu>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1.05" Duration="0:0:0.1" />
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1.05" Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="1" Duration="0:0:0.1" />
+                                                <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="1" Duration="0:0:0.1" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </Style.Triggers>
+
+                        </Style>
+                    </ListView.ItemContainerStyle>
 
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Border  
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border  
                             Height="350"
                             Width="270"
                             BorderThickness="2"
@@ -339,21 +345,21 @@
                             ClipToBounds="True"
                             Margin="13 0 0 0">
 
-                        <StackPanel Orientation="Vertical">
-                            
-                            <Border BorderBrush="Black"
+                                <StackPanel Orientation="Vertical">
+
+                                    <Border BorderBrush="Black"
                                     Background="White"
                                     BorderThickness="2"
                                     Margin="18 18 18 0"
                                     Width="230"
                                     Height="175"
                                     Padding="0">
-                                <Image Source="/Resources/Images/Products/example2.jpg"
+                                        <Image Source="/Resources/Images/Products/example2.jpg"
                                        Stretch="Fill">
-                                </Image>
-                            </Border>
+                                        </Image>
+                                    </Border>
 
-                            <TextBlock Text="{Binding Title}"
+                                    <TextBlock Text="{Binding Title}"
                                        Style="{StaticResource BaseTextBlockStyle}"
                                        Margin="18 0 18 0"
                                        FontSize="25"
@@ -361,20 +367,20 @@
                                        TextWrapping="Wrap"
                                        TextAlignment="Center"/>
 
-                            <StackPanel Orientation="Horizontal"
+                                    <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center">
-                                <TextBlock Text="{Binding Price}"
+                                        <TextBlock Text="{Binding Price}"
                                            Style="{StaticResource BaseTextBlockStyle}"/>
-                                <TextBlock Text="BYN"
+                                        <TextBlock Text="BYN"
                                            Style="{StaticResource BaseTextBlockStyle}"/>
-                            </StackPanel>
+                                    </StackPanel>
 
-                            <StackPanel Orientation="Horizontal"
+                                    <StackPanel Orientation="Horizontal"
                                         HorizontalAlignment="Center"
                                         Height="40"
                                         Width="215"
                                         Margin="0 5 0 0">
-                                <Button
+                                        <Button
                                     Background="Transparent" 
                                     Width="160"
                                     Height="40"
@@ -384,30 +390,30 @@
                                     HorizontalAlignment="Right"
                                     materialDesign:ButtonAssist.CornerRadius="10">
 
-                                    <Button.Style>
-                                        <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-                                            <Style.Triggers>
-                                                <Trigger Property="IsMouseOver" Value="True">
-                                                    <Setter Property="Background" Value="Red"/>
-                                                </Trigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Button.Style>
+                                            <Button.Style>
+                                                <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Background" Value="Red"/>
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>
 
-                                    <Button.Content>
+                                            <Button.Content>
 
-                                        <StackPanel Orientation="Horizontal">
-                                            <TextBlock Text="В корзину"
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="В корзину"
                                                        FontSize="22"
                                                        Margin="0 0 10 0"/>
-                                            <Image Width="25"
+                                                    <Image Width="25"
                                                Source="/Resources/Images/Png/cart.png"/>
-                                        </StackPanel>
+                                                </StackPanel>
 
-                                    </Button.Content>
+                                            </Button.Content>
 
-                                </Button>
-                                <Button 
+                                        </Button>
+                                        <Button 
                                     x:Name="AddItemToLiked"
                                     Width="35"
                                     Height="35"
@@ -422,34 +428,43 @@
                                     Command="{Binding DataContext.ChangeProductFavoriteStateCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
                                     CommandParameter="{Binding}">
 
-                                    <Button.Template>
-                                        <ControlTemplate TargetType="Button">
-                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                        </ControlTemplate>
-                                    </Button.Template>
+                                            <Button.Template>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                                </ControlTemplate>
+                                            </Button.Template>
 
-                                    <Button.Content>
-                                        <Image Stretch="UniformToFill">
-                                            <Image.Style>
-                                                <Style TargetType="Image">
-                                                    <Setter Property="Source" Value="/Resources/Images/Png/empty_heart.png"/>
-                                                    <Style.Triggers>
-                                                        <DataTrigger Binding="{Binding IsFavorite}" Value="True">
-                                                            <Setter Property="Source" Value="/Resources/Images/Png/full_heart.png"/>
-                                                        </DataTrigger>
-                                                    </Style.Triggers>
-                                                </Style>
-                                            </Image.Style>
-                                        </Image>
-                                    </Button.Content>
-                                </Button>
-                            </StackPanel>
-                        </StackPanel>
-                    </Border>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                                            <Button.Content>
+                                                <Image Stretch="UniformToFill">
+                                                    <Image.Style>
+                                                        <Style TargetType="Image">
+                                                            <Setter Property="Source" Value="/Resources/Images/Png/empty_heart.png"/>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding IsFavorite}" Value="True">
+                                                                    <Setter Property="Source" Value="/Resources/Images/Png/full_heart.png"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
-        </ListView>
+                </ListView>
+                <Button Grid.Row="2"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource BaseButtonStyle}"
+                        Command="{Binding ShowMoreProductsCommand}"
+                        Content="Ещё..."
+                        Padding="0"
+                        Margin="10"/>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 
 

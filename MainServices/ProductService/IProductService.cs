@@ -5,5 +5,6 @@ namespace FoxVill.MainServices.ProductService;
 
 public interface IProductService
 {
-    ObservableCollection<Product> GetProducts(int countProduct = 10, int currentUserID = 0);
+    ObservableCollection<Product> GetProducts(int currentUserID = 0);
+    public int CountProducts { get; set; }
 }

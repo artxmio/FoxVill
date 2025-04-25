@@ -9,14 +9,6 @@ public class FavoriteService : IFavoriteService
 {
     private readonly DatabaseContext _databaseContext;
     private readonly User _currentUser;
-    private ObservableCollection<Product> _product = null!;
-
-    public ObservableCollection<Product> Products
-    {
-        get => _product; 
-        set => _product = value;
-    }
-
 
     public FavoriteService(DatabaseContext context, User currentUser)
     {
@@ -43,7 +35,30 @@ public class FavoriteService : IFavoriteService
         {
             _databaseContext.Remove(exitingFavorite);
         }
-        
+
         await _databaseContext.SaveChangesAsync();
+    }
+
+    public ObservableCollection<Product> GetFavorites()
+    {
+        var favoriteProductIds = _databaseContext.Favorites
+            .Where(f => f.UserId == _currentUser.Id)
+            .Select(f => f.ProductId)
+            .ToHashSet();
+
+        var products = _databaseContext.Products
+                .Select(p => new Product
+                {
+                    Id = p.Id,
+                    Title = p.Title,
+                    Price = p.Price,
+                    IsFavorite = _databaseContext.Favorites
+                        .Any(f => f.UserId == _currentUser.Id && f.ProductId == p.Id)
+                })
+                .Where(p => p.IsFavorite)
+                .ToList();
+
+        return [.. products];
+
     }
 }

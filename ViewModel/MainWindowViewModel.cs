@@ -41,9 +41,10 @@ public class MainWindowViewModel : INotifyPropertyChanged
         }
     }
 
-    public ICommand ChangeProductFavoriteStateCommand {  get; set; }
-    public ICommand ShowFavoritesCommand {  get; set; }
-    public ICommand ShowAllProductsCommand {  get; set; }
+    public ICommand ChangeProductFavoriteStateCommand { get; set; }
+    public ICommand ShowFavoritesCommand { get; set; }
+    public ICommand ShowAllProductsCommand { get; set; }
+    public ICommand ShowMoreProductsCommand { get; set; }
 
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
@@ -57,6 +58,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
         ChangeProductFavoriteStateCommand = new RelayCommand(p => ChangeFavoriteState(p));
         ShowFavoritesCommand = new RelayCommand(p => ShowFavorites());
         ShowAllProductsCommand = new RelayCommand(p => ShowProducts());
+        ShowMoreProductsCommand = new RelayCommand(p => ShowMoreProducts());
     }
 
     private void ChangeFavoriteState(object parametr)
@@ -69,8 +71,22 @@ public class MainWindowViewModel : INotifyPropertyChanged
         product.IsFavorite = !product.IsFavorite;
         OnPropertyChange(nameof(product.IsFavorite));
     }
-    private void ShowFavorites() => Products = [.. _dbContext.Favorites.Where(f => f.UserId == _currentUser.Id).Select(f => f.Product)];
-    private void ShowProducts() => Products = [.. _dbContext.Products];
+    private void ShowFavorites()
+    {
+        Products = _favoriteService.GetFavorites();
+    }
+
+    private void ShowProducts()
+    {
+        _productService.CountProducts = 10;
+        Products = _productService.GetProducts(_currentUser.Id);
+    }
+
+    private void ShowMoreProducts()
+    {
+        _productService.CountProducts += 5;
+        Products = _productService.GetProducts(_currentUser.Id);
+    }
 
     protected void OnPropertyChange([CallerMemberName] string propName = "")
     {
