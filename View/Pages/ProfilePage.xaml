@@ -92,7 +92,7 @@
                     Padding="0"
                     BorderThickness="2"
                     materialDesign:ButtonAssist.CornerRadius="10"
-                    HorizontalAlignment="Center">
+                    HorizontalAlignment="Center" Click="Button_Click_4">
 
                     <Button.Style>
                         <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">

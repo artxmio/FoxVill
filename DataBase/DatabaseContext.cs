@@ -8,6 +8,7 @@ public class DatabaseContext : DbContext
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<Product> Products { get; set; } = null!;
     public DbSet<Favorite> Favorites { get; set; } = null!;
+    public DbSet<PaymentMethod> PaymentMethods { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -29,5 +30,10 @@ public class DatabaseContext : DbContext
             .HasOne(f => f.Product)
             .WithMany(p => p.Favorites)
             .HasForeignKey(f => f.ProductId);
+
+        modelBuilder.Entity<PaymentMethod>()
+            .HasOne(p => p.User)
+            .WithMany(u => u.PaymentMethods)
+            .HasForeignKey(p => p.UserId);
     }
 }

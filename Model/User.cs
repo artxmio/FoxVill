@@ -9,5 +9,6 @@ public class User
     public string Email { get; set; } = "";
     public string Password { get; set; } = "";
 
-    public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();
+    public ICollection<Favorite> Favorites { get; set; } = [];
+    public ICollection<PaymentMethod> PaymentMethods { get; set; } = []; 
 }

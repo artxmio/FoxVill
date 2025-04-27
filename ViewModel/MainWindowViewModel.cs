@@ -1,6 +1,7 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
 using FoxVill.MainServices.FavoritesService;
+using FoxVill.MainServices.PaymentService;
 using FoxVill.MainServices.ProductService;
 using FoxVill.MainServices.SearchService;
 using FoxVill.MainServices.SortManager;

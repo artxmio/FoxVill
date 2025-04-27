@@ -1,6 +1,8 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
+using FoxVill.MainServices.PaymentService;
 using FoxVill.Model;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -10,7 +12,9 @@ namespace FoxVill.ViewModel;
 public class ProfileViewModel : INotifyPropertyChanged
 {
     private readonly DatabaseContext _dbContext;
-    private User _currentUser;
+    private readonly User _currentUser;
+    private readonly PaymentService _paymentsService;
+    private ObservableCollection<PaymentMethod> _paymentMethods;
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -33,12 +37,26 @@ public class ProfileViewModel : INotifyPropertyChanged
         }
     }
 
+    public ObservableCollection<PaymentMethod> PaymentMethods
+    {
+        get => _paymentMethods;
+        set
+        {
+            _paymentMethods = value;
+            OnPropertyChanged();
+        }
+    }
+
     public ICommand ApplyUserDataChanges { get; }
 
     public ProfileViewModel(DatabaseContext dbContext, User currentUser)
     {
         _dbContext = dbContext;
         _currentUser = currentUser;
+        _paymentsService = new PaymentService(_dbContext);
+
+        PaymentMethods = _paymentsService.GetPaymentMethods(_currentUser.Id);
+        OnPropertyChanged(nameof(PaymentMethods));
 
         ApplyUserDataChanges = new RelayCommand(async p => await UpdateUserData());
     }

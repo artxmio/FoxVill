@@ -49,4 +49,11 @@ public partial class ProfilePage : Page
 
         AnimationManager.ShowModalWindow(_window, dataWindow);
     }
+
+    private void Button_Click_4(object sender, RoutedEventArgs e)
+    {
+        var window = new PaymentMethodsWindow(_viewModel);
+
+        window.ShowDialog();
+    }
 }
