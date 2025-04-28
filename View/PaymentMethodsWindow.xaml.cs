@@ -1,4 +1,5 @@
-﻿using FoxVill.ViewModel;
+﻿using FoxVill.View.Animation;
+using FoxVill.ViewModel;
 using System.Windows;
 
 namespace FoxVill.View;
@@ -13,5 +14,10 @@ public partial class PaymentMethodsWindow : Window
         this._viewModel = viewModel;
 
         DataContext = _viewModel;
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+        AnimationManager.CloseWithFade(this);
     }
 }

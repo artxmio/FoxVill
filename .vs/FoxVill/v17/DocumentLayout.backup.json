@@ -7,20 +7,28 @@
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\paymentmethodswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\paymentmethodswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\paymentmethodswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\paymentservice\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\paymentservice\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\aboutwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\aboutwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\paymentmethodswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\paymentmethodswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\paymentservice\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\paymentservice\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 316,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,6 +71,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AboutWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\AboutWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AboutWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\AboutWindow.xaml",
+              "RelativeToolTip": "View\\AboutWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T10:03:26.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml",
               "RelativeDocumentMoniker": "View\\Pages\\MainPage.xaml",
@@ -78,20 +94,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "PaymentMethodsWindow.xaml.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\View\\PaymentMethodsWindow.xaml.cs",
               "RelativeDocumentMoniker": "View\\PaymentMethodsWindow.xaml.cs",
               "ToolTip": "D:\\C#\\FoxVill\\View\\PaymentMethodsWindow.xaml.cs",
               "RelativeToolTip": "View\\PaymentMethodsWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T13:27:52.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DatabaseContext.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\DataBase\\DatabaseContext.cs",
               "RelativeDocumentMoniker": "DataBase\\DatabaseContext.cs",
@@ -99,12 +115,11 @@
               "RelativeToolTip": "DataBase\\DatabaseContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T13:19:00.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T13:19:00.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FavoriteService.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\FavoritesService\\FavoriteService.cs",
               "RelativeDocumentMoniker": "MainServices\\FavoritesService\\FavoriteService.cs",
@@ -112,8 +127,7 @@
               "RelativeToolTip": "MainServices\\FavoritesService\\FavoriteService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAIwCoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T13:16:34.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T13:16:34.384Z"
             },
             {
               "$type": "Document",
@@ -123,7 +137,7 @@
               "RelativeDocumentMoniker": "View\\Pages\\ProfilePage.xaml.cs",
               "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml.cs",
               "RelativeToolTip": "View\\Pages\\ProfilePage.xaml.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAgwDYAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAgwDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T13:07:22.566Z",
               "EditorCaption": ""
@@ -142,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\ProfileViewModel.cs",
@@ -150,12 +164,11 @@
               "RelativeToolTip": "ViewModel\\ProfileViewModel.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAewDkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T13:02:08.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T13:02:08.539Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
@@ -163,25 +176,24 @@
               "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T13:00:50.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T13:00:50.741Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "PaymentService.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\PaymentService\\PaymentService.cs",
               "RelativeDocumentMoniker": "MainServices\\PaymentService\\PaymentService.cs",
               "ToolTip": "D:\\C#\\FoxVill\\MainServices\\PaymentService\\PaymentService.cs",
               "RelativeToolTip": "MainServices\\PaymentService\\PaymentService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwC0AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-27T12:54:17.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ProfilePage.xaml",
               "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml",
               "RelativeDocumentMoniker": "View\\Pages\\ProfilePage.xaml",

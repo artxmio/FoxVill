@@ -54,6 +54,6 @@ public partial class ProfilePage : Page
     {
         var window = new PaymentMethodsWindow(_viewModel);
 
-        window.ShowDialog();
+        AnimationManager.ShowModalWindow(_window, window);
     }
 }
