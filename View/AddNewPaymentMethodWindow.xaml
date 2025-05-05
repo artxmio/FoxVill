@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FoxVill.View"
+        xmlns:vm="clr-namespace:FoxVill.ViewModel"
         mc:Ignorable="d"
         Width="500"
         Height="200"
@@ -11,7 +12,9 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
-        BorderBrush="Transparent">
+        BorderBrush="Transparent"
+        
+        d:DataContext="{d:DesignInstance vm:AddNewPaymentMethodViewModel}">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -67,7 +70,10 @@
                        Style="{StaticResource BaseTextBlockStyle}"
                        FontSize="20"/>
                 <TextBox Grid.Row="1" Grid.Column="1"
-                         Name="CardNumberBox" Width="250" />
+                         Name="CardNumberBox" Width="250" 
+                         MaxLength="16"
+                         Text="{Binding NewPaymentMethod.CardNumber}"
+                         PreviewTextInput="CardNumberBox_PreviewTextInput"/>
 
                 <TextBlock Text="Дата истечения срока:" Grid.Row="2" 
                        Style="{StaticResource BaseTextBlockStyle}"
@@ -75,11 +81,14 @@
                        Margin="0,10,10,0"/>
                 <DatePicker Grid.Row="2" 
                             Grid.Column="1"
+                            Text="{Binding Date}"
                             Name="ExpiryDatePicker" Width="250"/>
 
             <Button Content="Добавить" Grid.Row="3" Width="130" Height="40" Margin="0,10,0,0"
                 HorizontalAlignment="Center"
                     Grid.ColumnSpan="2"
+                    Command="{Binding AddNewMethodCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                 Style="{StaticResource BaseButtonStyle}"
                 FontSize="20"/>
 

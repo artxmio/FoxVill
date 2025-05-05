@@ -18,19 +18,6 @@ public class ProfileViewModel : INotifyPropertyChanged
     private readonly PaymentService _paymentsService;
     private ObservableCollection<PaymentMethod> _paymentMethods;
 
-    private PaymentMethod _newPaymentMethod;
-
-    public PaymentMethod NewPaymentMethod
-    {
-        get => _newPaymentMethod;
-        set
-        {
-            _newPaymentMethod = value;
-            OnPropertyChanged();
-        }
-    }
-
-
     public event PropertyChangedEventHandler? PropertyChanged;
 
     public string Email
@@ -79,7 +66,7 @@ public class ProfileViewModel : INotifyPropertyChanged
 
         ApplyUserDataChanges = new RelayCommand(async p => await UpdateUserData());
 
-        AddNewPaymentMethodCommand = new RelayCommand(async p => await AddNewPaymentMethod());
+        AddNewPaymentMethodCommand = new RelayCommand(p => AddNewPaymentMethod());
         RemovePaymentMethodCommand = new RelayCommand(async p => await RemovePaymentMethod(p));
     }
 
@@ -90,14 +77,20 @@ public class ProfileViewModel : INotifyPropertyChanged
 
         _dbContext.PaymentMethods.Remove(method);
         await _dbContext.SaveChangesAsync();
+
+        _paymentMethods = _paymentsService.GetPaymentMethods(_currentUser.Id);
+        OnPropertyChanged(nameof(PaymentMethods));
     }
 
-    private async Task AddNewPaymentMethod()
+    private void AddNewPaymentMethod()
     {
         var viewModel = new AddNewPaymentMethodViewModel(_dbContext, _currentUser);
         var window = new AddNewPaymentMethodWindow(viewModel);
 
         window.ShowDialog();
+
+        _paymentMethods = _paymentsService.GetPaymentMethods(_currentUser.Id);
+        OnPropertyChanged(nameof(PaymentMethods));
     }
 
     private async Task UpdateUserData()
