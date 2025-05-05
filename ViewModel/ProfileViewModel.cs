@@ -2,6 +2,8 @@
 using FoxVill.DataBase;
 using FoxVill.MainServices.PaymentService;
 using FoxVill.Model;
+using FoxVill.View;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -15,6 +17,19 @@ public class ProfileViewModel : INotifyPropertyChanged
     private readonly User _currentUser;
     private readonly PaymentService _paymentsService;
     private ObservableCollection<PaymentMethod> _paymentMethods;
+
+    private PaymentMethod _newPaymentMethod;
+
+    public PaymentMethod NewPaymentMethod
+    {
+        get => _newPaymentMethod;
+        set
+        {
+            _newPaymentMethod = value;
+            OnPropertyChanged();
+        }
+    }
+
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -49,16 +64,40 @@ public class ProfileViewModel : INotifyPropertyChanged
 
     public ICommand ApplyUserDataChanges { get; }
 
+    public ICommand AddNewPaymentMethodCommand { get; }
+    public ICommand RemovePaymentMethodCommand { get; }
+
     public ProfileViewModel(DatabaseContext dbContext, User currentUser)
     {
         _dbContext = dbContext;
         _currentUser = currentUser;
         _paymentsService = new PaymentService(_dbContext);
 
-        PaymentMethods = _paymentsService.GetPaymentMethods(_currentUser.Id);
+
+        _paymentMethods = _paymentsService.GetPaymentMethods(_currentUser.Id);
         OnPropertyChanged(nameof(PaymentMethods));
 
         ApplyUserDataChanges = new RelayCommand(async p => await UpdateUserData());
+
+        AddNewPaymentMethodCommand = new RelayCommand(async p => await AddNewPaymentMethod());
+        RemovePaymentMethodCommand = new RelayCommand(async p => await RemovePaymentMethod(p));
+    }
+
+    private async Task RemovePaymentMethod(object parametr)
+    {
+        if (parametr is not PaymentMethod method)
+            return;
+
+        _dbContext.PaymentMethods.Remove(method);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    private async Task AddNewPaymentMethod()
+    {
+        var viewModel = new AddNewPaymentMethodViewModel(_dbContext, _currentUser);
+        var window = new AddNewPaymentMethodWindow(viewModel);
+
+        window.ShowDialog();
     }
 
     private async Task UpdateUserData()

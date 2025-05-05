@@ -26,25 +26,6 @@ public class PaymentService
             .Where(p => p.UserId == currentUserID)
             .ToList();
 
-        methods.Add(new PaymentMethod()
-        {
-            Id = 1,
-            CardNumber = "23123123123",
-            ExpiryDate = "12.23.2123"
-        });
-        methods.Add(new PaymentMethod()
-        {
-            Id = 1,
-            CardNumber = "23123123123",
-            ExpiryDate = "12.23.2123"
-        });
-        methods.Add(new PaymentMethod()
-        {
-            Id = 1,
-            CardNumber = "23123123123",
-            ExpiryDate = "12.23.2123"
-        });
-
         return [.. methods];
     }
 }

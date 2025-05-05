@@ -16,7 +16,6 @@
         Background="Transparent"
         BorderBrush="Transparent"
         
-        
         d:DataContext="{d:DesignInstance vm:ProfileViewModel}">
     <Window.Resources>
         <ResourceDictionary>
@@ -79,7 +78,8 @@
 
                 <ListView x:Name="PaymentMethodsListView" 
                   Margin="10"
-                  ItemsSource="{Binding PaymentMethods, Mode=OneWay}">
+                  ItemsSource="{Binding PaymentMethods, Mode=OneWay}"
+                          >
 
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
@@ -126,7 +126,9 @@
                                             Height="50"
                                         FontSize="20"
                                         Margin="5"
-                                        Style="{StaticResource BaseButtonStyle}"/>
+                                                Command="{Binding DataContext.RemovePaymentMethodCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                                CommandParameter="{Binding}"
+                                                Style="{StaticResource BaseButtonStyle}"/>
                                     </StackPanel>
                                 </Grid>
                             </Border>
@@ -143,6 +145,7 @@
                     Height="50"
                     Content="Добавить"
                     Margin="0 0 0 10"
+                    Command="{Binding AddNewPaymentMethodCommand}"
                     Style="{StaticResource BaseButtonStyle}"/>
         </Grid>
     </Border>
