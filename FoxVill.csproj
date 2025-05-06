@@ -12,6 +12,7 @@
   <ItemGroup>
     <None Remove="database.db" />
     <None Remove="Resources\Fonts\Caveat.ttf" />
+    <None Remove="Resources\Html\faq.html" />
     <None Remove="Resources\Images\Png\arrow.png" />
     <None Remove="Resources\Images\Png\arrow_to_left.png" />
     <None Remove="Resources\Images\Png\auth_back.png" />
@@ -44,6 +45,9 @@
 
   <ItemGroup>
     <Content Include="database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Html\faq.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Ico\fox.ico" />

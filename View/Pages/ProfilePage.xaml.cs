@@ -68,4 +68,18 @@ public partial class ProfilePage : Page
 
         Process.Start(new ProcessStartInfo(mailtoLink) { UseShellExecute = true });
     }
+
+    private void Button_Click_6(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            string url = @"Resources\Html\faq.html"; 
+            Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+        }
+        catch(Exception ex) 
+        {
+            MessageBox.Show($"{ex.Message}", "Ошибка");
+        }
+
+    }
 }
