@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\C#\\FoxVill\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\paymentservice\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\paymentservice\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -35,14 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProfilePage.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pages\\ProfilePage.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml.cs",
-              "RelativeToolTip": "View\\Pages\\ProfilePage.xaml.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAArwEsAAAAvAAAAAAAAAA==",
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\PaymentService\\PaymentService.cs",
+              "RelativeDocumentMoniker": "MainServices\\PaymentService\\PaymentService.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\MainServices\\PaymentService\\PaymentService.cs",
+              "RelativeToolTip": "MainServices\\PaymentService\\PaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T09:54:39.319Z",
+              "WhenOpened": "2025-05-06T10:12:28.489Z",
               "EditorCaption": ""
             },
             {

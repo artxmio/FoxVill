@@ -6,12 +6,10 @@ namespace FoxVill.MainServices.PaymentService;
 
 public class PaymentService
 {
-    private readonly EncryptService _encryptService;
     private readonly DatabaseContext _dbContext;
 
     public PaymentService(DatabaseContext dbContext)
     {
-        _encryptService = new EncryptService();
         _dbContext = dbContext;
     }
 
