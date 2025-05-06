@@ -1,5 +1,6 @@
 ﻿using FoxVill.View.Animation;
 using FoxVill.ViewModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -55,5 +56,16 @@ public partial class ProfilePage : Page
         var window = new PaymentMethodsWindow(_viewModel);
 
         AnimationManager.ShowModalWindow(_window, window);
+    }
+
+    private void Button_Click_5(object sender, RoutedEventArgs e)
+    {
+        string email = "example@mail.com";
+        string subject = "Тема письма";
+        string body = "Добрый день!\n\nНапишите ваш текст здесь.";
+
+        string mailtoLink = $"mailto:{email}?subject={subject}&body={body}";
+
+        Process.Start(new ProcessStartInfo(mailtoLink) { UseShellExecute = true });
     }
 }

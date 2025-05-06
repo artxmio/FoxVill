@@ -279,7 +279,7 @@
                         Grid.Column="0"
                         Grid.Row="1"
                         FontSize="30"
-                        Width="330">
+                        Width="330" Click="Button_Click_5">
                     <Button.Effect>
                         <DropShadowEffect Color="Black"
                                           BlurRadius="15"
