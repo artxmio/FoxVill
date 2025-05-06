@@ -9,6 +9,8 @@ public class DatabaseContext : DbContext
     public DbSet<Product> Products { get; set; } = null!;
     public DbSet<Favorite> Favorites { get; set; } = null!;
     public DbSet<PaymentMethod> PaymentMethods { get; set; }
+    public DbSet<CartItem> CartItems { get; set; }
+    public DbSet<Cart> Carts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -35,5 +37,22 @@ public class DatabaseContext : DbContext
             .HasOne(p => p.User)
             .WithMany(u => u.PaymentMethods)
             .HasForeignKey(p => p.UserId);
+
+        modelBuilder.Entity<User>()
+                    .HasOne(u => u.Cart)
+                    .WithOne(c => c.User)
+                    .HasForeignKey<Cart>(c => c.UserId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Cart>()
+            .HasMany(c => c.CartItems)
+            .WithOne(ci => ci.Cart)
+            .HasForeignKey(ci => ci.CartId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<CartItem>()
+            .HasOne(ci => ci.Product)
+            .WithMany()
+            .HasForeignKey(ci => ci.ItemId);
     }
 }

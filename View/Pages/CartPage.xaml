@@ -10,7 +10,8 @@
 
       Margin="100 125"
       d:Background="White"
-      Title="CartPage">
+      Title="CartPage"
+      d:DataContext="{d:DesignInstance vm:MainWindowViewModel}">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -76,14 +77,15 @@
                 <ListView ScrollViewer.VerticalScrollBarVisibility="Auto"
                           ScrollViewer.IsDeferredScrollingEnabled="True"
                           Grid.Row="1"
-                          x:Name="listView">
+                          x:Name="listView"
+                          ItemsSource="{Binding CartItems}">
 
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <VirtualizingStackPanel ScrollUnit="Pixel" />
                         </ItemsPanelTemplate>
                     </ListView.ItemsPanel>
-                    
+
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
                             <Setter Property="Padding" Value="0" />
@@ -164,7 +166,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Text="Колесо обозрения"
+                                    <TextBlock Text="{Binding Product.Title}"
                                                FontSize="50" 
                                                Margin="10"
                                                Style="{StaticResource BaseTextBlockStyle}"
@@ -182,7 +184,9 @@
                                                 Padding="0"
                                                 BorderThickness="2"
                                                 HorizontalAlignment="Right"
-                                                materialDesign:ButtonAssist.CornerRadius="15">
+                                            Command="{Binding DataContext.DecreaseCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                            CommandParameter="{Binding}"
+                                            materialDesign:ButtonAssist.CornerRadius="15">
 
                                             <Button.Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
@@ -202,25 +206,27 @@
                                             </Button.Effect>
 
                                             <Image Source="/Resources/Images/Png/minus.png"
-                                   Width="20"/>
+                                                   Width="20"/>
                                         </Button>
 
-                                        <TextBlock Text="1"
-                                   Margin="15"
-                                   FontSize="50"
-                                   Style="{StaticResource BaseTextBlockStyle}"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding Quantity}"
+                                                   Margin="15"
+                                                   FontSize="50"
+                                                   Style="{StaticResource BaseTextBlockStyle}"
+                                                   HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center"/>
 
                                         <Button
-                            Background="Transparent" 
-                            Width="40"
-                            Height="40"
-                            Margin="0"
-                            Padding="0"
-                            BorderThickness="2"
-                            HorizontalAlignment="Right"
-                            materialDesign:ButtonAssist.CornerRadius="15">
+                                            Background="Transparent" 
+                                            Width="40"
+                                            Height="40"
+                                            Margin="0"
+                                            Padding="0"
+                                            BorderThickness="2"
+                                            HorizontalAlignment="Right"
+                                            materialDesign:ButtonAssist.CornerRadius="15"
+                                            Command="{Binding DataContext.IncreaseCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                            CommandParameter="{Binding}">
 
                                             <Button.Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
@@ -240,24 +246,24 @@
                                             </Button.Effect>
 
                                             <Image Source="/Resources/Images/Png/plus.png"
-                                   Width="20"/>
+                                                Width="20"/>
                                         </Button>
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal"
-                                Grid.Column="2">
-                                        <TextBlock Text="500"
-                               FontSize="50" 
-                               Margin="0 0 0 0"
-                               HorizontalAlignment="Right"
-                               VerticalAlignment="Center"
-                               Style="{StaticResource BaseTextBlockStyle}"/>
+                                                Grid.Column="2">
+                                        <TextBlock Text="{Binding Product.Price}"
+                                               FontSize="50" 
+                                               Margin="0 0 0 0"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource BaseTextBlockStyle}"/>
                                         <TextBlock Text="BYN"
-                               FontSize="50" 
-                               Margin="10"
-                               HorizontalAlignment="Right"
-                               VerticalAlignment="Center"
-                               Style="{StaticResource BaseTextBlockStyle}"/>
+                                               FontSize="50" 
+                                               Margin="10"
+                                               HorizontalAlignment="Right"
+                                               VerticalAlignment="Center"
+                                               Style="{StaticResource BaseTextBlockStyle}"/>
 
                                     </StackPanel>
                                 </Grid>
@@ -265,14 +271,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
 
-                    
-                </ListView>
-                <!--<Label Content="Корзина пока что пуста..." 
-                       HorizontalAlignment="Center"
-                       FontSize="50"
-                       FontFamily="pack://application:,,,/FoxVill;component/Resources/Fonts/Caveat.ttf#Caveat"
-                       Grid.Row="1" VerticalAlignment="Center"/>-->
+                    <d:ListBoxItem></d:ListBoxItem>
 
+                </ListView>
             </Grid>
         </Border>
 
@@ -304,9 +305,10 @@
 
                 <Button Style="{StaticResource BaseButtonStyle}"
                         Content="Картой"
+                        x:Name="btn1"
                         Grid.Column="0"
                         Grid.Row="1"
-                        Margin="20 0 0 0">
+                        Margin="20 0 0 0" Click="btn1_Click">
                     <Button.Effect>
                         <DropShadowEffect Color="Black"
                                               BlurRadius="15"
@@ -318,9 +320,10 @@
                 <Button Style="{StaticResource BaseButtonStyle}"
                             Content="Наличными на кассе"
                             FontSize="27"
+                            x:Name="btn2"
                             Grid.Column="1"
                             Grid.Row="1"
-                        Margin="20 0 20 0">
+                        Margin="20 0 20 0" Click="btn2_Click">
                     <Button.Effect>
                         <DropShadowEffect Color="Black"
                                               BlurRadius="15"

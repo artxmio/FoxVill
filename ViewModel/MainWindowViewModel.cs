@@ -1,13 +1,14 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
 using FoxVill.MainServices.FavoritesService;
-using FoxVill.MainServices.PaymentService;
 using FoxVill.MainServices.ProductService;
 using FoxVill.MainServices.SearchService;
 using FoxVill.MainServices.SortManager;
 using FoxVill.Model;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
@@ -61,6 +62,9 @@ public class MainWindowViewModel : INotifyPropertyChanged
         get => _currentUser;
     }
 
+    public Cart Cart { get; set; }
+    public ObservableCollection<CartItem> CartItems { get; set; }
+
     public ICommand ChangeProductFavoriteStateCommand { get; set; }
     public ICommand ShowFavoritesCommand { get; set; }
     public ICommand ShowAllProductsCommand { get; set; }
@@ -70,6 +74,9 @@ public class MainWindowViewModel : INotifyPropertyChanged
     public ICommand SortByTitleCommand { get; }
     public ICommand SortByTitleRevertCommand { get; }
 
+    public ICommand IncreaseCommand { get; }
+    public ICommand DecreaseCommand { get; }
+
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
         _dbContext = context;
@@ -77,6 +84,13 @@ public class MainWindowViewModel : INotifyPropertyChanged
         _favoriteService = new FavoriteService(_dbContext, _currentUser);
         _productService = new ProductService(_dbContext);
         _searchService = new SearchService();
+
+        Cart = _dbContext.Carts.FirstOrDefault(c => c.UserId == _currentUser.Id)
+            ?? throw new NullReferenceException();
+
+        _dbContext.Products.Load();
+        CartItems = [.. _dbContext.CartItems.Where(c => c.CartId == Cart.CartId)];
+        OnPropertyChange(nameof(CartItems));
 
         _products = _productService.GetProducts(currentUserID: _currentUser.Id);
 
@@ -104,6 +118,30 @@ public class MainWindowViewModel : INotifyPropertyChanged
         {
             Products = SortManager.SortByTitle(Products, false);
             OnPropertyChange(nameof(Products));
+        });
+
+        IncreaseCommand = new RelayCommand(p =>
+        {
+            if (p is CartItem item)
+            {
+                item.Quantity++;
+                Debug.WriteLine($"Новое значение: {item.Quantity}");
+                OnPropertyChange(nameof(CartItems));
+                _dbContext.SaveChanges();
+            }
+        }
+        );
+        DecreaseCommand = new RelayCommand(p =>
+        {
+            if (p is CartItem item)
+            {
+                if (item.Quantity != 1)
+                    item.Quantity--;
+                Debug.WriteLine($"Новое значение: {item.Quantity}");
+                OnPropertyChange(nameof(CartItems));
+                OnPropertyChange("Quantity");
+                _dbContext.SaveChanges();
+            }
         });
 
         SearchStringChanged += OnSearchStringChanged;
