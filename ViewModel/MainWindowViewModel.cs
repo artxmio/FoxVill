@@ -1,5 +1,6 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
+using FoxVill.MainServices.CartService;
 using FoxVill.MainServices.FavoritesService;
 using FoxVill.MainServices.ProductService;
 using FoxVill.MainServices.SearchService;
@@ -10,6 +11,8 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Security.Policy;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;
@@ -21,6 +24,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
     private readonly FavoriteService _favoriteService;
     private readonly SearchService _searchService;
     private readonly User _currentUser;
+    private readonly CartService _cartService;
 
     private ObservableCollection<Product> _products = new();
 
@@ -77,6 +81,9 @@ public class MainWindowViewModel : INotifyPropertyChanged
     public ICommand IncreaseCommand { get; }
     public ICommand DecreaseCommand { get; }
 
+    public ICommand AddToCartCommand { get; }
+    public ICommand RemoveItemFromCartCommand { get; }
+
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
         _dbContext = context;
@@ -84,6 +91,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
         _favoriteService = new FavoriteService(_dbContext, _currentUser);
         _productService = new ProductService(_dbContext);
         _searchService = new SearchService();
+        _cartService = new CartService(_dbContext);
 
         Cart = _dbContext.Carts.FirstOrDefault(c => c.UserId == _currentUser.Id)
             ?? throw new NullReferenceException();
@@ -144,7 +152,33 @@ public class MainWindowViewModel : INotifyPropertyChanged
             }
         });
 
+        AddToCartCommand = new RelayCommand(async p => await AddToCart(p));
+        RemoveItemFromCartCommand = new RelayCommand(async p => await RemoveItemFromCart(p));
+
         SearchStringChanged += OnSearchStringChanged;
+    }
+
+    private async Task RemoveItemFromCart(object p)
+    {
+        if (p is CartItem item)
+        {
+            _dbContext.Remove(item);
+            await _dbContext.SaveChangesAsync();
+            CartItems = [.. _dbContext.CartItems.Where(c => c.CartId == Cart.CartId)];
+            OnPropertyChange(nameof(CartItems));
+            Debug.WriteLine($"Товар {item.ItemId} удалился из корзины");
+        }
+    }
+
+    private async Task AddToCart(object p)
+    {
+        if (p is Product product)
+        {
+            await _cartService.AddItemToBasket(_currentUser.Id, product.Id);
+            Debug.WriteLine($"Товар {product.Title} добавился в корзину");
+            
+            OnPropertyChange(nameof(CartItems));
+        }
     }
 
     private void ChangeFavoriteState(object parametr)

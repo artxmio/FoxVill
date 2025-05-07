@@ -109,19 +109,7 @@
                                     <ScaleTransform ScaleX="1" ScaleY="1" />
                                 </Setter.Value>
                             </Setter>
-                            <Setter Property="ContextMenu">
-                                <Setter.Value>
-                                    <ContextMenu>
-                                        <MenuItem>
-                                            <MenuItem.Header>
-                                                <TextBlock Text="Убрать из корзины"
-                                                           FontSize="20"
-                                                           Style="{StaticResource BaseTextBlockStyle}"/>
-                                            </MenuItem.Header>
-                                        </MenuItem>
-                                    </ContextMenu>
-                                </Setter.Value>
-                            </Setter>
+                            
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
 
@@ -165,6 +153,10 @@
                                         <ColumnDefinition Width="0.5*"/>
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
+
+                                    
+
+
 
                                     <TextBlock Text="{Binding Product.Title}"
                                                FontSize="50" 
@@ -259,21 +251,54 @@
                                                VerticalAlignment="Center"
                                                Style="{StaticResource BaseTextBlockStyle}"/>
                                         <TextBlock Text="BYN"
-                                               FontSize="50" 
+                                               FontSize="40" 
                                                Margin="10"
                                                HorizontalAlignment="Right"
                                                VerticalAlignment="Center"
                                                Style="{StaticResource BaseTextBlockStyle}"/>
+                                        <Button Background="Transparent"
+                                            Width="40"
+                                            Height="40"
+                                            Grid.Column="3"
+                                            Padding="0"
+                                            BorderThickness="2"
+                                            HorizontalAlignment="Right"
+                                            Command="{Binding DataContext.RemoveItemFromCartCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                            CommandParameter="{Binding}"
+                                            materialDesign:ButtonAssist.CornerRadius="15">
 
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter Property="Background" Value="Red"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Button.Style>
+
+                                        <Button.Effect>
+                                            <DropShadowEffect Color="Black"
+                                          BlurRadius="15"
+                                          ShadowDepth="1"
+                                          Opacity="0.4"/>
+                                        </Button.Effect>
+
+                                        <Image Source="/Resources/Images/Png/trash.png"
+                                                Width="20"/>
+                                    </Button>
                                     </StackPanel>
+                                    
                                 </Grid>
                             </Border>
+                            
                         </DataTemplate>
                     </ListView.ItemTemplate>
 
                     <d:ListBoxItem></d:ListBoxItem>
 
                 </ListView>
+                
             </Grid>
         </Border>
 

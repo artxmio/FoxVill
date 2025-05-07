@@ -338,30 +338,29 @@
                         </Style>
                     </ListView.ItemContainerStyle>
 
-
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border  
-                            Height="350"
-                            Width="270"
-                            BorderThickness="2"
-                            CornerRadius="15"
-                            BorderBrush="Black"
-                            Background="Transparent"
-                            ClipToBounds="True"
-                            Margin="13 0 0 0">
+                                Height="350"
+                                Width="270"
+                                BorderThickness="2"
+                                CornerRadius="15"
+                                BorderBrush="Black"
+                                Background="Transparent"
+                                ClipToBounds="True"
+                                Margin="13 0 0 0">
 
                                 <StackPanel Orientation="Vertical">
 
                                     <Border BorderBrush="Black"
-                                    Background="White"
-                                    BorderThickness="2"
-                                    Margin="18 18 18 0"
-                                    Width="230"
-                                    Height="175"
-                                    Padding="0">
+                                            Background="White"
+                                            BorderThickness="2"
+                                            Margin="18 18 18 0"
+                                            Width="230"
+                                            Height="175"
+                                            Padding="0">
                                         <Image Source="/Resources/Images/Products/example2.jpg"
-                                       Stretch="Fill">
+                                               Stretch="Fill">
                                         </Image>
                                     </Border>
 
@@ -382,19 +381,21 @@
                                     </StackPanel>
 
                                     <StackPanel Orientation="Horizontal"
-                                        HorizontalAlignment="Center"
-                                        Height="40"
-                                        Width="215"
-                                        Margin="0 5 0 0">
+                                                HorizontalAlignment="Center"
+                                                Height="40"
+                                                Width="215"
+                                                Margin="0 5 0 0">
                                         <Button
-                                    Background="Transparent" 
-                                    Width="160"
-                                    Height="40"
-                                    Margin="0"
-                                    Padding="0"
-                                    BorderThickness="2"
-                                    HorizontalAlignment="Right"
-                                    materialDesign:ButtonAssist.CornerRadius="10">
+                                            Background="Transparent" 
+                                            Width="160"
+                                            Height="40"
+                                            Margin="0"
+                                            Padding="0"
+                                            BorderThickness="2"
+                                            HorizontalAlignment="Right"
+                                            materialDesign:ButtonAssist.CornerRadius="10"
+                                            Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                            CommandParameter="{Binding}">
 
                                             <Button.Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
@@ -410,29 +411,29 @@
 
                                                 <StackPanel Orientation="Horizontal">
                                                     <TextBlock Text="В корзину"
-                                                       FontSize="22"
-                                                       Margin="0 0 10 0"/>
+                                                               FontSize="22"
+                                                               Margin="0 0 10 0"/>
                                                     <Image Width="25"
-                                               Source="/Resources/Images/Png/cart.png"/>
+                                                           Source="/Resources/Images/Png/cart.png"/>
                                                 </StackPanel>
 
                                             </Button.Content>
 
                                         </Button>
                                         <Button 
-                                    x:Name="AddItemToLiked"
-                                    Width="35"
-                                    Height="35"
-                                    Margin="15 0 0 0"
-                                    Padding="3"
-                                    Background="Transparent"
-                                    BorderBrush="Transparent"
-                                    HorizontalAlignment="Right"
-                                    VerticalAlignment="Center"
-                                    Cursor="Hand"
-                                    Tag="0"
-                                    Command="{Binding DataContext.ChangeProductFavoriteStateCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
-                                    CommandParameter="{Binding}">
+                                            x:Name="AddItemToLiked"
+                                            Width="35"
+                                            Height="35"
+                                            Margin="15 0 0 0"
+                                            Padding="3"
+                                            Background="Transparent"
+                                            BorderBrush="Transparent"
+                                            HorizontalAlignment="Right"
+                                            VerticalAlignment="Center"
+                                            Cursor="Hand"
+                                            Tag="0"
+                                            Command="{Binding DataContext.ChangeProductFavoriteStateCommand, RelativeSource={RelativeSource AncestorType=ListView}}"
+                                            CommandParameter="{Binding}">
 
                                             <Button.Template>
                                                 <ControlTemplate TargetType="Button">

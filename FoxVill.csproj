@@ -33,6 +33,7 @@
     <None Remove="Resources\Images\Png\open_eye.png" />
     <None Remove="Resources\Images\Png\plus.png" />
     <None Remove="Resources\Images\Png\sort.png" />
+    <None Remove="Resources\Images\Png\trash.png" />
     <None Remove="Resources\Images\Png\user.png" />
     <None Remove="Resources\Images\Png\user_profile.png" />
     <None Remove="Resources\Images\Png\x.png" />
@@ -109,6 +110,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\sort.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\trash.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\user.png">

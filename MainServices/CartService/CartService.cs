@@ -14,7 +14,7 @@ public class CartService
         _context = context;
     }
 
-    public async Task AddItemToBasket(int userId, int itemId, int quantity)
+    public async Task AddItemToBasket(int userId, int itemId, int quantity = 1)
     {
         var user = _context.Users.Include(u => u.Cart).ThenInclude(b => b.CartItems).FirstOrDefault(u => u.Id == userId);
 
