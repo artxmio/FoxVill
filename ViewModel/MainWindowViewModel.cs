@@ -68,6 +68,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
 
     public Cart Cart { get; set; }
     public ObservableCollection<CartItem> CartItems { get; set; }
+    public decimal CartPrice => CartItems.Sum(c => c.Product.Price * c.Quantity);
 
     public ICommand ChangeProductFavoriteStateCommand { get; set; }
     public ICommand ShowFavoritesCommand { get; set; }
@@ -135,6 +136,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
                 item.Quantity++;
                 Debug.WriteLine($"Новое значение: {item.Quantity}");
                 OnPropertyChange(nameof(CartItems));
+                OnPropertyChange(nameof(CartPrice));
                 _dbContext.SaveChanges();
             }
         }
@@ -147,7 +149,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
                     item.Quantity--;
                 Debug.WriteLine($"Новое значение: {item.Quantity}");
                 OnPropertyChange(nameof(CartItems));
-                OnPropertyChange("Quantity");
+                OnPropertyChange(nameof(CartPrice));
                 _dbContext.SaveChanges();
             }
         });
@@ -166,6 +168,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
             await _dbContext.SaveChangesAsync();
             CartItems = [.. _dbContext.CartItems.Where(c => c.CartId == Cart.CartId)];
             OnPropertyChange(nameof(CartItems));
+            OnPropertyChange(nameof(CartPrice));
             Debug.WriteLine($"Товар {item.ItemId} удалился из корзины");
         }
     }
@@ -176,8 +179,8 @@ public class MainWindowViewModel : INotifyPropertyChanged
         {
             await _cartService.AddItemToBasket(_currentUser.Id, product.Id);
             Debug.WriteLine($"Товар {product.Title} добавился в корзину");
-            
             OnPropertyChange(nameof(CartItems));
+            OnPropertyChange(nameof(CartPrice));
         }
     }
 

@@ -367,7 +367,7 @@
                 <StackPanel Orientation="Horizontal"
                             Grid.Column="1"
                             Grid.Row="2">
-                    <TextBlock Text="2000"
+                    <TextBlock Text="{Binding CartPrice}"
                                Style="{StaticResource BaseTextBlockStyle}"
                                FontSize="45"
                            
