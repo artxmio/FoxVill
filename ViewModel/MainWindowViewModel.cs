@@ -11,8 +11,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Security.Policy;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;
@@ -178,6 +176,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
         if (p is Product product)
         {
             await _cartService.AddItemToBasket(_currentUser.Id, product.Id);
+            CartItems = [.. _dbContext.CartItems.Where(c => c.CartId == Cart.CartId)];
             Debug.WriteLine($"Товар {product.Title} добавился в корзину");
             OnPropertyChange(nameof(CartItems));
             OnPropertyChange(nameof(CartPrice));
