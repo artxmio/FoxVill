@@ -11,6 +11,7 @@ public class DatabaseContext : DbContext
     public DbSet<PaymentMethod> PaymentMethods { get; set; }
     public DbSet<CartItem> CartItems { get; set; }
     public DbSet<Cart> Carts { get; set; }
+    public DbSet<HistoryItem> HistoryItems { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -54,5 +55,10 @@ public class DatabaseContext : DbContext
             .HasOne(ci => ci.Product)
             .WithMany()
             .HasForeignKey(ci => ci.ItemId);
+
+        modelBuilder.Entity<HistoryItem>()
+            .HasOne(h => h.User)
+            .WithMany()
+            .HasForeignKey(h => h.UserId);
     }
 }

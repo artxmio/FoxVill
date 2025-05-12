@@ -213,7 +213,7 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Center"
             Grid.Row="1"
-            Grid.Column="2">
+            Grid.Column="2" Click="Button_Click_7">
 
             <Button.Effect>
                 <DropShadowEffect Color="Black"

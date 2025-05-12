@@ -82,4 +82,11 @@ public partial class ProfilePage : Page
         }
 
     }
+
+    private void Button_Click_7(object sender, RoutedEventArgs e)
+    { 
+        var page = new HistoryPage(_viewModel);
+
+        AnimationManager.NavigateWithAnimation(_window.MainFrame, page);
+    }
 }

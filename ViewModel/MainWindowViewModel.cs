@@ -2,6 +2,7 @@
 using FoxVill.DataBase;
 using FoxVill.MainServices.CartService;
 using FoxVill.MainServices.FavoritesService;
+using FoxVill.MainServices.HistoryService;
 using FoxVill.MainServices.ProductService;
 using FoxVill.MainServices.SearchService;
 using FoxVill.MainServices.SortManager;
@@ -23,7 +24,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
     private readonly SearchService _searchService;
     private readonly User _currentUser;
     private readonly CartService _cartService;
-
+    private readonly HistoryService _historyService;
     private ObservableCollection<Product> _products = new();
 
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -67,6 +68,8 @@ public class MainWindowViewModel : INotifyPropertyChanged
     public Cart Cart { get; set; }
     public ObservableCollection<CartItem> CartItems { get; set; }
     public decimal CartPrice => CartItems.Sum(c => c.Product.Price * c.Quantity);
+
+    public ObservableCollection<HistoryItem> HistoryItems { get; set; }
 
     public ICommand ChangeProductFavoriteStateCommand { get; set; }
     public ICommand ShowFavoritesCommand { get; set; }

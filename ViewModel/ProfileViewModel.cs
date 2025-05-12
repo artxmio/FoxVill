@@ -1,5 +1,6 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
+using FoxVill.MainServices.HistoryService;
 using FoxVill.MainServices.PaymentService;
 using FoxVill.Model;
 using FoxVill.View;
@@ -16,6 +17,7 @@ public class ProfileViewModel : INotifyPropertyChanged
     private readonly DatabaseContext _dbContext;
     private readonly User _currentUser;
     private readonly PaymentService _paymentsService;
+    private readonly HistoryService _historyService;
     private ObservableCollection<PaymentMethod> _paymentMethods;
 
     public event PropertyChangedEventHandler? PropertyChanged;
@@ -49,6 +51,8 @@ public class ProfileViewModel : INotifyPropertyChanged
         }
     }
 
+    public ObservableCollection<HistoryItem> HistoryItems { get; set; }
+
     public ICommand ApplyUserDataChanges { get; }
 
     public ICommand AddNewPaymentMethodCommand { get; }
@@ -59,7 +63,9 @@ public class ProfileViewModel : INotifyPropertyChanged
         _dbContext = dbContext;
         _currentUser = currentUser;
         _paymentsService = new PaymentService(_dbContext);
+        _historyService = new HistoryService(_dbContext);
 
+        HistoryItems = _historyService.HistoryItems;
 
         _paymentMethods = _paymentsService.GetPaymentMethods(_currentUser.Id);
         OnPropertyChanged(nameof(PaymentMethods));
