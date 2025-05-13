@@ -12,6 +12,8 @@ public class DatabaseContext : DbContext
     public DbSet<CartItem> CartItems { get; set; }
     public DbSet<Cart> Carts { get; set; }
     public DbSet<HistoryItem> HistoryItems { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderItem> OrderItems { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -60,5 +62,20 @@ public class DatabaseContext : DbContext
             .HasOne(h => h.User)
             .WithMany()
             .HasForeignKey(h => h.UserId);
+
+        modelBuilder.Entity<Order>()
+            .HasOne(o => o.User)
+            .WithMany()
+            .HasForeignKey(o => o.UserId);
+
+        modelBuilder.Entity<OrderItem>()
+            .HasOne(oi => oi.Order)
+            .WithMany(o => o.OrderItems)
+            .HasForeignKey(oi => oi.OrderId);
+
+        modelBuilder.Entity<OrderItem>()
+            .HasOne(oi => oi.Product)
+            .WithMany()
+            .HasForeignKey(oi => oi.ItemId);
     }
 }

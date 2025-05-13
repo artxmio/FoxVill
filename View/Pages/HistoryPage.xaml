@@ -5,13 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:FoxVill.View.Pages"
       xmlns:vm="clr-namespace:FoxVill.ViewModel"
-      mc:Ignorable="d" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:oxy="http://oxyplot.org/wpf"
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HistoryPage"
       d:DataContext="{d:DesignInstance vm:ProfileViewModel}"
       HorizontalAlignment="Center"
       VerticalAlignment="Top"
-      Margin="150">
+      Margin="150"
+      MaxHeight="450">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -20,19 +23,64 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    
+
     <Grid>
-        <DataGrid Style="{StaticResource BaseDataGridStyle}" 
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button
+            Background="Transparent" 
+            Width="71"
+            Height="71"
+            Padding="0"
+            BorderThickness="2"
+            HorizontalAlignment="Left"
+            materialDesign:ButtonAssist.CornerRadius="50"
+            Click="Button_Click">
+
+            <Button.Style>
+                <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Image Width="71"
+                Source="/Resources/Images/Png/arrow_to_left.png"/>
+
+        </Button>
+
+        <Border BorderBrush="Black"
+                CornerRadius="15"
+                BorderThickness="2"
+                Grid.Row="1"
+                Margin="10">
+
+            <ScrollViewer Margin="25">
+                <StackPanel>
+                    <DataGrid Style="{StaticResource BaseDataGridStyle}" 
                   ItemsSource="{Binding HistoryItems}" AutoGenerateColumns="False"
                   HorizontalScrollBarVisibility="Disabled"
                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsReadOnly="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="1*" FontSize="17"/>
-                <DataGridTextColumn Header="Товар" Binding="{Binding ProductName}" Width="3*" FontSize="17"/>
-                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}" Width="1*" FontSize="17"/>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="1*" FontSize="17"/>
-                <DataGridTextColumn Header="Дата покупки" Binding="{Binding PurchaseDate}" Width="3*" FontSize="17"/>
-            </DataGrid.Columns>
-        </DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="1*" FontSize="17"/>
+                            <DataGridTextColumn Header="Товар" Binding="{Binding ProductName}" Width="3*" FontSize="17"/>
+                            <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}" Width="1*" FontSize="17"/>
+                            <DataGridTextColumn Header="Цена" Binding="{Binding Price}" Width="1*" FontSize="17"/>
+                            <DataGridTextColumn Header="Дата покупки" Binding="{Binding PurchaseDate}" Width="3*" FontSize="17"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <oxy:PlotView Height="200"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
     </Grid>
+
 </Page>
