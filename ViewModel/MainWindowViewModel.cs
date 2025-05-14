@@ -1,17 +1,22 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
 using FoxVill.MainServices.CartService;
+using FoxVill.MainServices.EmailService;
 using FoxVill.MainServices.FavoritesService;
 using FoxVill.MainServices.HistoryService;
 using FoxVill.MainServices.ProductService;
+using FoxVill.MainServices.ReceiptGenerator;
 using FoxVill.MainServices.SearchService;
 using FoxVill.MainServices.SortManager;
 using FoxVill.Model;
+using FoxVill.View;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;
@@ -24,8 +29,9 @@ public class MainWindowViewModel : INotifyPropertyChanged
     private readonly SearchService _searchService;
     private readonly User _currentUser;
     private readonly CartService _cartService;
-    private readonly HistoryService _historyService;
     private ObservableCollection<Product> _products = new();
+    private bool _isOnlinePaymentSelected = false;
+    private bool _isOfflinePaymentSelected = false;
 
     public event PropertyChangedEventHandler? PropertyChanged;
     public event PropertyChangingEventHandler? SearchStringChanged;
@@ -65,11 +71,29 @@ public class MainWindowViewModel : INotifyPropertyChanged
         get => _currentUser;
     }
 
+    public bool IsOnlinePayMentSelected
+    {
+        get => _isOnlinePaymentSelected;
+        set
+        {
+            _isOnlinePaymentSelected = value;
+            OnPropertyChange();
+        }
+    }
+
+    public bool IsOfflinePayMentSelected
+    {
+        get => _isOfflinePaymentSelected;
+        set
+        {
+            _isOfflinePaymentSelected = value;
+            OnPropertyChange();
+        }
+    }
+
     public Cart Cart { get; set; }
     public ObservableCollection<CartItem> CartItems { get; set; }
     public decimal CartPrice => CartItems.Sum(c => c.Product.Price * c.Quantity);
-
-    public ObservableCollection<HistoryItem> HistoryItems { get; set; }
 
     public ICommand ChangeProductFavoriteStateCommand { get; set; }
     public ICommand ShowFavoritesCommand { get; set; }
@@ -85,6 +109,8 @@ public class MainWindowViewModel : INotifyPropertyChanged
 
     public ICommand AddToCartCommand { get; }
     public ICommand RemoveItemFromCartCommand { get; }
+
+    public ICommand MakeOrderCommand { get; }
 
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
@@ -158,7 +184,34 @@ public class MainWindowViewModel : INotifyPropertyChanged
         AddToCartCommand = new RelayCommand(async p => await AddToCart(p));
         RemoveItemFromCartCommand = new RelayCommand(async p => await RemoveItemFromCart(p));
 
+        MakeOrderCommand = new RelayCommand(async p => await MakeOrder());
+
         SearchStringChanged += OnSearchStringChanged;
+    }
+
+    private async Task MakeOrder()
+    {
+        if (!IsOfflinePayMentSelected && !IsOnlinePayMentSelected)
+        {
+            (new MessageWindow("Выберите способ оплаты")).Show();
+            return;
+        }
+
+        if (IsOfflinePayMentSelected)
+        {
+            (new MessageWindow("Покажите чек из сообщения на кассе и произведите оплату")).Show();
+        }
+        else
+        {
+            (new MessageWindow("Оплата прошла успешно")).Show();
+        }
+
+        ReceiptGenerator.GenerateReceipt((int)CartPrice, _currentUser.Email);
+
+        CartItems = new();
+        _dbContext.CartItems.RemoveRange(_dbContext.CartItems.Where(ci => ci.CartId == Cart.CartId));
+        OnPropertyChange(nameof(CartItems));
+        OnPropertyChange(nameof(CartPrice));
     }
 
     private async Task RemoveItemFromCart(object p)

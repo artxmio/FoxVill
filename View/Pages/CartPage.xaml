@@ -380,7 +380,8 @@
                 <Button Style="{StaticResource BaseButtonStyle}"
                         Content="Оплатить"
                         Grid.Row="3"
-                        Grid.ColumnSpan="2"/>
+                        Grid.ColumnSpan="2"
+                        Command="{Binding MakeOrderCommand}"/>
             </Grid>
         </Border>
     </Grid>

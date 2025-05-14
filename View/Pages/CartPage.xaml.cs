@@ -28,13 +28,19 @@ public partial class CartPage : Page
     }
 
     private void btn1_Click(object sender, RoutedEventArgs e)
-    {
+    {        
+        _viewModel.IsOfflinePayMentSelected = false;
+        _viewModel.IsOnlinePayMentSelected = true;
+
         btn2.Background = Brushes.Gray;
         btn1.Background = Brushes.White;
     }
 
     private void btn2_Click(object sender, RoutedEventArgs e)
     {
+        _viewModel.IsOfflinePayMentSelected = true;
+        _viewModel.IsOnlinePayMentSelected = false;
+
         btn1.Background = Brushes.Gray;
         btn2.Background = Brushes.White;
     }

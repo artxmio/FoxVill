@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="database.db" />
+    <None Remove="Resources\Config\config.json" />
     <None Remove="Resources\Fonts\Caveat.ttf" />
     <None Remove="Resources\Html\faq.html" />
     <None Remove="Resources\Images\Png\arrow.png" />
@@ -46,6 +47,9 @@
 
   <ItemGroup>
     <Content Include="database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Config\config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Html\faq.html">
@@ -137,6 +141,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.12.0" />
     <PackageReference Include="MaterialDesignColors" Version="5.2.2-ci942" />
     <PackageReference Include="MaterialDesignThemes" Version="5.2.2-ci942" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
@@ -150,9 +155,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.0-preview.4.25258.110" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0-preview.4.25258.110" />
+    <PackageReference Include="MimeKit" Version="4.12.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="OxyPlot.Core" Version="2.2.0" />
     <PackageReference Include="OxyPlot.Wpf" Version="2.2.0" />
+    <PackageReference Include="PDFSharp" Version="6.1.1" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.4" />
   </ItemGroup>
 
