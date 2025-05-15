@@ -1,7 +1,6 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
 using FoxVill.MainServices.CartService;
-using FoxVill.MainServices.EmailService;
 using FoxVill.MainServices.FavoritesService;
 using FoxVill.MainServices.HistoryService;
 using FoxVill.MainServices.ProductService;
@@ -11,14 +10,10 @@ using FoxVill.MainServices.SortManager;
 using FoxVill.Model;
 using FoxVill.View;
 using Microsoft.EntityFrameworkCore;
-using Org.BouncyCastle.Bcpg;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;

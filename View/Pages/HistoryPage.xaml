@@ -14,7 +14,7 @@
       HorizontalAlignment="Center"
       VerticalAlignment="Top"
       Margin="150"
-      MaxHeight="450">
+      MaxHeight="1000">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -77,7 +77,7 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <oxy:PlotView Height="200"/>
+                    <oxy:PlotView Height="500" Model="{Binding ChartService.Model}"/>
                 </StackPanel>
             </ScrollViewer>
         </Border>

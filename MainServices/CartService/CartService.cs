@@ -7,21 +7,21 @@ namespace FoxVill.MainServices.CartService;
 
 public class CartService
 {
-    private readonly DatabaseContext _context;
+    private readonly DatabaseContext _dbContext;
 
     public CartService(DatabaseContext context)
     {
-        _context = context;
+        _dbContext = context;
     }
 
     public async Task AddItemToBasket(int userId, int itemId, int quantity = 1)
     {
-        var user = _context.Users.Include(u => u.Cart).ThenInclude(b => b.CartItems).FirstOrDefault(u => u.Id == userId);
+        var user = _dbContext.Users.Include(u => u.Cart).ThenInclude(b => b.CartItems).FirstOrDefault(u => u.Id == userId);
 
         if (user != null && user.Cart != null)
         {
             var cart = user.Cart;
-            var item = _context.Products.FirstOrDefault(i => i.Id == itemId);
+            var item = _dbContext.Products.FirstOrDefault(i => i.Id == itemId);
 
             if (item != null)
             {
@@ -44,7 +44,7 @@ public class CartService
                     cart.CartItems.Add(cartItem);
                 }
 
-                await _context.SaveChangesAsync();
+                await _dbContext.SaveChangesAsync();
             }
         }
     }
@@ -53,13 +53,13 @@ public class CartService
     {
         if (_ != null && _ is CartItem itemToRemove)
         {
-            var cartItem = _context.CartItems
+            var cartItem = _dbContext.CartItems
                 .FirstOrDefault(ci => ci.CartItemId == itemToRemove.CartItemId);
 
             if (cartItem != null)
             {
-                _context.CartItems.Remove(cartItem);
-                await _context.SaveChangesAsync();
+                _dbContext.CartItems.Remove(cartItem);
+                await _dbContext.SaveChangesAsync();
             }
         }
     }

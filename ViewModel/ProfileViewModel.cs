@@ -1,10 +1,11 @@
 ﻿using FoxVill.Command;
 using FoxVill.DataBase;
+using FoxVill.MainServices.CartService;
+using FoxVill.MainServices.ChartService;
 using FoxVill.MainServices.HistoryService;
 using FoxVill.MainServices.PaymentService;
 using FoxVill.Model;
 using FoxVill.View;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -19,6 +20,7 @@ public class ProfileViewModel : INotifyPropertyChanged
     private readonly PaymentService _paymentsService;
     private readonly HistoryService _historyService;
     private ObservableCollection<PaymentMethod> _paymentMethods;
+    private ChartService _chartService;
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -39,6 +41,12 @@ public class ProfileViewModel : INotifyPropertyChanged
             _currentUser.Password = value;
             OnPropertyChanged();
         }
+    }
+
+    public ChartService ChartService
+    {
+        get => _chartService;
+        private set => _chartService = value;
     }
 
     public ObservableCollection<PaymentMethod> PaymentMethods
@@ -66,6 +74,8 @@ public class ProfileViewModel : INotifyPropertyChanged
         _historyService = new HistoryService(_dbContext);
 
         HistoryItems = _historyService.HistoryItems;
+
+        _chartService = new ChartService(_dbContext);
 
         _paymentMethods = _paymentsService.GetPaymentMethods(_currentUser.Id);
         OnPropertyChanged(nameof(PaymentMethods));
