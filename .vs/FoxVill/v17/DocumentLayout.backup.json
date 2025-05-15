@@ -7,20 +7,28 @@
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\emailservice\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\emailservice\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\historyservice\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\historyservice\\historyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\mainservices\\receiptgenerator\\receiptgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:mainservices\\receiptgenerator\\receiptgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\orderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\orderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\orderwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\orderwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\orderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\orderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\cartpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 316,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,41 +58,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\EmailService\\EmailService.cs",
-              "RelativeDocumentMoniker": "MainServices\\EmailService\\EmailService.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\MainServices\\EmailService\\EmailService.cs",
-              "RelativeToolTip": "MainServices\\EmailService\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAawBEAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\Model\\Order.cs",
+              "RelativeDocumentMoniker": "Model\\Order.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\Model\\Order.cs",
+              "RelativeToolTip": "Model\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T06:47:13.047Z",
+              "WhenOpened": "2025-05-15T08:57:25.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HistoryService.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\HistoryService\\HistoryService.cs",
+              "RelativeDocumentMoniker": "MainServices\\HistoryService\\HistoryService.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\MainServices\\HistoryService\\HistoryService.cs",
+              "RelativeToolTip": "MainServices\\HistoryService\\HistoryService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T08:19:54.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderWindowViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\OrderWindowViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\OrderWindowViewModel.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\OrderWindowViewModel.cs",
+              "RelativeToolTip": "ViewModel\\OrderWindowViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACEAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T08:07:02.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ReceiptGenerator.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\MainServices\\ReceiptGenerator\\ReceiptGenerator.cs",
-              "RelativeDocumentMoniker": "MainServices\\ReceiptGenerator\\ReceiptGenerator.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\MainServices\\ReceiptGenerator\\ReceiptGenerator.cs",
-              "RelativeToolTip": "MainServices\\ReceiptGenerator\\ReceiptGenerator.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAkwDQAAAA8AAAAAAAAAA==",
+              "Title": "OrderWindow.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\OrderWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\OrderWindow.xaml.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\OrderWindow.xaml.cs",
+              "RelativeToolTip": "View\\OrderWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T06:28:08.539Z",
+              "WhenOpened": "2025-05-14T07:12:20.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartPage.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\CartPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pages\\CartPage.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\CartPage.xaml.cs",
-              "RelativeToolTip": "View\\Pages\\CartPage.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T06:12:12.069Z",
+              "DocumentIndex": 6,
+              "Title": "OrderWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\OrderWindow.xaml",
+              "RelativeDocumentMoniker": "View\\OrderWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\OrderWindow.xaml",
+              "RelativeToolTip": "View\\OrderWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-14T07:12:12.216Z",
               "EditorCaption": ""
             },
             {
@@ -93,16 +126,16 @@
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs*",
-              "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs*",
-              "ViewState": "AgIAALgAAAAAAAAAAAAIwNEAAAAYAAAAAAAAAA==",
+              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAkwOcAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T06:10:11.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CartPage.xaml",
               "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\CartPage.xaml",
               "RelativeDocumentMoniker": "View\\Pages\\CartPage.xaml",
@@ -114,13 +147,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ProfileViewModel.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\ProfileViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\ProfileViewModel.cs",
               "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\ProfileViewModel.cs",
               "RelativeToolTip": "ViewModel\\ProfileViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAIwBQAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T06:03:32.502Z",
               "EditorCaption": ""

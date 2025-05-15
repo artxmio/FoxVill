@@ -17,22 +17,22 @@ public class HistoryService(DatabaseContext context)
         set => _historyItems = value;
     }
 
-    //public void AddOrderToPurchaseHistory(int userId, List<OrderItemModel> orderItems)
-    //{
-    //    foreach (var orderItem in orderItems)
-    //    {
-    //        var purchaseHistory = new HistoryItem
-    //        {
-    //            UserId = userId,
-    //            ProductName = orderItem.Item.Title,
-    //            Quantity = orderItem.Quantity,
-    //            Price = orderItem.Price,
-    //            PurchaseDate = DateTime.Now
-    //        };
+    public void AddOrderToPurchaseHistory(int userId, List<OrderItem> orderItems)
+    {
+        foreach (var orderItem in orderItems)
+        {
+            var purchaseHistory = new HistoryItem
+            {
+                UserId = userId,
+                ProductName = orderItem.Product.Title,
+                Quantity = orderItem.Quantity,
+                Price = orderItem.Price,
+                PurchaseDate = DateTime.Now
+            };
 
-    //        _context.HistoryItems.Add(purchaseHistory);
-    //    }
+            _context.HistoryItems.Add(purchaseHistory);
+        }
 
-    //    _context.SaveChanges();
-    //}
+        _context.SaveChanges();
+    }
 }

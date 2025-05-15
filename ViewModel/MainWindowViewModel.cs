@@ -11,12 +11,14 @@ using FoxVill.MainServices.SortManager;
 using FoxVill.Model;
 using FoxVill.View;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Bcpg;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;
@@ -184,34 +186,70 @@ public class MainWindowViewModel : INotifyPropertyChanged
         AddToCartCommand = new RelayCommand(async p => await AddToCart(p));
         RemoveItemFromCartCommand = new RelayCommand(async p => await RemoveItemFromCart(p));
 
-        MakeOrderCommand = new RelayCommand(async p => await MakeOrder());
+        MakeOrderCommand = new RelayCommand(p => MakeOrder());
 
         SearchStringChanged += OnSearchStringChanged;
     }
 
-    private async Task MakeOrder()
+    private void MakeOrder()
     {
+        if (CartItems.Count == 0)
+        {
+            (new MessageWindow("Ваша корзина пуста!")).Show();
+            return;
+        }
         if (!IsOfflinePayMentSelected && !IsOnlinePayMentSelected)
         {
-            (new MessageWindow("Выберите способ оплаты")).Show();
+            (new MessageWindow("Выберите способ оплаты!")).Show();
             return;
         }
 
         if (IsOfflinePayMentSelected)
         {
-            (new MessageWindow("Покажите чек из сообщения на кассе и произведите оплату")).Show();
+            (new MessageWindow("Покажите чек из сообщения на кассе и произведите оплату!")).Show();
         }
         else
         {
-            (new MessageWindow("Оплата прошла успешно")).Show();
+            var viewModel = new OrderWindowViewModel(_dbContext, CurrentUser);
+            var window = new OrderWindow(viewModel);
+
+            var a = window.ShowDialog();
+
+            if ((bool)a)
+            {
+                (new MessageWindow("Оплата прошла успешно!")).Show();
+            }
+            else
+            {
+                return;
+            }
         }
 
+        var order = new Order()
+        {
+            UserId = CurrentUser.Id,
+            OrderDate = DateTime.Now,
+            TotalAmount = Cart.CartItems.Sum(ci => ci.Product.Price * ci.Quantity),
+            OrderItems = [..Cart.CartItems.Select(ci => new OrderItem()
+            {
+                ItemId = ci.ItemId,
+                Quantity = ci.Quantity,
+                Price = ci.Product.Price,
+            })]
+        };
+
+        _dbContext.Add(order);
+        
         ReceiptGenerator.GenerateReceipt((int)CartPrice, _currentUser.Email);
 
-        CartItems = new();
+        HistoryService historyService = new(_dbContext);
+        historyService.AddOrderToPurchaseHistory(_currentUser.Id, [.. order.OrderItems]);
+
+        CartItems = [];
         _dbContext.CartItems.RemoveRange(_dbContext.CartItems.Where(ci => ci.CartId == Cart.CartId));
         OnPropertyChange(nameof(CartItems));
         OnPropertyChange(nameof(CartPrice));
+        _dbContext.SaveChanges();
     }
 
     private async Task RemoveItemFromCart(object p)
