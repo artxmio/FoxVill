@@ -14,6 +14,7 @@
     <None Remove="Resources\Config\config.json" />
     <None Remove="Resources\Fonts\Caveat.ttf" />
     <None Remove="Resources\Html\faq.html" />
+    <None Remove="Resources\Images\Gif\fox.gif" />
     <None Remove="Resources\Images\Png\arrow.png" />
     <None Remove="Resources\Images\Png\arrow_to_left.png" />
     <None Remove="Resources\Images\Png\auth_back.png" />
@@ -24,6 +25,12 @@
     <None Remove="Resources\Images\Png\data.png" />
     <None Remove="Resources\Images\Png\dwindow.png" />
     <None Remove="Resources\Images\Png\empty_heart.png" />
+    <None Remove="Resources\Images\Png\FoxToy.png" />
+    <None Remove="Resources\Images\Png\fox_money_forest.png" />
+    <None Remove="Resources\Images\Png\fox_money_green.png" />
+    <None Remove="Resources\Images\Png\fox_money_ice.png" />
+    <None Remove="Resources\Images\Png\fox_money_pickme.png" />
+    <None Remove="Resources\Images\Png\fox_money_yellow.png" />
     <None Remove="Resources\Images\Png\full_heart.png" />
     <None Remove="Resources\Images\Png\heart.png" />
     <None Remove="Resources\Images\Png\house.png" />
@@ -55,6 +62,9 @@
     <Content Include="Resources\Html\faq.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Gif\fox.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Ico\fox.ico" />
     <Content Include="Resources\Images\Png\arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -84,6 +94,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\empty_heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\FoxToy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\fox_money_forest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\fox_money_green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\fox_money_ice.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\fox_money_pickme.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\fox_money_yellow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\full_heart.png">
@@ -164,6 +192,7 @@
     <PackageReference Include="PDFSharp" Version="6.1.1" />
     <PackageReference Include="QRCoder" Version="1.6.0" />
     <PackageReference Include="System.Drawing.Common" Version="9.0.4" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>

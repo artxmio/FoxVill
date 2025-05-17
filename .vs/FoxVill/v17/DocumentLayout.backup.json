@@ -3,32 +3,52 @@
   "WorkspaceRootPath": "D:\\C#\\FoxVill\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\productcardwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\productcardwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\start.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\start.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\gamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\productcardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\productcardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\question1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\question1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\productcardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\productcardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\question1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\question1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\end.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\end.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\end.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\end.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\question5.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\question5.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\question4.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\question4.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\question3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\question3.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\game\\pages\\question2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\game\\pages\\question2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 316,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,91 +74,149 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\MainWindowViewModel.cs",
-              "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAIAwwMUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T08:41:15.519Z",
+              "DocumentIndex": 3,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "View\\Pages\\ProfilePage.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\ProfilePage.xaml",
+              "RelativeToolTip": "View\\Pages\\ProfilePage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T12:12:01.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ProductCardWindow.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\ProductCardWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\ProductCardWindow.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\ProductCardWindow.xaml.cs",
-              "RelativeToolTip": "View\\ProductCardWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
+              "Title": "Question1.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question1.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\Question1.xaml.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question1.xaml.cs",
+              "RelativeToolTip": "View\\Game\\Pages\\Question1.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T08:37:59.058Z",
+              "WhenOpened": "2025-05-17T12:10:19.092Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Pages\\MainPage.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml.cs",
-              "RelativeToolTip": "View\\Pages\\MainPage.xaml.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFUAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "End.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\End.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\End.xaml.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\End.xaml.cs",
+              "RelativeToolTip": "View\\Game\\Pages\\End.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T08:42:00.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductCardWindowViewModel.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\ProductCardWindowViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\ProductCardWindowViewModel.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\ProductCardWindowViewModel.cs",
-              "RelativeToolTip": "ViewModel\\ProductCardWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAACJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T08:35:21.018Z",
+              "WhenOpened": "2025-05-17T12:06:39.572Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml",
-              "RelativeDocumentMoniker": "View\\Pages\\MainPage.xaml",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml",
-              "RelativeToolTip": "View\\Pages\\MainPage.xaml",
+              "Title": "End.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\End.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\End.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\End.xaml",
+              "RelativeToolTip": "View\\Game\\Pages\\End.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T08:32:43.824Z",
+              "WhenOpened": "2025-05-17T11:53:57.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Question5.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question5.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\Question5.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question5.xaml",
+              "RelativeToolTip": "View\\Game\\Pages\\Question5.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T11:51:00.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Question4.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question4.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\Question4.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question4.xaml",
+              "RelativeToolTip": "View\\Game\\Pages\\Question4.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T11:50:51.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Question3.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question3.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\Question3.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question3.xaml",
+              "RelativeToolTip": "View\\Game\\Pages\\Question3.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T11:50:41.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Question2.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question2.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\Question2.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question2.xaml",
+              "RelativeToolTip": "View\\Game\\Pages\\Question2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T11:50:27.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Question1.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question1.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\Question1.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Question1.xaml",
+              "RelativeToolTip": "View\\Game\\Pages\\Question1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T11:50:13.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\Model\\Product.cs",
-              "RelativeDocumentMoniker": "Model\\Product.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\Model\\Product.cs",
-              "RelativeToolTip": "Model\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T08:30:48.737Z",
+              "Title": "Start.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Start.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\Pages\\Start.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\Pages\\Start.xaml",
+              "RelativeToolTip": "View\\Game\\Pages\\Start.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-17T11:50:02.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductCardWindow.xaml",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\ProductCardWindow.xaml",
-              "RelativeDocumentMoniker": "View\\ProductCardWindow.xaml",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\ProductCardWindow.xaml",
-              "RelativeToolTip": "View\\ProductCardWindow.xaml",
+              "DocumentIndex": 0,
+              "Title": "GameWindow.xaml.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\GameWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Game\\GameWindow.xaml.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\GameWindow.xaml.cs",
+              "RelativeToolTip": "View\\Game\\GameWindow.xaml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T11:49:19.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Game\\GameWindow.xaml",
+              "RelativeDocumentMoniker": "View\\Game\\GameWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Game\\GameWindow.xaml",
+              "RelativeToolTip": "View\\Game\\GameWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-17T08:28:01.231Z",
+              "WhenOpened": "2025-05-17T11:49:13.299Z",
               "EditorCaption": ""
             }
           ]

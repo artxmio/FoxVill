@@ -6,6 +6,7 @@ using FoxVill.MainServices.HistoryService;
 using FoxVill.MainServices.PaymentService;
 using FoxVill.Model;
 using FoxVill.View;
+using FoxVill.View.Game;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -66,6 +67,8 @@ public class ProfileViewModel : INotifyPropertyChanged
     public ICommand AddNewPaymentMethodCommand { get; }
     public ICommand RemovePaymentMethodCommand { get; }
 
+    public ICommand FoxCommand { get; }
+
     public ProfileViewModel(DatabaseContext dbContext, User currentUser)
     {
         _dbContext = dbContext;
@@ -84,6 +87,13 @@ public class ProfileViewModel : INotifyPropertyChanged
 
         AddNewPaymentMethodCommand = new RelayCommand(p => AddNewPaymentMethod());
         RemovePaymentMethodCommand = new RelayCommand(async p => await RemovePaymentMethod(p));
+
+        FoxCommand = new RelayCommand(p => OpenGame());
+    }
+
+    private static void OpenGame()
+    {
+        
     }
 
     private async Task RemovePaymentMethod(object parametr)

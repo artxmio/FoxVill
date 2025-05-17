@@ -3,6 +3,8 @@ using FoxVill.ViewModel;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using WpfAnimatedGif;
 
 namespace FoxVill.View.Pages;
 
@@ -19,6 +21,14 @@ public partial class ProfilePage : Page
         _viewModel = viewModel;
 
         this.DataContext = _viewModel;
+
+        LoadGif();
+    }
+
+    private void LoadGif()
+    {
+        var image = new BitmapImage(new Uri("../../Resources/Images/Gif/fox.gif", UriKind.Relative));
+        ImageBehavior.SetAnimatedSource(gifImage, image);
     }
 
     private void Button_Click(object sender, System.Windows.RoutedEventArgs e)

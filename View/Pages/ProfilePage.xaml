@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:vm="clr-namespace:FoxVill.ViewModel"
+      xmlns:wpfAnimatedGif="clr-namespace:WpfAnimatedGif;assembly=WpfAnimatedGif"
       mc:Ignorable="d" 
 
       Title="ProfilePage"
@@ -221,7 +222,7 @@
                                   ShadowDepth="1"
                                   Opacity="0.4" />
             </Button.Effect>
-            
+
             <Button.Style>
                 <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
                     <Style.Triggers>
@@ -349,6 +350,23 @@
                         Width="55"
                         HorizontalAlignment="Right"/>
             </StackPanel>
+
+        </Button>
+
+        <Button
+            Padding="0"
+            Margin="119,0,230,0"
+            BorderBrush="Transparent"
+            Background="Transparent"
+            Width="100"
+            Height="100"
+            Command="{Binding FoxCommand}">
+
+            <Image  Stretch="UniformToFill"
+                       VerticalAlignment="Center"
+                       d:Source="/Resources/Images/Gif/fox.gif"
+                       x:Name="gifImage"
+                       wpfAnimatedGif:ImageBehavior.AnimatedSource="{Binding Source}" />
 
         </Button>
     </Grid>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B+bkZxUUlGo=",
+  "dgSpecHash": "9OHny6dcB40=",
   "success": true,
   "projectFilePath": "D:\\C#\\FoxVill\\FoxVill.csproj",
   "expectedPackageFiles": [
@@ -76,6 +76,7 @@
     "C:\\Users\\AdminX\\.nuget\\packages\\system.text.encodings.web\\10.0.0-preview.4.25258.110\\system.text.encodings.web.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\AdminX\\.nuget\\packages\\system.text.json\\10.0.0-preview.4.25258.110\\system.text.json.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\AdminX\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
+    "C:\\Users\\AdminX\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512",
     "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.26100.57\\microsoft.windows.sdk.net.ref.10.0.26100.57.nupkg.sha512",
     "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
     "C:\\Users\\AdminX\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
