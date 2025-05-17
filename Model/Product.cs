@@ -11,7 +11,7 @@ public class Product : INotifyPropertyChanged
     public int Id { get; set; }
     public string Title { get; set; }
     public decimal Price { get; set; }
-    public string Description { get; set; }
+    public string Description { get; set; } = "default";
     public ProductType Type { get; set; }
 
     public ICollection<Favorite> Favorites { get; set; } = new List<Favorite>();

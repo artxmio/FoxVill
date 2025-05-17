@@ -1,0 +1,64 @@
+﻿<Window x:Class="FoxVill.View.ProductCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoxVill.View"
+        xmlns:vm="clr-namespace:FoxVill.ViewModel"
+        mc:Ignorable="d"
+        Title="ProductCardWindow" 
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Height="385" Width="575"
+        RenderOptions.BitmapScalingMode="HighQuality"
+        
+        d:DataContext="{d:DesignInstance vm:ProductCardWindowViewModel}">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles/BaseStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Border Background="White"
+            BorderBrush="Black"
+            BorderThickness="2"
+            CornerRadius="15">
+
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="Карточка товара" Style="{StaticResource BaseTextBlockStyle}"
+                           FontSize="40" HorizontalAlignment="Center"
+                           Margin="0 15 0 0"/>
+                <TextBlock Text="{Binding SelectedProduct.Title}" FontSize="25" 
+                           Style="{StaticResource BaseTextBlockStyle}"
+                           FontWeight="Bold" Margin="0,10,0,0" Width="500"/>
+                <TextBlock Text="{Binding SelectedProduct.Price}"
+                           Style="{StaticResource BaseTextBlockStyle}"
+                           FontSize="20" Foreground="Green"  Width="500"/>
+                <TextBlock Text="{Binding SelectedProduct.Description}"
+                           Style="{StaticResource BaseTextBlockStyle}"
+                           FontSize="18" TextWrapping="Wrap" Margin="0,10,0,0" Width="500" Height="100"/>
+
+                <Button Content="Добавить в корзину" 
+                        Margin="0,10,0,0"
+                        FontSize="20"
+                        Width="400"
+                        Height="50"
+                        Style="{StaticResource BaseButtonStyle}"/>
+                <Button Content="Закрыть" Click="Button_Click" 
+                        FontSize="20"
+                        Width="400"
+                        Height="50"
+                        Style="{StaticResource BaseButtonStyle}"
+                        Margin="0,10,0,10"/>
+            </StackPanel>
+        </Grid>
+
+    </Border>
+    
+</Window>

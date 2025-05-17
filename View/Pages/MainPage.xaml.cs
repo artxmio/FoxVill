@@ -1,4 +1,5 @@
-﻿using FoxVill.View.Animation;
+﻿using FoxVill.Model;
+using FoxVill.View.Animation;
 using FoxVill.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -73,6 +74,16 @@ public partial class MainPage : Page
         if (e.Key == System.Windows.Input.Key.Enter)
         {
             _viewModel.SearchString = searchbox.Text;
+        }
+    }
+
+    private void Border_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        var product = (sender as Border)?.DataContext as Product;
+
+        if (product is not null)
+        {
+            _viewModel.OpenProductCardCommand.Execute(product);
         }
     }
 }

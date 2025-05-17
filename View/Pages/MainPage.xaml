@@ -253,7 +253,7 @@
                     <RowDefinition Height="7*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
-                
+
                 <ListView Grid.Row="0"
                   HorizontalAlignment="Center"
                   Padding="0"
@@ -348,7 +348,8 @@
                                 BorderBrush="Black"
                                 Background="Transparent"
                                 ClipToBounds="True"
-                                Margin="13 0 0 0">
+                                Margin="13 0 0 0"
+                                MouseLeftButtonDown="Border_MouseLeftButtonDown">
 
                                 <StackPanel Orientation="Vertical">
 
@@ -459,6 +460,7 @@
                                     </StackPanel>
                                 </StackPanel>
                             </Border>
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
 

@@ -108,6 +108,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
     public ICommand RemoveItemFromCartCommand { get; }
 
     public ICommand MakeOrderCommand { get; }
+    public ICommand OpenProductCardCommand { get; }
 
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
@@ -182,8 +183,20 @@ public class MainWindowViewModel : INotifyPropertyChanged
         RemoveItemFromCartCommand = new RelayCommand(async p => await RemoveItemFromCart(p));
 
         MakeOrderCommand = new RelayCommand(p => MakeOrder());
+        OpenProductCardCommand = new RelayCommand(p => OpenProductCard(p));
 
         SearchStringChanged += OnSearchStringChanged;
+    }
+
+    private void OpenProductCard(object product)
+    {
+        if (product is Product selectedProduct)
+        {
+            var viewModel = new ProductCardWindowViewModel(_dbContext, selectedProduct);
+            var window = new ProductCardWindow(viewModel, this);
+
+            window.ShowDialog();
+        }
     }
 
     private void MakeOrder()
@@ -234,7 +247,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
         };
 
         _dbContext.Add(order);
-        
+
         ReceiptGenerator.GenerateReceipt((int)CartPrice, _currentUser.Email);
 
         HistoryService historyService = new(_dbContext);
