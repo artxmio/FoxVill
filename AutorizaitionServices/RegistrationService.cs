@@ -26,7 +26,13 @@ public static class RegistrationService
         }
         else
         {
+            var cart = new Cart()
+            {
+                User = newUser,
+                UserId = newUser.Id
+            };
             await context.AddAsync(newUser);
+            await context.AddAsync(cart);
             context.SaveChanges();
 
             return true;

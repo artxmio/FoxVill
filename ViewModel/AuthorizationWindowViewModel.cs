@@ -217,7 +217,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
         }
         catch (Exception ex)
         {
-            MessageBox.Show("Произошла неожиданная ошибка: " + ex.Message, "Внимание");
+            
         }
     }
 
