@@ -5,10 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FoxVill.View"
         mc:Ignorable="d"
-        Title="CoinWindow" Height="450" Width="800">
+        Title="CoinWindow" Height="500" Width="850"
+        RenderOptions.BitmapScalingMode="HighQuality"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
     <Canvas>
         <Canvas.Background>
             <ImageBrush ImageSource="/Resources/Images/Png/game_back.png"/>
         </Canvas.Background>
+
+        <Image x:Name="chest1"
+               Height="100" 
+               Canvas.Left="100" 
+               Source="/Resources/Images/Png/open_chest.png"
+               Stretch="Fill" Canvas.Top="319"
+               Width="100"/>
+        <Image x:Name="chest2"
+               Height="100" 
+               Canvas.Left="245" 
+               Source="/Resources/Images/Png/open_chest.png"
+               Stretch="Fill" Canvas.Top="319"
+               Width="100"/>
+        <Image x:Name="chest3"
+               Height="100" 
+               Canvas.Left="390" 
+               Source="/Resources/Images/Png/open_chest.png"
+               Stretch="Fill" Canvas.Top="319"
+               Width="100"/>
+        <Image x:Name="chest4"
+               Height="100" 
+               Canvas.Left="530" 
+               Source="/Resources/Images/Png/open_chest.png"
+               Stretch="Fill" Canvas.Top="319"
+               Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="chest5"
+               Height="100" 
+               Canvas.Left="660" 
+               Source="/Resources/Images/Png/open_chest.png"
+               Stretch="Fill" Canvas.Top="319"
+               Width="100" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <Image Name="FoxMoneyForest" Source="/Resources/Images/Png/fox_money_forest.png"
+       Width="100"
+       Height="100"
+       
+       Canvas.Left="225" Canvas.Top="119"
+       Stretch="Fill"
+       MouseDown="Image_MouseDown"
+       MouseMove="Image_MouseMove"
+       MouseUp="Image_MouseUp"/>
+
+        <Image Name="FoxMoneyGreen" Source="/Resources/Images/Png/fox_money_green.png"
+       Width="100" Height="100"
+       Canvas.Left="480" Canvas.Top="139"
+       Stretch="Fill"
+       MouseDown="Image_MouseDown"
+       MouseMove="Image_MouseMove"
+       MouseUp="Image_MouseUp"/>
+
+        <Image Name="FoxMoneyIce" Source="/Resources/Images/Png/fox_money_ice.png"
+       Width="100" Height="100"
+       Canvas.Left="355" Canvas.Top="54"
+       Stretch="Fill"
+       MouseDown="Image_MouseDown"
+       MouseMove="Image_MouseMove"
+       MouseUp="Image_MouseUp"/>
+
+        <Image Name="FoxMoneyPickme" Source="/Resources/Images/Png/fox_money_pickme.png"
+       Width="100" Height="100"
+       Canvas.Left="95" Canvas.Top="39"
+       Stretch="Fill"
+       MouseDown="Image_MouseDown"
+       MouseMove="Image_MouseMove"
+       MouseUp="Image_MouseUp"/>
+
+        <Image Name="FoxMoneyYellow" Source="/Resources/Images/Png/fox_money_yellow.png"
+       Width="100" Height="100"
+       Canvas.Left="520" Canvas.Top="24"
+       Stretch="Fill"
+       MouseDown="Image_MouseDown"
+       MouseMove="Image_MouseMove"
+       MouseUp="Image_MouseUp"/>
     </Canvas>
 </Window>

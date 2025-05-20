@@ -9,6 +9,7 @@ using FoxVill.View;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Automation.Peers;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;
@@ -92,7 +93,9 @@ public class ProfileViewModel : INotifyPropertyChanged
 
     private static void OpenGame()
     {
-        
+        var window = new CoinWindow();
+
+        window.ShowDialog();
     }
 
     private async Task RemovePaymentMethod(object parametr)

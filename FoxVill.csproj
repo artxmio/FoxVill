@@ -21,6 +21,7 @@
     <None Remove="Resources\Images\Png\bag.png" />
     <None Remove="Resources\Images\Png\bank.png" />
     <None Remove="Resources\Images\Png\cart.png" />
+    <None Remove="Resources\Images\Png\close_chest.png" />
     <None Remove="Resources\Images\Png\close_eye.png" />
     <None Remove="Resources\Images\Png\data.png" />
     <None Remove="Resources\Images\Png\dwindow.png" />
@@ -32,12 +33,14 @@
     <None Remove="Resources\Images\Png\fox_money_pickme.png" />
     <None Remove="Resources\Images\Png\fox_money_yellow.png" />
     <None Remove="Resources\Images\Png\full_heart.png" />
+    <None Remove="Resources\Images\Png\game_back.png" />
     <None Remove="Resources\Images\Png\heart.png" />
     <None Remove="Resources\Images\Png\house.png" />
     <None Remove="Resources\Images\Png\info.png" />
     <None Remove="Resources\Images\Png\main_back.png" />
     <None Remove="Resources\Images\Png\minus.png" />
     <None Remove="Resources\Images\Png\more.png" />
+    <None Remove="Resources\Images\Png\open_chest.png" />
     <None Remove="Resources\Images\Png\open_eye.png" />
     <None Remove="Resources\Images\Png\plus.png" />
     <None Remove="Resources\Images\Png\sort.png" />
@@ -46,6 +49,7 @@
     <None Remove="Resources\Images\Png\user_profile.png" />
     <None Remove="Resources\Images\Png\x.png" />
     <None Remove="Resources\Images\Products\example2.jpg" />
+    <None Remove="Resources\Music\mp3\forest_sound.mp3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -84,6 +88,9 @@
     <Content Include="Resources\Images\Png\cart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Png\close_chest.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Png\close_eye.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -117,6 +124,9 @@
     <Content Include="Resources\Images\Png\full_heart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Png\game_back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Png\heart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -133,6 +143,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\more.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\open_chest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\open_eye.png">
@@ -162,6 +175,9 @@
     <Content Include="Resources\Images\Products\example2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Music\mp3\forest_sound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -186,6 +202,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.0-preview.4.25258.110" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0-preview.4.25258.110" />
     <PackageReference Include="MimeKit" Version="4.12.0" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="OxyPlot.Core" Version="2.2.0" />
     <PackageReference Include="OxyPlot.Wpf" Version="2.2.0" />
