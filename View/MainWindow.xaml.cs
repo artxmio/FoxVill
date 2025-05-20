@@ -1,6 +1,7 @@
 ﻿using FoxVill.View.Animation;
 using FoxVill.View.Pages;
 using FoxVill.ViewModel;
+using Microsoft.EntityFrameworkCore;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -20,6 +21,14 @@ public partial class MainWindow : Window
         this.DataContext = _viewModel;
 
         this.MainFrame.Navigate(new MainPage(_viewModel, this));
+    }
+
+    private void Window_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (Keyboard.IsKeyDown(Key.LeftCtrl) && Keyboard.IsKeyDown(Key.A) && Keyboard.IsKeyDown(Key.D))
+        {
+            _viewModel.OpenAdminWindowCommand.Execute(this);
+        }
     }
 
     private void DragModeWindow(object sender, System.Windows.Input.MouseButtonEventArgs e)

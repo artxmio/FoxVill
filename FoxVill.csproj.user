@@ -8,6 +8,9 @@
     <Compile Update="View\AddNewPaymentMethodWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AuthorizationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

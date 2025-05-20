@@ -43,7 +43,6 @@ public partial class CoinWindow : Window
     private void CoinWindow_Closed(object? sender, EventArgs e)
     {
         _outputDevice.Stop();
-        _outputDevice?.Dispose();
     }
     private void Image_MouseDown(object sender, MouseButtonEventArgs e)
     {

@@ -16,7 +16,8 @@
         ResizeMode="NoResize"
         
         MouseLeftButtonDown="DragModeWindow"
-        MouseDoubleClick="ToggleButton_Click">
+        MouseDoubleClick="ToggleButton_Click"
+        KeyDown="Window_KeyDown">
 
     <Window.Background>
         <ImageBrush ImageSource="/Resources/Images/Png/main_back.png" Stretch="Fill" />

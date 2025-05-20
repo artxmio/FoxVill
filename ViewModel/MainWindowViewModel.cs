@@ -110,6 +110,8 @@ public class MainWindowViewModel : INotifyPropertyChanged
     public ICommand MakeOrderCommand { get; }
     public ICommand OpenProductCardCommand { get; }
 
+    public ICommand OpenAdminWindowCommand { get; }
+
     public MainWindowViewModel(DatabaseContext context, User currentUser)
     {
         _dbContext = context;
@@ -185,7 +187,16 @@ public class MainWindowViewModel : INotifyPropertyChanged
         MakeOrderCommand = new RelayCommand(p => MakeOrder());
         OpenProductCardCommand = new RelayCommand(p => OpenProductCard(p));
 
+        OpenAdminWindowCommand = new RelayCommand(p=> OpenAdminWindow());
+
         SearchStringChanged += OnSearchStringChanged;
+    }
+
+    private void OpenAdminWindow()
+    {
+        var viewModel = new AdminViewModel(_dbContext);
+        var window = new AdminWindow(viewModel);
+        window.Show();
     }
 
     private void OpenProductCard(object product)
