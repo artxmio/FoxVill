@@ -37,6 +37,7 @@
                        Margin="0 30 0 0"
                        />
             <Image Height="100" 
+                   Margin="25 0 0 0"
                    Source="/Resources/Images/Png/fox_money_forest.png" 
                    Stretch="Uniform" Width="100"/>
             </StackPanel>

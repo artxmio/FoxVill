@@ -8,6 +8,7 @@ using FoxVill.Model;
 using FoxVill.View;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows.Automation.Peers;
 using System.Windows.Input;
@@ -95,8 +96,22 @@ public class ProfileViewModel : INotifyPropertyChanged
     {
         var window = new CoinWindow();
 
-        window.ShowDialog();
+        if (!CheckPreviousWin())
+        {
+            window.ShowDialog();
+        }
     }
+
+    private static bool CheckPreviousWin()
+    {
+        if (File.Exists("win_data.txt"))
+        {
+            string result = File.ReadAllText("win_data.txt");
+            return result == "Win";
+        }
+        return false;
+    }
+
 
     private async Task RemovePaymentMethod(object parametr)
     {

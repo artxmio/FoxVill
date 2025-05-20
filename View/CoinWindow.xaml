@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FoxVill.View"
         mc:Ignorable="d"
-        Title="CoinWindow" Height="500" Width="850"
+        Title="Игра" Height="500" Width="850"
         RenderOptions.BitmapScalingMode="HighQuality"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">

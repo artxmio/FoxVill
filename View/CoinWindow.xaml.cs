@@ -1,4 +1,5 @@
 ﻿using NAudio.Wave;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -118,7 +119,13 @@ public partial class CoinWindow : Window
 
         if (success1 && success2 && success3 && success4 && success5)
         {
-            MessageBox.Show("Успех");
+            MessageBox.Show("Успех, сделай скриншот этого окна,\n назови свой адрес электронной почты \nи получи скидку 5% на наличную оплату в кассах нашего парка!");
+            SaveWinResult();
+            this.Close();
         }
+    }
+    private void SaveWinResult()
+    {
+        File.WriteAllText("win_data.txt", "Win");
     }
 }
