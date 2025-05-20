@@ -474,6 +474,8 @@
                         Margin="10"/>
             </Grid>
         </ScrollViewer>
+        <Image Source="/Resources/Images/Png/fox_money_yellow.png" Stretch="Uniform" 
+               Width="100" HorizontalAlignment="Right"/>
     </Grid>
 
 

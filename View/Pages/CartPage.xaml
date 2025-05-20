@@ -109,7 +109,7 @@
                                     <ScaleTransform ScaleX="1" ScaleY="1" />
                                 </Setter.Value>
                             </Setter>
-                            
+
                             <Style.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
 
@@ -154,7 +154,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    
+
 
 
 
@@ -267,38 +267,38 @@
                                             CommandParameter="{Binding}"
                                             materialDesign:ButtonAssist.CornerRadius="15">
 
-                                        <Button.Style>
-                                            <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-                                                <Style.Triggers>
-                                                    <Trigger Property="IsMouseOver" Value="True">
-                                                        <Setter Property="Background" Value="Red"/>
-                                                    </Trigger>
-                                                </Style.Triggers>
-                                            </Style>
-                                        </Button.Style>
+                                            <Button.Style>
+                                                <Style TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Background" Value="Red"/>
+                                                        </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>
 
-                                        <Button.Effect>
-                                            <DropShadowEffect Color="Black"
+                                            <Button.Effect>
+                                                <DropShadowEffect Color="Black"
                                           BlurRadius="15"
                                           ShadowDepth="1"
                                           Opacity="0.4"/>
-                                        </Button.Effect>
+                                            </Button.Effect>
 
-                                        <Image Source="/Resources/Images/Png/trash.png"
+                                            <Image Source="/Resources/Images/Png/trash.png"
                                                 Width="20"/>
-                                    </Button>
+                                        </Button>
                                     </StackPanel>
-                                    
+
                                 </Grid>
                             </Border>
-                            
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
 
                     <d:ListBoxItem></d:ListBoxItem>
 
                 </ListView>
-                
+
             </Grid>
         </Border>
 
@@ -382,7 +382,15 @@
                         Grid.Row="3"
                         Grid.ColumnSpan="2"
                         Command="{Binding MakeOrderCommand}"/>
+                <Image Grid.Column="1" 
+                       Width="100" 
+                       Height="100"
+                       HorizontalAlignment="Right"
+                       Grid.Row="3" Source="/Resources/Images/Png/fox_money_pickme.png"
+                       Stretch="Uniform"
+                       />
             </Grid>
+
         </Border>
     </Grid>
 </Page>

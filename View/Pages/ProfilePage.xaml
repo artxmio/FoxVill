@@ -369,5 +369,9 @@
                        wpfAnimatedGif:ImageBehavior.AnimatedSource="{Binding Source}" />
 
         </Button>
+        <Image Width="100" Source="/Resources/Images/Png/fox_money_green.png" 
+               Stretch="Uniform" 
+               Grid.Column="2"
+               HorizontalAlignment="Right"/>
     </Grid>
 </Page>

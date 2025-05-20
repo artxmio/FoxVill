@@ -11,6 +11,9 @@
     <Compile Update="View\AuthorizationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\CoinWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

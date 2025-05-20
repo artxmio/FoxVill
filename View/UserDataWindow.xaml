@@ -7,7 +7,7 @@
         xmlns:validations="clr-namespace:FoxVill.Validation"
         xmlns:vm="clr-namespace:FoxVill.ViewModel"
         mc:Ignorable="d"
-        Title="UserDataWindow" Height="460" Width="600"
+        Title="UserDataWindow" Height="560" Width="600"
         Background="Transparent"
         BorderBrush="Transparent"
         AllowsTransparency="True"
@@ -28,13 +28,20 @@
             BorderBrush="Black"
             BorderThickness="2">
         <StackPanel Orientation="Vertical"
-                    VerticalAlignment="Top">
-            <TextBlock Text="Личные данные"
+                    VerticalAlignment="Top" Height="603">
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Center">
+                <TextBlock Text="Личные данные"
                        Style="{StaticResource BaseTextBlockStyle}"
                        FontSize="45"
                        Margin="0 30 0 0"
-                       HorizontalAlignment="Center"/>
+                       />
+            <Image Height="100" 
+                   Source="/Resources/Images/Png/fox_money_forest.png" 
+                   Stretch="Uniform" Width="100"/>
+            </StackPanel>
             
+
             <TextBlock Text="Почта"
                        Style="{StaticResource BaseTextBlockStyle}"
                        HorizontalAlignment="Left"

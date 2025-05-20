@@ -78,6 +78,7 @@
                     </DataGrid>
 
                     <oxy:PlotView Height="500" Model="{Binding ChartService.Model}"/>
+                    <Image Source="/Resources/Images/Png/fox_money_ice.png" Stretch="Uniform" Width="100" Height="100"/>
                 </StackPanel>
             </ScrollViewer>
         </Border>

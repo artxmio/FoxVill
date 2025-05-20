@@ -6,7 +6,6 @@ using FoxVill.MainServices.HistoryService;
 using FoxVill.MainServices.PaymentService;
 using FoxVill.Model;
 using FoxVill.View;
-using FoxVill.View.Game;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
