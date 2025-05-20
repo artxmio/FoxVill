@@ -17,7 +17,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 368,
+          "DockedWidth": 301,
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -38,8 +38,8 @@
               "Title": "CoinWindow.xaml.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\View\\CoinWindow.xaml.cs",
               "RelativeDocumentMoniker": "View\\CoinWindow.xaml.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\CoinWindow.xaml.cs*",
-              "RelativeToolTip": "View\\CoinWindow.xaml.cs*",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\CoinWindow.xaml.cs",
+              "RelativeToolTip": "View\\CoinWindow.xaml.cs",
               "ViewState": "AgIAAGMAAAAAAAAAAAAAAHgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T09:16:39.366Z",
@@ -48,7 +48,7 @@
           ]
         },
         {
-          "DockedWidth": 264,
+          "DockedWidth": 331,
           "SelectedChildIndex": 1,
           "Children": [
             {

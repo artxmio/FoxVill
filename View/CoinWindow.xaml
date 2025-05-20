@@ -50,7 +50,7 @@
        Width="100"
        Height="100"
        
-       Canvas.Left="225" Canvas.Top="119"
+       Canvas.Left="405" Canvas.Top="204"
        Stretch="Fill"
        MouseDown="Image_MouseDown"
        MouseMove="Image_MouseMove"
@@ -58,7 +58,7 @@
 
         <Image Name="FoxMoneyGreen" Source="/Resources/Images/Png/fox_money_green.png"
        Width="100" Height="100"
-       Canvas.Left="480" Canvas.Top="139"
+       Canvas.Left="595" Canvas.Top="154"
        Stretch="Fill"
        MouseDown="Image_MouseDown"
        MouseMove="Image_MouseMove"
@@ -74,7 +74,7 @@
 
         <Image Name="FoxMoneyPickme" Source="/Resources/Images/Png/fox_money_pickme.png"
        Width="100" Height="100"
-       Canvas.Left="95" Canvas.Top="39"
+       Canvas.Left="260" Canvas.Top="159"
        Stretch="Fill"
        MouseDown="Image_MouseDown"
        MouseMove="Image_MouseMove"
@@ -87,5 +87,6 @@
        MouseDown="Image_MouseDown"
        MouseMove="Image_MouseMove"
        MouseUp="Image_MouseUp"/>
+        <Image Height="235" Canvas.Left="25" Source="/Resources/Images/Png/help_list.png" Stretch="Fill" Canvas.Top="9" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Canvas>
 </Window>

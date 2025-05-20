@@ -35,6 +35,7 @@
     <None Remove="Resources\Images\Png\full_heart.png" />
     <None Remove="Resources\Images\Png\game_back.png" />
     <None Remove="Resources\Images\Png\heart.png" />
+    <None Remove="Resources\Images\Png\help_list.png" />
     <None Remove="Resources\Images\Png\house.png" />
     <None Remove="Resources\Images\Png\info.png" />
     <None Remove="Resources\Images\Png\main_back.png" />
@@ -128,6 +129,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\heart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Png\help_list.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Png\house.png">
