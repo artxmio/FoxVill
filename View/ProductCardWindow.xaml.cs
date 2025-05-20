@@ -1,5 +1,6 @@
 ﻿using FoxVill.ViewModel;
 using System.Windows;
+using System.Windows.Input;
 
 namespace FoxVill.View;
 
@@ -20,7 +21,13 @@ public partial class ProductCardWindow : Window
     {
         this.Close();
     }
-
+    private void Window_KeyDown(object sender, KeyEventArgs e)
+    {
+        if (e.Key == Key.Escape)
+        {
+            this.Close();
+        }
+    }
     private void AddItemToLiked_Click(object sender, RoutedEventArgs e)
     {
         _mainViewModel.ChangeProductFavoriteStateCommand.Execute(this);

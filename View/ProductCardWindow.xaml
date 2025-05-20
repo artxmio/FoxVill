@@ -13,7 +13,7 @@
         Background="Transparent"
         Height="385" Width="575"
         RenderOptions.BitmapScalingMode="HighQuality"
-        
+        KeyDown="Window_KeyDown"
         d:DataContext="{d:DesignInstance vm:ProductCardWindowViewModel}">
 
     <Window.Resources>

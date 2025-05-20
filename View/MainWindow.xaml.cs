@@ -29,6 +29,17 @@ public partial class MainWindow : Window
         {
             _viewModel.OpenAdminWindowCommand.Execute(this);
         }
+
+        if (e.Key == Key.Escape)
+        {
+            var result = MessageBox.Show("Вы действительно хотите закрыть окно?", "Подтверждение",
+                                         MessageBoxButton.YesNo, MessageBoxImage.Asterisk);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close(); 
+            }
+        }
     }
 
     private void DragModeWindow(object sender, System.Windows.Input.MouseButtonEventArgs e)

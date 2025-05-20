@@ -12,7 +12,8 @@
         Background="Transparent"
         AllowsTransparency="True"
         ResizeMode="NoResize"
-        d:DataContext="{d:DesignInstance vm:OrderWindowViewModel}">
+        d:DataContext="{d:DesignInstance vm:OrderWindowViewModel}"
+        KeyDown="Window_KeyDown">
 
     <Window.Resources>
         <ResourceDictionary>
