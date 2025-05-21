@@ -48,6 +48,10 @@
                             CommandParameter="{Binding SelectedProduct}" 
                             Width="300"
                             Margin="5"/>
+                    <Button Content="Save changes"
+                            Command="{Binding SaveProductCommand}" 
+                            Width="300"
+                            Margin="5"/>
                 </StackPanel>
             </TabItem>
         </TabControl>

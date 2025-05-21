@@ -40,6 +40,7 @@ public class AdminViewModel : INotifyPropertyChanged
     public ICommand DeleteUserCommand { get; }
     public ICommand AddProductCommand { get; }
     public ICommand DeleteProductCommand { get; }
+    public ICommand SaveProductCommand { get; }
 
     public AdminViewModel(DatabaseContext context)
     {
@@ -50,6 +51,12 @@ public class AdminViewModel : INotifyPropertyChanged
         DeleteUserCommand = new RelayCommand(p => DeleteUser(p));
         AddProductCommand = new RelayCommand(p =>  AddProduct());
         DeleteProductCommand = new RelayCommand(p =>  DeleteProduct(p));
+        SaveProductCommand = new RelayCommand(p => SaveProduct());
+    }
+
+    private void SaveProduct()
+    {
+        _dbContext.SaveChanges();
     }
 
     private void LoadData()

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\C#\\FoxVill\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\autorizaitionservices\\registrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:autorizaitionservices\\registrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\authorizationwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\authorizationwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\adminviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,40 +35,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RegistrationService.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\AutorizaitionServices\\RegistrationService.cs",
-              "RelativeDocumentMoniker": "AutorizaitionServices\\RegistrationService.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\AutorizaitionServices\\RegistrationService.cs",
-              "RelativeToolTip": "AutorizaitionServices\\RegistrationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T15:00:20.402Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthorizationWindowViewModel.cs",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\AuthorizationWindowViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\AuthorizationWindowViewModel.cs",
-              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\AuthorizationWindowViewModel.cs",
-              "RelativeToolTip": "ViewModel\\AuthorizationWindowViewModel.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAEwKIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:55:14.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AdminViewModel.cs",
               "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\AdminViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\AdminViewModel.cs",
               "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\AdminViewModel.cs",
               "RelativeToolTip": "ViewModel\\AdminViewModel.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAvwDoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:55:05.524Z",
+              "WhenOpened": "2025-05-21T08:14:54.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AdminWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\AdminWindow.xaml*",
+              "RelativeToolTip": "View\\AdminWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-21T07:43:36.137Z",
               "EditorCaption": ""
             }
           ]
