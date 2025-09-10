@@ -261,7 +261,7 @@ public class MainWindowViewModel : INotifyPropertyChanged
 
         ReceiptGenerator.GenerateReceipt((int)CartPrice, _currentUser.Email);
 
-        HistoryService historyService = new(_dbContext);
+        HistoryService historyService = new(_dbContext, CurrentUser.Id);
         historyService.AddOrderToPurchaseHistory(_currentUser.Id, [.. order.OrderItems]);
 
         CartItems = [];

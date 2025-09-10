@@ -56,6 +56,12 @@
 
         </Button>
 
+        <TextBox Width="300"
+         Margin="0 0 0 15"
+         FontSize="16"
+         materialDesign:HintAssist.Hint="Поиск..."
+         Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" />
+
         <Border BorderBrush="Black"
                 CornerRadius="15"
                 BorderThickness="2"
@@ -65,7 +71,7 @@
             <ScrollViewer Margin="25">
                 <StackPanel>
                     <DataGrid Style="{StaticResource BaseDataGridStyle}" 
-                  ItemsSource="{Binding HistoryItems}" AutoGenerateColumns="False"
+                  ItemsSource="{Binding HistoryView}" AutoGenerateColumns="False"
                   HorizontalScrollBarVisibility="Disabled"
                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsReadOnly="True">
                         <DataGrid.Columns>
@@ -76,9 +82,6 @@
                             <DataGridTextColumn Header="Дата покупки" Binding="{Binding PurchaseDate}" Width="3*" FontSize="17"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
-                    <oxy:PlotView Height="500" Model="{Binding ChartService.Model}"/>
-                    <Image Source="/Resources/Images/Png/fox_money_ice.png" Stretch="Uniform" Width="100" Height="100"/>
                 </StackPanel>
             </ScrollViewer>
         </Border>

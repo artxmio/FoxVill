@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Windows.Automation.Peers;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace FoxVill.ViewModel;
@@ -23,7 +24,19 @@ public class ProfileViewModel : INotifyPropertyChanged
     private readonly HistoryService _historyService;
     private ObservableCollection<PaymentMethod> _paymentMethods;
     private ChartService _chartService;
+    private string _searchText;
+    public string SearchText
+    {
+        get => _searchText;
+        set
+        {
+            _searchText = value;
+            OnPropertyChanged(nameof(SearchText));
+            HistoryView.Refresh(); // обновляем фильтр
+        }
+    }
 
+    public ICollectionView HistoryView { get; }
     public event PropertyChangedEventHandler? PropertyChanged;
 
     public string Email
@@ -75,9 +88,11 @@ public class ProfileViewModel : INotifyPropertyChanged
         _dbContext = dbContext;
         _currentUser = currentUser;
         _paymentsService = new PaymentService(_dbContext);
-        _historyService = new HistoryService(_dbContext);
+        _historyService = new HistoryService(_dbContext, currentUser.Id);
 
         HistoryItems = _historyService.HistoryItems;
+        HistoryView = CollectionViewSource.GetDefaultView(HistoryItems);
+        HistoryView.Filter = FilterHistory;
 
         _chartService = new ChartService(_dbContext);
 
@@ -90,6 +105,20 @@ public class ProfileViewModel : INotifyPropertyChanged
         RemovePaymentMethodCommand = new RelayCommand(async p => await RemovePaymentMethod(p));
 
         FoxCommand = new RelayCommand(p => OpenGame());
+    }
+
+    private bool FilterHistory(object obj)
+    {
+        if (obj is HistoryItem item)
+        {
+            if (string.IsNullOrWhiteSpace(SearchText))
+                return true;
+
+            return item.ProductName?.IndexOf(SearchText, StringComparison.OrdinalIgnoreCase) >= 0
+                || item.PurchaseDate.ToString("dd.MM.yyyy").Contains(SearchText)
+                || item.PurchaseDate.ToString("HH:mm:ss").Contains(SearchText);
+        }
+        return false;
     }
 
     private static void OpenGame()
@@ -111,7 +140,6 @@ public class ProfileViewModel : INotifyPropertyChanged
         }
         return false;
     }
-
 
     private async Task RemovePaymentMethod(object parametr)
     {

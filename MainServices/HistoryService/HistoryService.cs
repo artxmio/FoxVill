@@ -1,15 +1,14 @@
 ﻿using FoxVill.DataBase;
 using FoxVill.Model;
-using SQLitePCL;
 using System.Collections.ObjectModel;
 
 namespace FoxVill.MainServices.HistoryService;
 
-public class HistoryService(DatabaseContext context)
+public class HistoryService(DatabaseContext context, int userID)
 {
     private readonly DatabaseContext _context = context;
 
-    private ObservableCollection<HistoryItem> _historyItems = [.. context.HistoryItems.ToList()];
+    private ObservableCollection<HistoryItem> _historyItems = [.. context.HistoryItems.Where(h => h.UserId == userID).ToList()];
 
     public ObservableCollection<HistoryItem> HistoryItems
     {
