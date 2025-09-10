@@ -59,6 +59,5 @@ public class FavoriteService : IFavoriteService
                 .ToList();
 
         return [.. products];
-
     }
 }

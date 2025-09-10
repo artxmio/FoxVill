@@ -162,6 +162,7 @@ public class AuthorizationWindowViewModel : INotifyPropertyChanged
 
             var viewModel = new MainWindowViewModel(_databaseContext, _authUser);
             var mainWindow = new MainWindow(viewModel);
+
             mainWindow.Show();
             Application.Current.MainWindow.Close();
         }

@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FoxVill.AutorizaitionServices.AuthorizationService" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>AutorizaitionServices\AuthorizationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.AutorizaitionServices.RegistrationService" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutorizaitionServices\RegistrationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Command.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAEAEAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.DataBase.DatabaseContext" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACCAgQEAAAAAAAAACAAAEAAAAQAAAACAAAAAAAQ=</HashCode>
+      <FileName>DataBase\DatabaseContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.CartService.CartService" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>MainServices\CartService\CartService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.ChartService.ChartService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAACAACAAAAAAIhAAAAAAgBAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>MainServices\ChartService\ChartService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.MainServices.EmailService.EmailService" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABAAAAAAAAAAAAAAAAACAAEAAAAAAAQAAAAA=</HashCode>
+      <FileName>MainServices\EmailService\EmailService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.FavoritesService.FavoriteService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAEAAAAAAIAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>MainServices\FavoritesService\FavoriteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.MainServices.HistoryService.HistoryService" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAQABAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainServices\HistoryService\HistoryService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.OrderService.OrderService" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainServices\OrderService\OrderService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.PaymentService.PaymentService" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainServices\PaymentService\PaymentService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.ProductService.ProductService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAABQAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>MainServices\ProductService\ProductService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.MainServices.ReceiptGenerator.ReceiptGenerator" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>MainServices\ReceiptGenerator\ReceiptGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.SearchService.SearchService" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAIAAAAAAAAACAAAAA=</HashCode>
+      <FileName>MainServices\SearchService\SearchService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.MainServices.SortManager.SortManager" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAA=</HashCode>
+      <FileName>MainServices\SortManager\SortManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.InitMigration" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250407105739_InitMigration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.AddProductsTable" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250417092548_AddProductsTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.AddUserId" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250417095949_AddUserId.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.AddFavoritesTable" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250423081854_AddFavoritesTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.m1" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250423081938_m1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.AddPaymentMethods" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250427123359_AddPaymentMethods.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.AddCartWithCartItems" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250506105715_AddCartWithCartItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.AddHistoryTable" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250512063449_AddHistoryTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.AddOrders" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20250513110324_AddOrders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Migrations.DatabaseContextModelSnapshot" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Migrations\DatabaseContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Model.Cart" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAgAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Model\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Model.CartItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAEAAAAAAAAABoAAAAAAAgAAAAAAAAAAAgAAACAA=</HashCode>
+      <FileName>Model\CartItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.Model.Favorite" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAADAAAAAAAgAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Favorite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Model.HistoryItem" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAQAAAAAAAIAAAAgAAAAAAAAAAAAAgAAIAAA=</HashCode>
+      <FileName>Model\HistoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Model.Order" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAABAAAAAAEQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Model.OrderItem" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAECAAAAAQAAAAAAgAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Model\OrderItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Model.PaymentMethod" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAHAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Model.Product" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAQAgAEAAIAAAAAAAgAAAAAAAAQCAAAAAAAA=</HashCode>
+      <FileName>Model\Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.Model.User" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAECAACAAAAAAAAAAAAAAAAAAAAACAACAAAAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Validation.EmailValidationRule" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\EmailValidarionRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.Validation.PasswordValidationRule" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validations\PasswordValidationRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.View.Animation.AnimationManager" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAEAAQAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>View\Animation\AnimationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.View.Controls.TextPasswordBox" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAEgAAAAAQAAABACCAAAAACABAA=</HashCode>
+      <FileName>View\Controls\TextPasswordBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.View.Pages.AuthPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAACgAACABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Pages\AuthPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.Pages.CartPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAYAgAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Pages\CartPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.Pages.DefaultPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABgAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Pages\DefaultPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.Pages.HistoryPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Pages\HistoryPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.Pages.MainPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQQAAgABAAAYEAAAAAEIAAAAABAAAAAACAEAAAA=</HashCode>
+      <FileName>View\Pages\MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.Pages.ProfilePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEgABABAQAAAAAAEEAAAAAAACAAAACAQAAAA=</HashCode>
+      <FileName>View\Pages\ProfilePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.Pages.RegPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAACgAACABAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>View\Pages\RegPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.AboutWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>View\AboutWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.AddNewPaymentMethodWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>View\AddNewPaymentMethodWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.AdminWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AdminWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.AuthorizationWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAQAAAAQAAAAEAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>View\AuthorizationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.CoinWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEBAEAAAAAAAAAASCACAAAABAAABAwAAwAAAAABA=</HashCode>
+      <FileName>View\CoinWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAAQAAAAQAAAAEAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.MessageWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MessageWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.OrderWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAQAAAAAAEAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>View\OrderWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.PaymentMethodsWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\PaymentMethodsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.ProductCardWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAQAAQAAAAAAEAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>View\ProductCardWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.View.UserDataWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\UserDataWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.ViewModel.AddNewPaymentMethodViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAAAAAAAAAAJEAAAAAAgAAAAAABAAAAACAAAAA=</HashCode>
+      <FileName>ViewModel\AddNewPaymentMethodViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.ViewModel.AdminViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBACIhABAQEAAEIAAAQAgAgAAAAIAgAIAAAQwAAAQ=</HashCode>
+      <FileName>ViewModel\AdminViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.ViewModel.AuthorizationWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgAARAQAQAAABQIAiAAAAAiCAAAEQAAgGACQAEEAA=</HashCode>
+      <FileName>ViewModel\AuthorizationWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.ViewModel.MainWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQFAsQRgICAIIApAFEAIAAwoBAAIgGACIAgkCBAISQ=</HashCode>
+      <FileName>ViewModel\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.ViewModel.OrderWindowViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAACAAAAAAAAAIEAAAAAAgAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>ViewModel\OrderWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.ViewModel.ProductCardWindowViewModel" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ProductCardWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoxVill.ViewModel.ProfileViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAmwACAAAAAAIEQACAAAkAAAIQASAAAIAAAIAAE=</HashCode>
+      <FileName>ViewModel\ProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FoxVill.App" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="FoxVill.MainServices.FavoritesService.IFavoriteService" Collapsed="true">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainServices\FavoritesService\IFavoriteService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FoxVill.MainServices.ProductService.IProductService" Collapsed="true">
+    <Position X="2.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>MainServices\ProductService\IProductService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="FoxVill.Model.Enums.ProductType" Collapsed="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQEAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAgAABA=</HashCode>
+      <FileName>Model\Enums\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

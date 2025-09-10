@@ -3,8 +3,40 @@
   "WorkspaceRootPath": "D:\\C#\\FoxVill\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\addnewpaymentmethodviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\addnewpaymentmethodviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\addnewpaymentmethodwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\addnewpaymentmethodwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\paymentmethodswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\paymentmethodswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\model\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:model\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:database\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:view\\pages\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\viewmodel\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:viewmodel\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|d:\\c#\\foxvill\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{DAE4B90B-9DCD-48BA-8EA8-909CA26C4F3B}|FoxVill.csproj|solutionrelative:classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 301,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +62,112 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminWindow.xaml",
-              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\AdminWindow.xaml",
-              "RelativeDocumentMoniker": "View\\AdminWindow.xaml",
-              "ToolTip": "D:\\C#\\FoxVill\\View\\AdminWindow.xaml",
-              "RelativeToolTip": "View\\AdminWindow.xaml",
+              "DocumentIndex": 1,
+              "Title": "AddNewPaymentMethodWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\AddNewPaymentMethodWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AddNewPaymentMethodWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\AddNewPaymentMethodWindow.xaml",
+              "RelativeToolTip": "View\\AddNewPaymentMethodWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-21T07:43:36.137Z",
+              "WhenOpened": "2025-09-10T11:53:39.818Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\Model\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "Model\\PaymentMethod.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\Model\\PaymentMethod.cs",
+              "RelativeToolTip": "Model\\PaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T11:53:17.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddNewPaymentMethodViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\AddNewPaymentMethodViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\AddNewPaymentMethodViewModel.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\AddNewPaymentMethodViewModel.cs*",
+              "RelativeToolTip": "ViewModel\\AddNewPaymentMethodViewModel.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T11:50:42.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentMethodsWindow.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\PaymentMethodsWindow.xaml",
+              "RelativeDocumentMoniker": "View\\PaymentMethodsWindow.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\PaymentMethodsWindow.xaml",
+              "RelativeToolTip": "View\\PaymentMethodsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-10T11:50:28.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\DataBase\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "DataBase\\DatabaseContext.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\DataBase\\DatabaseContext.cs",
+              "RelativeToolTip": "DataBase\\DatabaseContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:30:34.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml",
+              "RelativeDocumentMoniker": "View\\Pages\\MainPage.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\View\\Pages\\MainPage.xaml",
+              "RelativeToolTip": "View\\Pages\\MainPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-05T00:15:59.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\C#\\FoxVill\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-30T08:01:11.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\ViewModel\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\ProfileViewModel.cs",
+              "ToolTip": "D:\\C#\\FoxVill\\ViewModel\\ProfileViewModel.cs",
+              "RelativeToolTip": "ViewModel\\ProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T08:00:14.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "D:\\C#\\FoxVill\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "ClassDiagram1.cd",
+              "ToolTip": "D:\\C#\\FoxVill\\ClassDiagram1.cd",
+              "RelativeToolTip": "ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2025-05-22T11:03:16.566Z"
             }
           ]
         },

@@ -24,7 +24,6 @@ public class OrderWindowViewModel : INotifyPropertyChanged
         }
     }
 
-
     public OrderWindowViewModel(DatabaseContext context, User currentUser)
     {
         this._dbContext = context;
